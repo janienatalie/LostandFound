@@ -1,0 +1,141 @@
+.auth-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .image-container {
+    width: 100%; 
+    height: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .image-container {
+      display: none;  /* hide the image container on tablets and mobile devices */
+    }
+  
+    .auth-container {
+      grid-template-columns: 1fr; /* stacks the content in a single column */
+    }
+  }
+  
+  .title {
+    margin-top: 50px;
+  }
+  
+  .form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .form-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-container input {
+    border: 2px solid #763996;
+    border-radius: 5px;
+    padding: 8px;
+    height: 20px
+  }
+  
+  .form-container input:focus {
+    outline: none;
+  }
+  
+  .form-container p {
+    margin-bottom: 5px;
+    color: #000;
+    font-size: 16px;
+  }
+  
+  .form-container button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #763996;
+    color: white;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-container button:hover {
+    background-color: #683286;
+  }
+  
+  .info {
+    font-size: 14px;
+  }
+  
+  .info.active {
+    display: none;
+  }
+  
+  
+  /* handling button option active and non active */
+  .button-option-admin {
+    border: 1px solid black;
+    border-right: none;
+    border-radius: 5px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-color: white;
+    padding: 7px;
+    padding-right: 25px;
+    padding-left: 25px;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .button-option-admin.active {
+    border: 1px solid #763996;
+    border-right: none;
+    border-radius: 5px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-color: #763996;
+    padding: 7px;
+    padding-right: 25px;
+    padding-left: 25px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .button-option-user {
+    border: 1px solid black;
+    border-left: none;
+    border-radius: 5px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background-color: white;
+    padding: 7px;
+    padding-right: 25px;
+    padding-left: 25px;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .button-option-user.active {
+    border: 1px solid #763996;
+    border-left: none;
+    border-radius: 5px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background-color: #763996;
+    padding: 7px;
+    padding-right: 25px;
+    padding-left: 25px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  
