@@ -1,10 +1,16 @@
 .auth-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  grid-gap: 20px;
 }
 
 .image-container {
+  display: contents;
+  width: 100%;
+  height: 100vh;
+}
+
+.image-container img {
   width: 100%;
   height: auto;
 }
@@ -24,6 +30,14 @@
 }
 
 .form-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-section-sign-up {
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -69,6 +83,12 @@
 }
 
 .info {
+  font-size: 14px;
+  position: absolute;
+  bottom: -50px;
+}
+
+.info-signup {
   font-size: 14px;
 }
 
@@ -135,4 +155,8 @@
   color: white;
   font-size: 16px;
   cursor: pointer;
+}
+
+.image-logo {
+  width: 50%;
 }

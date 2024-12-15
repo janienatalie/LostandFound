@@ -15,35 +15,35 @@ $isFirstLogin = true;
 <body>
     <div class="auth-container">
         <!-- image -->
-        <div>
-          <img src="./image/img-login.png" alt="Example Image" class="image-container">
+        <div class="image-container">
+          <img src="./image/img-login.png" alt="Example Image">
         </div>
         <!-- end -->
 
         <!-- form -->
         <div class="form-section">
-            <img src="./image/logo.png" alt="Example Image" style="width: 50%">
-            <h2 class='title'>Log in</h2>
+            <img src="./image/logo.png" alt="Example Image" class="image-logo">
+            <h2 class='title'>Masuk</h2>
 
             <!-- button option -->
             <div style='display: flex'> 
                 <button class='button-option-admin <?php echo $isFirstLogin ? 'active' : ''; ?>' id='button-option-admin'>Admin</button>
-                <button class='button-option-user' id='button-option-user'>User</button>
+                <button class='button-option-user' id='button-option-user'>Pengguna</button>
             </div>
             <!--  -->
 
             <!-- field -->
             <form class="form-container">
-              <p>username</p>
+              <p>Nama Pengguna</p>
               <input type="text" id="username" name="username">
                 
-              <p>password </p>
+              <p>Kata Sandi </p>
               <input type="password" id="password" name="password"><br>
                 
-              <button type="submit" id='submit-buton'>Login</button>
+              <button type="submit" id='submit-buton'>Masuk</button>
             </form>
-
-            <p class='info' id='signup-info'>Don't have an account ? <a  href="signup.php" style='text-decoration: underline; color: #1C07D2'>Sign up</a></p>
+                
+            <p class='info' id='signup-info'>Belum punya akun ? <a  href="signup.php" style='text-decoration: underline; color: #1C07D2'>Daftar</a></p>
         </div>
         <!-- end -->
     </div>
