@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.form-section {
+  margin: 10px;
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: #fff;
+  z-index: 1000;
+}
+
+.navbar .logo .logo-image {
+  height: 40px;
+  width: auto;
+}
+
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar nav ul li a {
+  text-decoration: none;
+  font-size: 16px;
+
+  font-weight: bold;
+  color: #763996; /* Default link color */
+  transition: all 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+  color: #ff9934; /* Hover color */
+}
+
+.navbar nav ul li a.active {
+  color: #ff9934; /* Active link color */
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+h2 {
+  /* margin-top: 100px; */
+  /* padding-left: 55px; */
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+  color: #763996;
+  margin-bottom: 20px;
+}
+
+p {
+  /* padding-left: 55px; */
+  padding-right: 55px;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+form {
+  max-width: 1200px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #763996;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #c7c7c7;
+}
+
+.required {
+  color: rgb(220, 29, 29);
+}
+
+button {
+  background-color: #763996;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 25px;
+  display: block;
+}
+
+footer {
+  background-color: #763996;
+  color: white;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 20px;
+  height: 50px;
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+input:invalid,
+select:invalid {
+  color: gray;
+}
+
+input:valid,
+select:valid {
+  color: black;
+}

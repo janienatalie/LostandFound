@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lost & Found - Gunadarma University</title>
+    <link rel="stylesheet" href="./css/form.css" />
+  </head>
+  <body>
+    <div class="form-section">
+      <!-- Header Section -->
+      <!-- <header>
+      <div class="navbar">
+        <div class="logo">
+          <img
+            src="/image/logo.png"
+            alt="Lost & Found Logo"
+            class="logo-image"
+          />
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#" class="active">Form Kehilangan</a></li>
+            <li><a href="#">Form Penemuan</a></li>
+            <li><a href="#">Daftar Barang</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header> -->
+
+      <h2>Form Kehilangan</h2>
+      <p>
+        Formulir ini digunakan untuk melaporkan barang-barang yang hilang di
+        lingkungan kampus. Jika Anda kehilangan barang, isilah informasi di
+        bawah ini dengan benar dan jelas.
+      </p>
+      <form
+        action="proses_kehilangan.php"
+        method="POST"
+        enctype="multipart/form-data"
+        class="form-laporan"
+      >
+        <div class="form-group">
+          <label for="Lokasi"
+            >Lokasi Kampus <span class="required">*</span></label
+          >
+          <select id="lokasi" name="lokasi" required>
+            <option value="">Pilih Lokasi Kampus</option>
+            <option value="Kampus A">Kampus D</option>
+            <option value="Kampus B">Kampus E</option>
+            <option value="Kampus F4">Kampus F4</option>
+            <option value="Kampus F8">Kampus F8</option>
+            <option value="Kampus C">Kampus G</option>
+            <option value="Kampus D">Kampus H</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="barang"
+            >Barang yang Hilang <span class="required">*</span></label
+          >
+          <input type="text" id="barang" name="barang" required />
+        </div>
+        <div class="form-group">
+          <label for="tempat"
+            >Tempat Kehilangan <span class="required">*</span></label
+          >
+          <input type="text" id="tempat" name="tempat" required />
+        </div>
+        <div class="form-group">
+          <label for="tanggal"
+            >Tanggal Kehilangan <span class="required">*</span></label
+          >
+          <input type="date" id="tanggal" name="tanggal" required />
+        </div>
+        <div class="form-group">
+          <label for="foto">Foto Barang </label>
+          <input type="file" id="foto" name="foto" />
+        </div>
+
+        <button type="submit">Kirim</button>
+      </form>
+      <!-- Footer Section -->
+      <!-- <footer>
+      <p>Copyright &copy; <b>Lost And Found.</b> Kelompok 6.</p>
+    </footer> -->
+    </div>
+  </body>
+</html>

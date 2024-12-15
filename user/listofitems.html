@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/listofitems.css" />
+    <!-- loading bar -->
+    <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- fontowesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Lost and Found - List of Items</title>
+  </head>
+  <body>
+    <div class="list-of-items">
+      <div class="title">
+        <h2>List of Items</h2>
+      </div>
+      <div class="dropdown">
+        <div class="controls-container">
+          <div class="dropdown-lost-and-found">
+            <select
+              name="lost-found"
+              class="dropdownlostandfound"
+              id="dropdown"
+            >
+              <option value="" disabled selected>Lost or Found</option>
+              <option value="Lost">Lost</option>
+              <option value="Found">Found</option>
+            </select>
+          </div>
+
+          <div class="dropdown-campus">
+            <select name="campus" class="dropdowncampus" id="dropdown">
+              <option value="" disabled selected>Campus</option>
+              <option value="CampusD">D</option>
+              <option value="CampusE">E</option>
+              <option value="CampusF8">F8</option>
+              <option value="CampusG">G</option>
+              <option value="CampusH">H</option>
+            </select>
+          </div>
+
+          <div class="search-bar">
+            <!-- Ikon pencarian -->
+            <input
+              type="search"
+              id="query"
+              name="q"
+              placeholder="Search..."
+              aria-label="Search through site content"
+            />
+            <i class="fa fa-search search-icon" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+      <div class="listofitemstable" class="table-responsive-xl">
+        <table>
+          <thead>
+            <tr>
+              <th>Items</th>
+              <th>Campus</th>
+              <th>Location</th>
+              <th>Date</th>
+              <th>Photo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Dompet</td>
+              <td>E</td>
+              <td>Dekat masjid</td>
+              <td>16 September 2024</td>
+              <td>gambar</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="frame">
+        <p class="terms-and-conditions">
+          Terms And Conditions For Item Retrieval:<br />1. To Retrieve An Item,
+          Please Visit The Campus Lost &amp; Found Building Directly And Bring
+          Your Student Id Card.<br />2. The Storage Period For Lost And Found
+          Items Is Limited To 30 Working Days.<br />3. Operating Hours For
+          Retrieval:<br />  Monday - Friday 09:00 Am – 05:00 Pm<br />  Saturday
+          09:00 Am – 12:00 Pm
+        </p>
+      </div>
+    </div>
+    <footer class="footer">
+      <p class="copyrights-lost">
+        <span class="span">Copyrights © 2024 </span>
+        <span class="text-wrapper-2">Lost and Found.</span>
+        <span class="span">Kelompok 6.</span>
+      </p>
+    </footer>
+
+    <script src="/user/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lost & Found laporan</title>
+<link rel="stylesheet" href="/admin/css/laporan.css">
+</head>
+<body>
+<div class="content">
+    <h1>Reports</h1>
+    <div class="container">
+        <select class="dropdown">
+            <option value="">Kehilangan</option>
+            <option value="">Penemuan</option>
+        </select>
+        <div class="search-box">
+            <input type="text" placeholder="Cari" />
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M10 2a8 8 0 1 0 5.29 14.71l5 5a1 1 0 0 0 1.41-1.42l-5-5A8 8 0 0 0 10 2Zm0 2a6 6 0 1 1-6 6 6 6 0 0 1 6-6Z"/>
+            </svg>
+        </div>
+    </div>
+
+    <div class="table">
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>NPM</th>
+                    <th>Kampus</th>
+                    <th>Barang</th>
+                    <th>Lokasi</th>
+                    <th>Tanggal</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Ardinda Nur</td>
+                    <td>10122207</td>
+                    <td class="kampus">E</td>
+                    <td>Dompet</td>
+                    <td>Masjid Kampus E</td>
+                    <td>18 Nov 2024</td>
+                    <td>Sudah Ditemukan</td>
+                </tr>
+
+            </tbody>
+        </table>
+        <div class="print-container">
+            <a class="print-button" href="#" onclick="printPage()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M19 8h-1V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v5H5a3 3 0 0 0-3 3v5a1 1 0 0 0 1 1h2v4a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-4h2a1 1 0 0 0 1-1v-5a3 3 0 0 0-3-3ZM8 4h8v4H8Zm8 16H8v-3h8Zm3-5h-2v-2H7v2H5v-4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1Z"/>
+                </svg>
+                Print
+            </a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.list-of-items {
+  margin: 10px;
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+.title {
+  color: #763996;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  text-align: left;
+}
+
+.dropdown {
+  margin-top: 30px;
+}
+
+/* Kontainer untuk semua elemen (dropdown dan search bar) */
+.controls-container {
+  display: flex; /* Tata letak horizontal */
+  justify-content: flex-start; /* Elemen mulai dari kiri */
+  align-items: center; /* Luruskan secara vertikal */
+  gap: 20px; /* Jarak antar elemen */
+  margin-top: 20px; /* Jarak dari elemen sebelumnya */
+  width: 100%; /* Pastikan kontainer memenuhi lebar layar */
+}
+
+/* Dropdown Lost and Found */
+.dropdownlostandfound,
+.dropdowncampus {
+  display: flex;
+  width: 274px; /* Lost and Found */
+  padding: 14px 20px;
+  border-radius: 12px;
+  border: 2px solid #763996;
+  font-size: 16px;
+  background-color: white;
+  color: #c7c7c7; /* Warna teks default */
+}
+
+
+
+.dropdownlostandfound option[value=""],
+.dropdowncampus option[value=""] {
+  color: #c7c7c7; /* Warna placeholder */
+}
+
+/* Search bar, diposisikan di kanan */
+.search-bar {
+  display: flex;
+  width: 250px; /* Lebar search bar */
+  height: 54px;
+  padding: 0px 14px; /* Padding kiri dan kanan */
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+  border: 2px solid #763996;
+  color: #c7c7c7;
+  font-size: 16px;
+  background-color: white;
+  margin-left: auto; /* Mengarahkan search bar ke kanan */
+}
+button {
+  all: unset;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+}
+
+svg {
+  color: #763996;
+  fill: currentColor;
+  width: 50px;
+  height: 24px;
+  padding: 10px;
+}
+
+.search-bar input {
+  all: unset;
+  width: 100%; /* Memenuhi lebar yang tersedia */
+  height: 100%; /* Tinggi sesuai dengan search bar */
+  padding: 6px 10px; /* Memberikan ruang untuk ikon di sebelah kiri */
+  font-size: 16px;
+  color: #763996;
+}
+
+.search-bar input::placeholder {
+  color: #c7c7c7;
+  opacity: 0.7;
+}
+
+.search-bar .search-icon {
+  color: #763996;
+}
+
+/* Hapus tanda 'X' pada browser modern */
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none; /* Hilangkan tampilan bawaan */
+  appearance: none;
+}
+
+/* Untuk Firefox */
+input[type="search"] {
+  -moz-appearance: textfield; /* Atur menjadi seperti input teks biasa */
+}
+
+/* Tambahan untuk kompatibilitas lintas browser */
+input[type="search"]::-ms-clear {
+  display: none; /* Hilangkan tombol pada Internet Explorer */
+}
+
+.frame {
+  display: flex;
+  justify-content: center; /* Menjaga konten tetap di tengah secara horizontal */
+  align-items: center; /* Menjaga konten tetap di tengah secara vertikal */
+  width: 100%; /* Menyesuaikan lebar kotak agar lebih responsif */
+  max-width: 850px; /* Menentukan batas lebar maksimal */
+  padding: 20px; /* Memberikan ruang di dalam kotak */
+  background-color: #763996;
+  border-radius: 12px;
+  margin: 50px auto; /* Memberikan jarak dari elemen sebelumnya dan footer */
+  margin-top: 100px; /* Menambahkan jarak lebih besar dengan tabel */
+}
+
+.terms-and-conditions {
+  font-family: "Poppins-Medium", Helvetica;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: left; /* Memastikan teks berada di tengah */
+  line-height: 1.5; /* Memberikan jarak antar baris agar teks lebih nyaman dibaca */
+  max-width: 1020px; /* Membatasi lebar konten agar tidak terlalu melebar */
+}
+
+
+.listofitemstable {
+  width: 100%; /* Membuat tabel mengisi lebar kontainer */
+  margin-top: 50px;
+  overflow-x: auto; /* Menambahkan scroll horizontal jika tabel terlalu lebar */
+}
+
+.listofitemstable table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Mengatur lebar kolom agar lebih konsisten */
+}
+
+.listofitemstable thead {
+  background-color: #763996;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+}
+
+.listofitemstable tbody {
+  text-align: center;
+}
+
+.listofitemstable td, .listofitemstable th {
+  padding: 10px; /* Menyelaraskan padding antara th dan td */
+  border: 1px solid #ddd; /* Menambahkan border antara sel */
+  font-size: 16px;
+}
+
+.listofitemstable th {
+  padding-top: 12px; /* Memberikan sedikit ruang di bagian atas */
+  padding-bottom: 12px; /* Memberikan ruang di bagian bawah */
+  /* font-weight: bold; */
+  font-size: 16px;
+}
+
+.listofitemstable tr:nth-child(even) {
+  background-color: #c7c7c7; /* Memberikan warna latar belakang pada baris genap */
+}
+
+
+.footer {
+  display: flex;
+  justify-content: center; /* Menempatkan konten di tengah horizontal */
+  align-items: center; /* Menempatkan konten di tengah vertikal */
+  width: 100%; /* Lebar footer sesuai lebar halaman */
+  height: 70px; /* Tinggi footer */
+  bottom: 0; /* Footer tetap berada di bawah */
+  background-color: #763996; /* Warna latar footer */
+}
+
+.copyrights-lost {
+  display: flex;
+  justify-content: flex-end; /* Menempatkan teks copyright di tengah secara horizontal */
+  margin-right: 40px;
+  font-family: "Open Sans-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16px;
+  width: 100%; /* Memastikan lebar teks mengisi seluruh footer */
+}
+
+.span {
+  color: #ffffff;
+}
+
+.text-wrapper-2 {
+  font-family: "Open Sans-Bold", Helvetica;
+  font-weight: 700;
+}
+
+
+/* Responsivitas */
+@media (max-width: 768px) {
+  .dropdown-lost-and-found,
+  .dropdown-campus,
+  .search-bar, 
+  .footer, .frame {
+    width: 100%;
+  }
+
