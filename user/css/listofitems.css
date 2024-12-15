@@ -12,7 +12,7 @@
 
 .title {
   color: #763996;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
   font-size: 18px;
   text-align: left;
 }
@@ -120,7 +120,7 @@ input[type="search"]::-ms-clear {
   justify-content: center; /* Menjaga konten tetap di tengah secara horizontal */
   align-items: center; /* Menjaga konten tetap di tengah secara vertikal */
   width: 100%; /* Menyesuaikan lebar kotak agar lebih responsif */
-  max-width: 850px; /* Menentukan batas lebar maksimal */
+  max-width: 950px; /* Menentukan batas lebar maksimal */
   padding: 20px; /* Memberikan ruang di dalam kotak */
   background-color: #763996;
   border-radius: 12px;

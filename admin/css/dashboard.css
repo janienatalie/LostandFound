@@ -1,6 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Cookie&family=Poppins:wght@600&display=swap");
-
-:root {
+/* :root {
   --bg-text-shadow: 0 2px 4px rgb(13 0 77 / 8%), 0 3px 6px rgb(13 0 77 / 8%),
     0 8px 16px rgb(13 0 77 / 8%);
   --bg-box-shadow: 0px 0px 20px 6px rgba(26, 30, 164, 0.31);
@@ -13,26 +11,16 @@
 }
 *::-webkit-scrollbar-thumb {
   background: #0040ff;
-}
-
-* {
-  /* margin: 0;
-  padding: 0; */
-  font-family: "Poppins", sans-serif;
-}
+} */
 
 .titlepage {
   color: #763996;
   font-family: Poppins;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  padding-top: 50px;
+  font-size: 18px;
 }
 .rectangle {
-  width: 1092px;
-  height: 185px;
+  width: 950px;
+  height: 140px;
   flex-shrink: 0;
   border-radius: 10px;
   background: #763996;
@@ -47,7 +35,7 @@ h3 {
   color: #fff;
   padding-top: 22px;
   padding-left: 28px;
-  font-size: 24px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -55,6 +43,8 @@ h3 {
 
 .rectangle svg {
   position: relative;
-  left: 950px;
-  bottom: 100px;
+  left: 850px;
+  bottom: 90px;
+  width: 60px; /* Atur lebar */
+  height: 60px; /* Atur tinggi */
 }

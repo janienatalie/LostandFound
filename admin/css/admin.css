@@ -1,16 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Cookie&family=Poppins:wght@600&display=swap");
-
-:root {
+/* :root {
   --bg-text-shadow: 0 2px 4px rgb(13 0 77 / 8%), 0 3px 6px rgb(13 0 77 / 8%),
     0 8px 16px rgb(13 77 / 8%);
   --bg-box-shadow: 0px 0px 20px 6px rgb(0 0 0 / 34%);
-}
+} */
 
 * {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
-  /* text-shadow: var(--bg-text-shadow); */
 }
 body {
   height: 100vh;
@@ -31,14 +27,18 @@ body {
 } */
 .logo .lostandfoundlogo {
   display: flex;
-  width: 252px;
-  height: 82px;
+  max-width: 60%; /* Gambar tidak akan melebihi lebar kontainer */
+  /* Batas tinggi maksimum */
+  height: auto; /* Menjaga aspek rasio */
+  width: auto; /* Pastikan tidak gepeng */
+  object-fit: contain;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
   margin-top: 30px;
   margin-bottom: 30px;
   padding: 15px;
+  margin-left: 20px;
 }
 /* .logo p {
   height: 100%;
@@ -53,23 +53,23 @@ body {
   position: absolute;
   background: #763996;
   color: #ffffff;
-  width: 302px;
-  height: 1024px;
+  width: 20%;
+  height: 600px;
   flex-shrink: 0;
 }
 
 ul li {
   display: flex;
-  height: 50px;
+  height: 25px;
   cursor: pointer;
   margin-bottom: 5px;
   display: flex;
-  width: 262px;
+  width: auto;
   padding: 15px 20px;
   align-items: center;
   gap: 13px;
   color: #fff;
-  font-size: 25px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -91,10 +91,6 @@ ul li.active {
     #763996;
 }
 
-.mainscreen {
-  margin-left: 18%;
-}
-
 .frames {
   height: 100vh;
   width: 100%;
@@ -107,11 +103,11 @@ ul li.active {
 
 /* temp */
 img {
-  height: 50px;
+  height: 40px;
 }
 
 .pagebtnlogout {
-  margin-top: 150px;
+  margin-top: 110px;
 }
 
 /* responsive stuff */
@@ -134,5 +130,5 @@ img {
 }
 
 .mainscreen {
-  margin-left: 20%;
+  margin-left: 22%;
 }
