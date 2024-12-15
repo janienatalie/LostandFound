@@ -51,6 +51,11 @@
   color: #c7c7c7; /* Warna placeholder */
 }
 
+.dropdowncampus input:focus, select:focus, 
+.dropdownlostandfound input:focus, select:focus {
+  outline: none;
+}
+
 /* Search bar, diposisikan di kanan */
 .search-bar {
   display: flex;
