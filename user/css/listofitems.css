@@ -44,15 +44,15 @@
   color: #c7c7c7; /* Warna teks default */
 }
 
-
-
 .dropdownlostandfound option[value=""],
 .dropdowncampus option[value=""] {
   color: #c7c7c7; /* Warna placeholder */
 }
 
-.dropdowncampus input:focus, select:focus, 
-.dropdownlostandfound input:focus, select:focus {
+.dropdowncampus input:focus,
+select:focus,
+.dropdownlostandfound input:focus,
+select:focus {
   outline: none;
 }
 
@@ -142,7 +142,6 @@ input[type="search"]::-ms-clear {
   max-width: 1020px; /* Membatasi lebar konten agar tidak terlalu melebar */
 }
 
-
 .listofitemstable {
   width: 100%; /* Membuat tabel mengisi lebar kontainer */
   margin-top: 50px;
@@ -166,7 +165,8 @@ input[type="search"]::-ms-clear {
   text-align: center;
 }
 
-.listofitemstable td, .listofitemstable th {
+.listofitemstable td,
+.listofitemstable th {
   padding: 10px; /* Menyelaraskan padding antara th dan td */
   border: 1px solid #ddd; /* Menambahkan border antara sel */
   font-size: 16px;
@@ -182,7 +182,6 @@ input[type="search"]::-ms-clear {
 .listofitemstable tr:nth-child(even) {
   background-color: #c7c7c7; /* Memberikan warna latar belakang pada baris genap */
 }
-
 
 .footer {
   display: flex;
@@ -214,13 +213,13 @@ input[type="search"]::-ms-clear {
   font-weight: 700;
 }
 
-
 /* Responsivitas */
 @media (max-width: 768px) {
   .dropdown-lost-and-found,
   .dropdown-campus,
-  .search-bar, 
-  .footer, .frame {
+  .search-bar,
+  .footer,
+  .frame {
     width: 100%;
   }
-
+}

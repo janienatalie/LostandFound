@@ -15,22 +15,35 @@ body {
   align-items: flex-start;
 }
 
+<<<<<<< HEAD
+h1 {
+  color: #763996;
+  font-family: Poppins;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+=======
 h2 {
   color: #6a1b9a;
   font-size: 2em;
   margin-bottom: 20px;
+>>>>>>> 22e2884fcb131589c51cc1bf4426f163ed3fa5ba
 }
 
 .search-box {
   display: flex;
+  width: 250px; /* Lebar search bar */
+  height: 54px;
+  padding: 0px 14px; /* Padding kiri dan kanan */
+  justify-content: space-between;
   align-items: center;
-  border: 2px solid #800080;
-  border-radius: 25px;
-  padding: 10px 15px;
-  margin-bottom: 20px;
-  margin-left: auto;
-  width: 300px;
-  height: 30px;
+  border-radius: 12px;
+  border: 2px solid #763996;
+  color: #c7c7c7;
+  font-size: 16px;
+  background-color: white;
+  margin-left: auto; /* Mengarahkan search bar ke kanan */
 }
 
 .search-box input {
