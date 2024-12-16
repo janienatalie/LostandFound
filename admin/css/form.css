@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap");
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: #f9f9f9;
@@ -7,18 +9,41 @@ body {
 .container {
   width: 90%;
   margin: 20px auto;
+  /* <!--tambah--> */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 h1 {
   color: #6a1b9a;
   text-align: left;
 }
+
+.dropdown,
 .search-box {
+  width: 300px; /* Lebar yang sama */
+  height: 50px; /* Tinggi yang sama */
   display: flex;
   align-items: center;
   border: 2px solid #800080;
   border-radius: 25px;
   padding: 10px 15px;
+  box-sizing: border-box; /* Memastikan padding tidak memengaruhi ukuran */
 }
+
+.search-box {
+  margin-left: 772px;
+}
+.dropdown select {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #3b3b3b;
+  flex: 1;
+  background: transparent;
+  cursor: pointer;
+}
+
 .search-container {
   display: flex;
   align-items: center;
@@ -32,11 +57,14 @@ h1 {
   font-size: 16px;
   color: #0b0a0a;
   flex: 1;
+  background: transparent;
 }
+
 .search-box i {
   color: #800080;
   margin-left: 10px;
 }
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -80,65 +108,4 @@ th {
     margin-left: 0;
     margin-top: 10px;
   }
-}
-.dropdown {
-  position: absolute;
-  background-color: #f5f5f5;
-  display: inline-block;
-  align-items: left;
-  border: 2px solid #800080;
-  border-radius: 25px;
-  padding: 5px 10px;
-  margin-bottom: 20px;
-  left: 0;
-}
-.dropdown select {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-color: #f5f5f5;
-  border: 1px solid #dcdcdc;
-  border-radius: 4px;
-  padding: 10px 40px 10px 15px;
-  font-size: 16px;
-  color: #b3b3b3;
-  cursor: pointer;
-  outline: none;
-}
-.dropdown select:focus {
-  border-color: #a64ac9;
-}
-.dropdown::after {
-  content: "\f078";
-  font-family: "FontAwesome";
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-  color: #a64ac9;
-}
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #fff;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  border: 1px solid #dcdcdc;
-  border-radius: 4px;
-  /* Tambahkan posisi kiri */
-  left: 0 !important; /* Memastikan dropdown berada di sisi kiri */
-}
-.dropdown-content a {
-  color: #a64ac9;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-}
-.dropdown:hover .dropdown-content {
-  display: block;
 }

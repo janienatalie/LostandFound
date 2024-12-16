@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap");
+
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
@@ -12,11 +14,13 @@ body {
   flex-direction: column;
   align-items: flex-start;
 }
+
 h1 {
   color: #6a1b9a;
   font-size: 2em;
   margin-bottom: 20px;
 }
+
 .search-box {
   display: flex;
   align-items: center;
@@ -25,7 +29,10 @@ h1 {
   padding: 10px 15px;
   margin-bottom: 20px;
   margin-left: auto;
+  width: 300px;
+  height: 30px;
 }
+
 .search-box input {
   border: none;
   outline: none;
@@ -33,25 +40,30 @@ h1 {
   color: #0b0a0a;
   flex: 1;
 }
+
 .search-box i {
   color: #800080;
   margin-left: 10px;
 }
+
 table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 10px;
 }
+
 th,
 td {
   padding: 10px;
   text-align: left;
   border-bottom: 1px solid #ddd;
 }
+
 th {
   background-color: #6a1b9a;
   color: #fff;
 }
+
 @media (max-width: 600px) {
   .container {
     padding: 10px;
