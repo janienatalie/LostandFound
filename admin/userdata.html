@@ -2,13 +2,11 @@
 <html>
   <head>
     <title>Data Pengguna</title>
-    <link rel="stylesheet" href="./css/userdata.css" />
-    <link rel="stylesheet" href="/css/style.css" />
-    <!---link
-rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/al
-l.min.css"
--->
+    <link rel="stylesheet" href="styleuser.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
   </head>
   <body>
     <div class="container">
@@ -16,7 +14,7 @@ l.min.css"
       <div class="search-box">
         <input
           type="text"
-          placeholder="Search"
+          placeholder="Cari"
           id="searchInput"
           onkeyup="searchTable()"
         />
@@ -44,6 +42,7 @@ l.min.css"
         filter = input.value.toUpperCase();
         table = document.getElementById("userTable");
         tr = table.getElementsByTagName("tr");
+
         for (i = 1; i < tr.length; i++) {
           td = tr[i].getElementsByTagName("td")[1];
           if (td) {
