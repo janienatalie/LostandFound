@@ -15,20 +15,16 @@ body {
   align-items: flex-start;
 }
 
-<<<<<<< HEAD
-h1 {
+h2 {
   color: #763996;
+
   font-family: Poppins;
   font-size: 30px;
   font-style: normal;
   font-weight: 600;
-  line-height: normal;
-=======
-h2 {
-  color: #6a1b9a;
-  font-size: 2em;
-  margin-bottom: 20px;
->>>>>>> 22e2884fcb131589c51cc1bf4426f163ed3fa5ba
+  line-height: 16px; /* 40% */
+
+  text-transform: capitalize;
 }
 
 .search-box {
@@ -55,26 +51,49 @@ h2 {
 }
 
 .search-box i {
-  color: #800080;
+  color: #763996;
   margin-left: 10px;
 }
 
-table {
+.listofitemstable {
+  width: 100%; /* Membuat tabel mengisi lebar kontainer */
+  margin-top: 50px;
+  overflow-x: auto; /* Menambahkan scroll horizontal jika tabel terlalu lebar */
+}
+
+.listofitemstable table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 10px;
+  table-layout: fixed; /* Mengatur lebar kolom agar lebih konsisten */
 }
 
-th,
-td {
-  padding: 10px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
+.listofitemstable thead {
+  background-color: #763996;
+  color: white;
+  text-align: center;
+  font-size: 16px;
 }
 
-th {
-  background-color: #6a1b9a;
-  color: #fff;
+.listofitemstable tbody {
+  text-align: center;
+}
+
+.listofitemstable td,
+.listofitemstable th {
+  padding: 10px; /* Menyelaraskan padding antara th dan td */
+  border: 1px solid #ddd; /* Menambahkan border antara sel */
+  font-size: 16px;
+}
+
+.listofitemstable th {
+  padding-top: 12px; /* Memberikan sedikit ruang di bagian atas */
+  padding-bottom: 12px; /* Memberikan ruang di bagian bawah */
+  /* font-weight: bold; */
+  font-size: 16px;
+}
+
+.listofitemstable tr:nth-child(even) {
+  background-color: #c7c7c7; /* Memberikan warna latar belakang pada baris genap */
 }
 
 @media (max-width: 600px) {

@@ -14,26 +14,27 @@
       <div class="search-box">
         <input
           type="text"
-          placeholder="Cari"
+          placeholder="Cari..."
           id="searchInput"
           onkeyup="searchTable()"
         />
         <i class="fas fa-search"></i>
       </div>
-      <table id="userTable">
-        <thead>
-          <tr>
-            <th>No</th>
-            <th>Nama</th>
-            <th>Nama Pengguna</th>
-            <th>NPM</th>
-            <th>Nomor Handphone</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Data pengguna akan ditambahkan di sini -->
-        </tbody>
-      </table>
+
+      <div class="listofitemstable" class="table-responsive-xl">
+        <table>
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Nama</th>
+              <th>Nama Pengguna</th>
+              <th>NPM</th>
+              <th>Nomor Handphone</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
     </div>
     <script>
       function searchTable() {

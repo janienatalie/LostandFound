@@ -11,37 +11,42 @@
     <div class="container">
       <h2>Daftar Barang</h2>
       <div class="search-container">
-        <div class="dropdown">
-          <select>
-            <option value="" disabled selected>Hilang atau Ditemukan</option>
-            <option value="hilang">Hilang</option>
-            <option value="ditemukan">Ditemukan</option>
+        <div class="dropdown-lost-and-found">
+          <select name="lost-found" class="dropdownlostandfound" id="dropdown">
+            <option hidden value="" disabled selected>
+              Kehilangan atau Penemuan
+            </option>
+            <option value="Lost">Kehilangan</option>
+            <option value="Found">Penemuan</option>
           </select>
         </div>
         <div class="search-box">
           <input
             type="text"
-            placeholder="Cari"
+            placeholder="Cari..."
             id="searchInput"
             onkeyup="searchTable()"
           />
           <i class="fas fa-search"></i>
         </div>
       </div>
-      <table>
-        <thead>
-          <tr>
-            <th>No</th>
-            <th>Nama</th>
-            <th>NPM</th>
-            <th>Kampus</th>
-            <th>Item</th>
-            <th>Lokasi</th>
-            <th>Tanggal</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
+      <div class="listofitemstable" class="table-responsive-xl">
+        <table>
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Nama</th>
+              <th>NPM</th>
+              <th>Kampus</th>
+              <th>Item</th>
+              <th>Lokasi</th>
+              <th>Tanggal</th>
+              <th>Foto Barang</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
     </div>
     <script>
       document.querySelectorAll(".dropdown").forEach((dropdown) => {
