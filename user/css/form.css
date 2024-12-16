@@ -107,6 +107,10 @@ form {
   font-family: "Poppins", sans-serif;
 }
 
+.form-group input:focus, select:focus {
+  outline: none;
+}
+
 .required {
   color: rgb(220, 29, 29);
 }

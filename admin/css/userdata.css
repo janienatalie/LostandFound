@@ -15,6 +15,7 @@ body {
   align-items: flex-start;
 }
 
+<<<<<<< HEAD
 h1 {
   color: #763996;
   font-family: Poppins;
@@ -22,6 +23,12 @@ h1 {
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+=======
+h2 {
+  color: #6a1b9a;
+  font-size: 2em;
+  margin-bottom: 20px;
+>>>>>>> 22e2884fcb131589c51cc1bf4426f163ed3fa5ba
 }
 
 .search-box {
