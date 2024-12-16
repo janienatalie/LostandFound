@@ -79,7 +79,7 @@ body {
   padding: 20px;
 }
 
-h1 {
+h2 {
   color: #763996;
   margin-left: 10px;
 }
@@ -214,7 +214,7 @@ td {
 }
 
 th {
-  background-color: #763996;;
+  background-color: #763996;
   color: white;
   text-align: center;
 }
