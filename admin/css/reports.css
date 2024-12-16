@@ -4,7 +4,7 @@
 }
 
 h1 {
-  color: #6a1b9a;
+  color: #763996;
   margin-left: 10px;
 }
 
@@ -19,11 +19,11 @@ h1 {
 
 .dropdown,
 .search-box {
-  border: 1px solid #6a1b9a;
+  border: 1px solid #763996;
   border-radius: 8px;
   padding: 10px 30px;
   font-size: 16px;
-  color: #6a1b9a;
+  color: #763996;
 }
 
 .dropdown {
@@ -33,7 +33,7 @@ h1 {
 .dropdown:focus,
 .search-box:focus {
   outline: none;
-  border-color: #6a1b9a;
+  border-color: #763996;
 }
 
 .search-box {
@@ -50,7 +50,7 @@ h1 {
 .search-box svg {
   width: 20px;
   height: 20px;
-  fill: #6a1b9a;
+  fill: #763996;
 }
 
 .table {
@@ -80,7 +80,7 @@ body {
 }
 
 h1 {
-  color: #6a1b9a;
+  color: #763996;
   margin-left: 10px;
 }
 
@@ -95,11 +95,11 @@ h1 {
 
 .dropdown,
 .search-box {
-  border: 1px solid #6a1b9a;
+  border: 1px solid #763996;
   border-radius: 8px;
   padding: 10px 30px;
   font-size: 16px;
-  color: #6a1b9a;
+  color: #763996;
 }
 
 .dropdown {
@@ -109,7 +109,7 @@ h1 {
 .dropdown:focus,
 .search-box:focus {
   outline: none;
-  border-color: #6a1b9a;
+  border-color: #763996;
 }
 
 .search-box {
@@ -126,7 +126,7 @@ h1 {
 .search-box svg {
   width: 20px;
   height: 20px;
-  fill: #6a1b9a;
+  fill: #763996;
 }
 
 .table {
@@ -154,7 +154,7 @@ td {
 }
 
 th {
-  background-color: #6f2989;
+  background-color: #763996;
   color: white;
 }
 
@@ -172,8 +172,8 @@ tr:nth-child(odd) {
   margin-top: 20px;
   padding: 10px 20px;
   background-color: #ffffff;
-  color: #6a1b9a;
-  border: 1px solid #6a1b9a;
+  color: #763996;
+  border: 1px solid #763996;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
@@ -182,13 +182,13 @@ tr:nth-child(odd) {
 }
 
 .print-button:hover {
-  background-color: #6a1b9a;
+  background-color: #763996;
   color: white;
 }
 
 .print-button svg {
   margin-right: 10px;
-  fill: #6a1b9a;
+  fill: #763996;
   width: 20px;
   height: 20px;
 }
@@ -214,7 +214,7 @@ td {
 }
 
 th {
-  background-color: #6f2989;
+  background-color: #763996;;
   color: white;
   text-align: center;
 }
@@ -229,8 +229,8 @@ tr:nth-child(odd) {
   margin-top: 20px;
   padding: 10px 20px;
   background-color: #ffffff;
-  color: #6a1b9a;
-  border: 1px solid #6a1b9a;
+  color: #763996;
+  border: 1px solid #763996;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
@@ -239,13 +239,13 @@ tr:nth-child(odd) {
 }
 
 .print-button:hover {
-  background-color: #6a1b9a;
+  background-color: #763996;
   color: white;
 }
 
 .print-button svg {
   margin-right: 10px;
-  fill: #6a1b9a;
+  fill: #763996;
   width: 20px;
   height: 20px;
 }
