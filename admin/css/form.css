@@ -19,20 +19,30 @@ h1 {
   text-align: left;
 }
 
-.dropdown,
-.search-box {
-  width: 300px; /* Lebar yang sama */
-  height: 50px; /* Tinggi yang sama */
+.dropdown {
   display: flex;
-  align-items: center;
-  border: 2px solid #800080;
-  border-radius: 25px;
-  padding: 10px 15px;
-  box-sizing: border-box; /* Memastikan padding tidak memengaruhi ukuran */
+  width: 274px; /* Lost and Found */
+  padding: 14px 20px;
+  border-radius: 12px;
+  border: 2px solid #763996;
+  font-size: 16px;
+  background-color: white;
+  color: #c7c7c7;
 }
 
 .search-box {
-  margin-left: 772px;
+  display: flex;
+  width: 250px; /* Lebar search bar */
+  height: 54px;
+  padding: 0px 14px; /* Padding kiri dan kanan */
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+  border: 2px solid #763996;
+  color: #c7c7c7;
+  font-size: 16px;
+  background-color: white;
+  margin-left: auto;
 }
 .dropdown select {
   border: none;
@@ -45,11 +55,12 @@ h1 {
 }
 
 .search-container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end; /* Memindahkan ke sisi kanan */
-  margin-bottom: 20px;
-  position: relative;
+  display: flex; /* Tata letak horizontal */
+  justify-content: flex-start; /* Elemen mulai dari kiri */
+  align-items: center; /* Luruskan secara vertikal */
+  gap: 20px; /* Jarak antar elemen */
+  margin-top: 20px; /* Jarak dari elemen sebelumnya */
+  width: 100%; /* Pastikan kontainer memenuhi lebar layar */
 }
 .search-box input {
   border: none;
