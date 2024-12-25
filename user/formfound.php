@@ -95,9 +95,16 @@
         <button type="submit">Kirim</button>
       </form>
 
+ <?php     
       <!-- proses setelah data diinput -->
-       if($server)
+      if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $lokasi_kampus = $_POST['lokasi_kampus'];
+        $barang_ditemukan = $_POST['barang_ditemukan'];
+        $tempat_ditemukan = $_POST['tempat_ditemukan'];
+        $tanggal_ditemukan = $_POST['tanggal_ditemukan'];
+      }
 
+?>
       <!-- Footer Section -->
       <!-- <footer>
         <p>Copyright &copy; <b>Lost And Found.</b> Kelompok 6.</p>
