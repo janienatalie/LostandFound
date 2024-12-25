@@ -94,6 +94,10 @@
 
         <button type="submit">Kirim</button>
       </form>
+
+      <!-- proses setelah data diinput -->
+       if($server)
+
       <!-- Footer Section -->
       <!-- <footer>
         <p>Copyright &copy; <b>Lost And Found.</b> Kelompok 6.</p>
@@ -101,3 +105,4 @@
     </div>
   </body>
 </html>
+

@@ -37,5 +37,28 @@ CREATE TABLE `signup` (
 INSERT INTO `signup` (`userID`, `name`, `npm`, `phone`, `username`, `password`) VALUES
 (1, 'janie', '10122654', '089630770165', 'janie123', 'janie');
 
+
+-- Table structure for form_lost --
+CREATE TABLE form_lost (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    lokasi_kampus ENUM('Kampus E', 'Kampus D', 'Kampus G', 'Kampus H', 'Kampus F8'),
+    barang_hilang VARCHAR(255) NOT NULL,
+    tempat_hilang TEXT,
+    tanggal_hilang DATE,
+    foto_hilang MEDIUMBLOB
+);
+
+-- Table structure for form_found --
+CREATE TABLE form_found (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    lokasi_kampus ENUM('Kampus E', 'Kampus D', 'Kampus G', 'Kampus H', 'Kampus F8'),
+    barang_ditemukan VARCHAR(255) NOT NULL,
+    tempat_ditemukan TEXT,
+    tanggal_ditemukan DATE,
+    foto_ditemukan MEDIUMBLOB
+);
+
 -- Commit transaction --
 COMMIT;
+
+
