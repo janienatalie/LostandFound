@@ -33,7 +33,7 @@ $isFirstLogin = true;
             <!--  -->
 
             <!-- field -->
-            <form class="form-container">
+            <form class="form-container" method="POST" action="server/auth/sign-in.php" id="login-form">
               <p>Nama Pengguna</p>
               <input type="text" id="username" name="username">
                 
@@ -74,6 +74,44 @@ $isFirstLogin = true;
         }
 
         toggleSignUpInfo();
+        
+        // script login 
+        document.getElementById('button-option-admin').addEventListener('click', function() {
+            this.classList.add('active');
+            document.getElementById('button-option-user').classList.remove('active');
+            document.getElementById('user_type').value = 'admin'; // Set user_type to admin
+            toggleSignUpInfo();
+        });
+
+        document.getElementById('button-option-user').addEventListener('click', function() {
+            this.classList.add('active');
+            document.getElementById('button-option-admin').classList.remove('active');
+            document.getElementById('user_type').value = 'user'; // Set user_type to user
+            toggleSignUpInfo();
+        });
+
+        // Prevent default form submission and handle via JavaScript
+        document.getElementById('login-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            
+            const response = await fetch(this.action, {
+                method: this.method,
+                body: formData,
+            });
+            
+            const result = await response.json();
+                window.location.href = '/lostandfound/dashboard.php'; 
+
+
+            if (result.success) {
+                window.location.href = '/lostandfound/dashboard.php'; 
+            } else {
+                alert(result.message); 
+            }
+        });
     </script>
+
+    
 </body>
 </html>
