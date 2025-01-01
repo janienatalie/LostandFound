@@ -1,6 +1,61 @@
 <?php
-$isFirstLogin = true;  
+// Koneksi ke database
+$host = "localhost"; // Nama host database
+$user = "root"; // Username database
+$password = ""; // Password database
+$database = "coba"; // Nama database
+
+$conn = new mysqli($host, $user, $password, $database);
+
+// Cek koneksi
+if ($conn->connect_error) {
+    die("Koneksi gagal: " . $conn->connect_error);
+}
+
+// Proses jika formulir dikirim
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Ambil data dari formulir
+    $nama = trim($_POST['name']);
+    $npm = trim($_POST['npm']);
+    $nomor_telepon = trim($_POST['phone']);
+    $username = trim($_POST['username']);
+    $password = trim($_POST['password']);
+    $confirm_password = trim($_POST['confirm-password']);
+
+    // Validasi data
+    if (empty($nama) || empty($npm) || empty($nomor_telepon) || empty($username) || empty($password) || empty($confirm_password)) {
+        echo "<script>alert('Semua field harus diisi.');</script>";
+    } elseif ($password !== $confirm_password) {
+        echo "<script>alert('Password dan konfirmasi password tidak cocok.'); window.location.href = 'signup.php';</script>";
+    } else {
+        // Hash password
+        $password_hash = password_hash($password, PASSWORD_DEFAULT);
+
+        // Query untuk menyimpan data
+        $sql = "INSERT INTO Users (nama, npm, nomor_telepon, username, password_hash) VALUES (?, ?, ?, ?, ?)";
+
+        // Gunakan prepared statement untuk mencegah SQL Injection
+        $stmt = $conn->prepare($sql);
+        if ($stmt) {
+            $stmt->bind_param("sssss", $nama, $npm, $nomor_telepon, $username, $password_hash);
+
+            // Eksekusi statement
+            if ($stmt->execute()) {
+                echo "<script>alert('Pendaftaran berhasil. Silakan login.'); window.location.href = 'index.php';</script>";
+            } else {
+                echo "<script>alert('Terjadi kesalahan: " . $stmt->error . "');</script>";
+            }
+
+            $stmt->close();
+        } else {
+            echo "<script>alert('Terjadi kesalahan: " . $conn->error . "');</script>";
+        }
+    }
+}
+
+$conn->close();
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +81,8 @@ $isFirstLogin = true;
             <h2 class='title'>Daftar Akun</h2>
 
             <!-- field -->
-            <form class="form-container">
+            <form action="signup.php" method="POST" class="form-container">
+
               <p>Nama</p>
               <input type="text" id="name" name="name">
                 
