@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Validasi data
     if (empty($username) || empty($password)) {
-        echo "<script>alert('Please fill in all fields.');</script>";
+        echo "<script>alert('Harap isi semua kolom.');</script>";
     } else {
         // Query berdasarkan user_type
         if ($user_type === 'admin') {
@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             echo "<script>alert('Berhasil Login.'); window.location.href = 'dashboard.php';</script>";
         } else {
-            echo "<script>alert('Invalid username or password.'); window.location.href = 'index.php';</script>";;
+            echo "<script>alert('Nama pengguna atau kata sandi tidak valid.'); window.location.href = 'index.php';</script>";;
         }
 
         $stmt->close();
