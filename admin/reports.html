@@ -4,20 +4,26 @@
 <link rel="stylesheet" href="/admin/css/reports.css">
 </head>
 <body>
-<div class="content">
-    <h2>Reports</h2>
-    <div class="container">
-        <select class="dropdown">
-            <option value="">Kehilangan</option>
-            <option value="">Penemuan</option>
-        </select>
-        <div class="search-box">
-            <input type="text" placeholder="Cari" />
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path d="M10 2a8 8 0 1 0 5.29 14.71l5 5a1 1 0 0 0 1.41-1.42l-5-5A8 8 0 0 0 10 2Zm0 2a6 6 0 1 1-6 6 6 6 0 0 1 6-6Z"/>
-            </svg>
+    <div class="content">
+        <h2>Laporan</h2>
+        <div class="search-container">
+          <div class="dropdown">
+            <select>
+              <option value="" disabled selected>Hilang atau Ditemukan</option>
+              <option value="hilang">Hilang</option>
+              <option value="ditemukan">Ditemukan</option>
+            </select>
+          </div>
+          <div class="search-box">
+            <input
+              type="text"
+              placeholder="Cari"
+              id="searchInput"
+              onkeyup="searchTable()"
+            />
+            <i class="fas fa-search"></i>
+          </div>
         </div>
-    </div>
 
     <div class="table">
         <table>
