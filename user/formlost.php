@@ -40,7 +40,7 @@
         bawah ini dengan benar dan jelas.
       </p>
       <form
-        action="proses_kehilangan.php"
+        action=""
         method="POST"
         enctype="multipart/form-data"
         class="form-laporan"
@@ -92,3 +92,65 @@
     </div>
   </body>
 </html>
+
+<?php
+
+include 'config.php';
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $lokasi_kampus = $_POST['lokasi'];
+    $barang_hilang = $_POST['barang'];
+    $tempat_hilang = $_POST['tempat'];
+    $tanggal_hilang = $_POST['tanggal'];
+    $foto = $_FILES['foto'];
+
+    // Validasi input
+    if (empty($lokasi_kampus) || empty($barang_hilang) || empty($tempat_hilang) || empty($tanggal_hilang)) {
+        die("Semua input wajib diisi.");
+    }
+
+    // Proses upload file
+    $foto_hilang = null;
+    if (!empty($foto['name'])) {
+    $target_dir = "uploads/";
+
+    // Memeriksa apakah folder uploads ada
+    if (!is_dir($target_dir)) {
+        // Membuat folder jika belum ada
+        mkdir($target_dir, 0777, true);
+    }
+
+    $foto_hilang = $target_dir . time() . "_" . basename($foto["name"]);
+    $image_file_type = strtolower(pathinfo($foto_hilang, PATHINFO_EXTENSION));
+
+        // Validasi jenis file
+        $allowed_types = ['jpg', 'jpeg', 'png', 'gif'];
+        if (!in_array($image_file_type, $allowed_types)) {
+            die("Hanya format JPG, JPEG, PNG, dan GIF yang diperbolehkan.");
+        }
+
+        // Validasi ukuran file
+        if ($foto['size'] > 5000000) {  
+            die("File terlalu besar (maksimal 5MB).");
+        }
+
+        // Pindahkan file ke folder tujuan
+        if (!move_uploaded_file($foto["tmp_name"], $foto_hilang)) {  
+            die("Gagal mengunggah file.");
+        }   
+    }
+
+    // Simpan ke database
+    $stmt = $conn->prepare("INSERT INTO form_lost (lokasi_kampus, barang_hilang, tempat_hilang, tanggal_hilang, foto_hilang) VALUES (?, ?, ?, ?, ?)");
+    $stmt->bind_param("sssss", $lokasi_kampus, $barang_hilang, $tempat_hilang, $tanggal_hilang, $foto_hilang);  // Menggunakan $foto_hilang untuk path foto
+
+    if ($stmt->execute()) {
+       echo "<script>alert('Formulir berhasil dikirim.');</script>";;
+    } else {
+        echo "Gagal menyimpan data: " . $stmt->error;
+    }
+
+    $stmt->close();
+}
+$conn->close();
+?>
