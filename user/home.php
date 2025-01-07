@@ -1,6 +1,6 @@
 <?php
-include '../database/config.php';
 include './navbar.php';
+include '../database/config.php';
 session_start();
 ?>
 
@@ -11,7 +11,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lost & Found - Gunadarma University</title>
     <link rel="stylesheet" href="./css/home.css">
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     
 </head>
 <body>

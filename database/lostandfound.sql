@@ -31,8 +31,6 @@ CREATE TABLE Admins (
 
 );
 
-INSERT INTO `admins`(`id`, `username`, `password_hash`) VALUES (1,'admin','admin123');
-
 -- Tabel untuk menyimpan formulir kehilangan barang
 CREATE TABLE LostItems (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -49,7 +47,7 @@ CREATE TABLE LostItems (
 CREATE TABLE FoundItems (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
-    lokasi_kampus ENUM('Kampus E', 'Kampus D', 'Kampus G', 'Kampus H', 'Kampus F8')
+    lokasi_kampus ENUM('Kampus E', 'Kampus D', 'Kampus G', 'Kampus H', 'Kampus F8'),
     barang_ditemukan VARCHAR(100) NOT NULL,
     tempat_menemukan VARCHAR(255) NOT NULL,
     tanggal_menemukan DATE NOT NULL,
