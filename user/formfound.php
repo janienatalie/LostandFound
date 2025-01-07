@@ -50,7 +50,7 @@
         kembali.
       </p>
       <form
-        action="proses_kehilangan.php"
+        action=""
         method="POST"
         enctype="multipart/form-data"
         class="form-laporan"
@@ -60,12 +60,13 @@
             >Lokasi Kampus <span class="required">*</span></label
           >
           <select id="lokasi" name="lokasi" required>
-            <option hidden value="">Pilih Lokasi Kampus</option>
-            <option value="Kampus E">Kampus E</option>
-            <option value="Kampus D">Kampus D</option>
-            <option value="Kampus G">Kampus G</option>
-            <option value="Kampus H">Kampus H</option>
+            <option value="">Pilih Lokasi Kampus</option>
+            <option value="Kampus A">Kampus D</option>
+            <option value="Kampus B">Kampus E</option>
+            <option value="Kampus F4">Kampus F4</option>
             <option value="Kampus F8">Kampus F8</option>
+            <option value="Kampus C">Kampus G</option>
+            <option value="Kampus D">Kampus H</option>
           </select>
         </div>
 
@@ -101,3 +102,66 @@
     </div>
   </body>
 </html>
+
+<?php
+
+include 'config.php';
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Menangkap data dari form
+    $lokasi_kampus = $_POST['lokasi'];
+    $barang_ditemukan = $_POST['barang'];
+    $tempat_ditemukan = $_POST['tempat'];
+    $tanggal_ditemukan = $_POST['tanggal'];
+    $foto = $_FILES['foto'];
+
+    // Validasi input
+    if (empty($lokasi_kampus) || empty($barang_ditemukan) || empty($tempat_ditemukan) || empty($tanggal_ditemukan)) {
+        die("Semua input wajib diisi.");
+    }
+
+    // Proses upload file
+    $foto_ditemukan = null;
+    if (!empty($foto['name'])) {
+        $target_dir = "uploads/";
+
+        // Memeriksa apakah folder uploads ada
+        if (!is_dir($target_dir)) {
+            // Membuat folder jika belum ada
+            mkdir($target_dir, 0777, true);
+        }
+
+        $foto_ditemukan = $target_dir . time() . "_" . basename($foto["name"]);
+        $image_file_type = strtolower(pathinfo($foto_ditemukan, PATHINFO_EXTENSION));
+
+        // Validasi jenis file
+        $allowed_types = ['jpg', 'jpeg', 'png', 'gif'];
+        if (!in_array($image_file_type, $allowed_types)) {
+            die("Hanya format JPG, JPEG, PNG, dan GIF yang diperbolehkan.");
+        }
+
+        // Validasi ukuran file
+        if ($foto['size'] > 5000000) {  // Maksimal 5MB
+            die("File terlalu besar (maksimal 5MB).");
+        }
+
+        // Pindahkan file ke folder tujuan
+        if (!move_uploaded_file($foto["tmp_name"], $foto_ditemukan)) {
+            die("Gagal mengunggah file.");
+        }
+    }
+
+    // Simpan data ke dalam database formlost
+    $stmt = $conn->prepare("INSERT INTO form_found (lokasi_kampus, barang_ditemukan, tempat_ditemukan, tanggal_ditemukan, foto_ditemukan) VALUES (?, ?, ?, ?, ?)");
+    $stmt->bind_param("sssss", $lokasi_kampus, $barang_ditemukan, $tempat_ditemukan, $tanggal_ditemukan, $foto_ditemukan);
+
+    if ($stmt->execute()) {
+      echo "<script>alert('Formulir berhasil disimpan.');</script>";;
+    } else {
+        echo "Gagal menyimpan data: " . $stmt->error;
+    }
+
+    $stmt->close();
+}
+$conn->close();
+?>
