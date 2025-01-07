@@ -34,12 +34,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['username'] = $user['username'];
             $_SESSION['user_type'] = $user_type;
 
-            echo "<script>alert('Berhasil Login.'); window.location.href = './user/home.php';</script>";
+            if ($user_type === 'admin') {
+                echo "<script>alert('Berhasil Login sebagai Admin.'); window.location.href = './admin/dashboard.php';</script>";
+            } else {
+                echo "<script>alert('Berhasil Login.'); window.location.href = './user/home.php';</script>";
+            }
         } else {
             echo "<script>alert('Nama pengguna atau kata sandi tidak valid.'); window.location.href = 'index.php';</script>";;
         }
-            
-        $stmt->close();
+
     }
 }
 

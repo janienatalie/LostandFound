@@ -13,3 +13,4 @@ try {
 } catch (Exception $e) {
     die('Gagal menambahkan admin: ' . $e->getMessage());
 }
+?>
