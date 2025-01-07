@@ -151,7 +151,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
 
-    // Simpan data ke dalam database
+
+    // Simpan data ke dalam database formlost
     $stmt = $conn->prepare("INSERT INTO form_found (lokasi_kampus, barang_ditemukan, tempat_ditemukan, tanggal_ditemukan, foto_ditemukan) VALUES (?, ?, ?, ?, ?)");
     $stmt->bind_param("sssss", $lokasi_kampus, $barang_ditemukan, $tempat_ditemukan, $tanggal_ditemukan, $foto_ditemukan);
 
