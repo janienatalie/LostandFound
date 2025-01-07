@@ -1,20 +1,7 @@
 <?php
+include './database/config.php';
 session_start(); // Start the session
-
-// Koneksi ke database
-$host = "localhost";
-$user = "root";
-$password = "";
-$database = "lostandfound";
-
 $isFirstLogin = true;
-
-$conn = new mysqli($host, $user, $password, $database);
-
-// Cek koneksi
-if ($conn->connect_error) {
-    die("Koneksi gagal: " . $conn->connect_error);
-}
 
 // Proses jika formulir dikirim
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -29,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         // Query berdasarkan user_type
         if ($user_type === 'admin') {
-            $query = "SELECT id, username, password_hash FROM admins WHERE username = ?";
+            $query = "SELECT id, username, password_hash FROM Admins WHERE username = ?";
         } else {
             $query = "SELECT id, username, password_hash FROM users WHERE username = ?";
         }
@@ -47,11 +34,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['username'] = $user['username'];
             $_SESSION['user_type'] = $user_type;
 
-            echo "<script>alert('Berhasil Login.'); window.location.href = 'dashboard.php';</script>";
+            echo "<script>alert('Berhasil Login.'); window.location.href = './user/home.php';</script>";
         } else {
             echo "<script>alert('Nama pengguna atau kata sandi tidak valid.'); window.location.href = 'index.php';</script>";;
         }
-
+            
         $stmt->close();
     }
 }

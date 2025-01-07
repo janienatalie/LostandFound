@@ -10,32 +10,49 @@ CREATE USER IF NOT EXISTS 'lostandfound_user'@'%' IDENTIFIED BY 'password';
 GRANT SELECT, INSERT, UPDATE, DELETE ON lostandfound.* TO 'lostandfound_user'@'%';
 USE lostandfound;
 
--- Table structure for admin login --
-CREATE TABLE `adm_login` (
-  `admID` int NOT NULL AUTO_INCREMENT,
-  `adm_usn` varchar(50) NOT NULL,
-  `adm_password` varchar(255) NOT NULL,
-  PRIMARY KEY (`admID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table `adm_login` --
-INSERT INTO `adm_login` (`admID`, `adm_usn`, `adm_password`) VALUES
-(1, 'admin', 'admin123');
+-- Tabel untuk menyimpan data pengguna
+CREATE TABLE Users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nama VARCHAR(100) NOT NULL,
+    npm VARCHAR(20) NOT NULL,
+    nomor_telepon VARCHAR(15) NOT NULL,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    password_hash VARCHAR(255) NOT NULL -- Kata sandi akan disimpan dalam bentuk hash
+);
 
--- Table structure for user signup --
-CREATE TABLE `signup` (
-  `userID` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(100) NOT NULL,
-  `npm` varchar(8) NOT NULL UNIQUE,
-  `phone` varchar(50) NOT NULL,
-  `username` varchar(50) NOT NULL UNIQUE,
-  `password` varchar(255) NOT NULL,
-  PRIMARY KEY (`userID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+INSERT INTO `users`(`id`, `nama`, `npm`, `nomor_telepon`, `username`, `password_hash`) VALUES (1,'kevin', '10122645', '08963818319343', 'kevin', 'kevin123');
 
--- Dumping data for table `signup` --
-INSERT INTO `signup` (`userID`, `name`, `npm`, `phone`, `username`, `password`) VALUES
-(1, 'janie', '10122654', '089630770165', 'janie123', 'janie');
+-- Tabel untuk menyimpan data admin
+CREATE TABLE Admins (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    password_hash VARCHAR(255) NOT NULL -- Kata sandi admin juga disimpan dalam bentuk hash
 
--- Commit transaction --
-COMMIT;
+);
+
+INSERT INTO `admins`(`id`, `username`, `password_hash`) VALUES (1,'admin','admin123');
+
+-- Tabel untuk menyimpan formulir kehilangan barang
+CREATE TABLE LostItems (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    lokasi_kampus ENUM('Kampus E', 'Kampus D', 'Kampus G', 'Kampus H', 'Kampus F8'),
+    barang_hilang VARCHAR(100) NOT NULL,
+    tempat_kehilangan VARCHAR(255) NOT NULL,
+    tanggal_kehilangan DATE NOT NULL,
+    foto_barang VARCHAR(255), -- Lokasi atau nama file gambar barang
+    FOREIGN KEY (user_id) REFERENCES Users(id) ON DELETE CASCADE
+);
+
+-- Tabel untuk menyimpan formulir penemuan barang
+CREATE TABLE FoundItems (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    lokasi_kampus ENUM('Kampus E', 'Kampus D', 'Kampus G', 'Kampus H', 'Kampus F8')
+    barang_ditemukan VARCHAR(100) NOT NULL,
+    tempat_menemukan VARCHAR(255) NOT NULL,
+    tanggal_menemukan DATE NOT NULL,
+    foto_barang VARCHAR(255), -- Lokasi atau nama file gambar barang
+    FOREIGN KEY (user_id) REFERENCES Users(id) ON DELETE CASCADE
+);

@@ -1,5 +1,8 @@
-<!-- Navbar -->
-<?php include 'navbar.php'; ?>
+<?php
+include '../database/config.php';
+include './navbar.php';
+session_start();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,13 +10,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lost & Found - Gunadarma University</title>
-    <link rel="stylesheet" href="/user/css/home.css">
+    <link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="/css/style.css" />
     
 </head>
 <body>
     <!-- Header Section -->
-    <header>
+    <!-- <header>
         <div class="navbar">
             <div class="logo">
                 <img src="/image/logo.png" alt="Lost & Found Logo" class="logo-image">
@@ -27,11 +30,11 @@
                 </ul>
             </nav>
         </div>
-    </header>
+    </header> -->
 
     <!-- Hero Section -->
     <section class="hero">
-        <img src="/image/gundarhd.png" alt="Building Image" class="hero-image">
+        <img src="../image/gundarhd.png" alt="Building Image" class="hero-image">
     </section>
             <div class="header">
                 Universitas Gunadarma Lost And Found
@@ -47,7 +50,7 @@
             </p>
         </div>
         <div class="image-section">
-            <img src="/image/gundar_build.png" alt="Gunadarma University Building">
+            <img src="../image/gundar_build.png" alt="Gunadarma University Building">
         </div>
     </div>
 

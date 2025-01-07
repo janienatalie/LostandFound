@@ -1,16 +1,14 @@
 <?php
 
-$server = "localhost";
-$username = "lostandfound_user";
-$password = "password";
-$database = "lostandfound";
+$host = "localhost"; // Nama host database
+$user = "root"; // Username database
+$password = ""; // Password database
+$database = "lostandfound"; // Nama database
 
-$conn = mysqli_connect($server,$username,$password,$database);
+$conn = new mysqli($host, $user, $password, $database);
 
-if(!$conn){
-    die("<script>alert('connection Failed.')</script>");
+// Cek koneksi
+if ($conn->connect_error) {
+    die("Koneksi gagal: " . $conn->connect_error);
 }
-// else{
-//     echo "<script>alert('connection successfully.')</script>";
-// }
 ?>
