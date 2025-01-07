@@ -30,12 +30,11 @@ h2 {
   font-size: 16px;
   background-color: white;
   color: #c7c7c7;
-  margin-bottom: 25px;
 }
 
 .search-box {
   display: flex;
-  width: 209px; /* Lebar search bar */
+  width: 274px; /* Lebar search bar */
   height: 20px;
   padding: 0px 14px; /* Padding kiri dan kanan */
   justify-content: space-between;
@@ -46,7 +45,6 @@ h2 {
   font-size: 16px;
   background-color: white;
   margin-left: auto;
-  margin-bottom: 25px;
 }
 
 .dropdown select {
