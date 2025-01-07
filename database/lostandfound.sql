@@ -21,8 +21,6 @@ CREATE TABLE Users (
     password_hash VARCHAR(255) NOT NULL -- Kata sandi akan disimpan dalam bentuk hash
 );
 
-INSERT INTO `users`(`id`, `nama`, `npm`, `nomor_telepon`, `username`, `password_hash`) VALUES (1,'kevin', '10122645', '08963818319343', 'kevin', 'kevin123');
-
 -- Tabel untuk menyimpan data admin
 CREATE TABLE Admins (
     id INT AUTO_INCREMENT PRIMARY KEY,

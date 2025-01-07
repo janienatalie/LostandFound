@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +14,7 @@
 
 .title {
   color: #763996;
-  /* font-family: "Poppins", sans-serif; */
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
   text-align: left;
 }
@@ -42,6 +44,7 @@
   font-size: 16px;
   background-color: white;
   color: #c7c7c7; /* Warna teks default */
+  font-family: "Poppins", sans-serif;
 }
 
 .dropdownlostandfound option[value=""],
@@ -71,6 +74,7 @@ select:focus {
   background-color: white;
   margin-left: auto; /* Mengarahkan search bar ke kanan */
 }
+
 button {
   all: unset;
   cursor: pointer;

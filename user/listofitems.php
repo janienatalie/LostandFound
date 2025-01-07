@@ -1,6 +1,7 @@
 <?php
-$sql = "SELECT barang, lokasi_kampus, tempat, tanggal, foto_barang FROM kehilangan";
-$result = $conn->query($sql);
+include './navbar.php';
+include '../database/config.php';
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -10,17 +11,7 @@ $result = $conn->query($sql);
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/listofitems.css" />
-    <!-- loading bar -->
-    <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
     <link rel="stylesheet" href="../css/style.css" />
-    <!-- fontowesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
     <title>Lost and Found - List of Items</title>
   </head>
   <body>
@@ -61,7 +52,7 @@ $result = $conn->query($sql);
               type="search"
               id="query"
               name="q"
-              placeholder="Search..."
+              placeholder="Cari..."
               aria-label="Search through site content"
             />
             <i class="fa fa-search search-icon" aria-hidden="true"></i>
@@ -80,28 +71,6 @@ $result = $conn->query($sql);
             </tr>
           </thead>
           <tbody>
-          <?php
-            if ($result->num_rows > 0) {
-                // Output data untuk setiap baris
-                while ($row = $result->fetch_assoc()) {
-                    echo "<tr>";
-                    echo "<td>" . htmlspecialchars($row['barang']) . "</td>";
-                    echo "<td>" . htmlspecialchars($row['lokasi_kampus']) . "</td>";
-                    echo "<td>" . htmlspecialchars($row['tempat']) . "</td>";
-                    echo "<td>" . htmlspecialchars($row['tanggal']) . "</td>";
-                    echo "<td>";
-                    if (!empty($row['foto_barang'])) {
-                        echo "<img src='uploads/" . htmlspecialchars($row['foto_barang']) . "' alt='Foto Barang' style='width:100px;'>";
-                    } else {
-                        echo "Tidak ada foto";
-                    }
-                    echo "</td>";
-                    echo "</tr>";
-                }
-            } else {
-                echo "<tr><td colspan='5'>Tidak ada data ditemukan</td></tr>";
-            }
-            ?>
           </tbody>
         </table>
       </div>

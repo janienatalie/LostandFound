@@ -1,18 +1,16 @@
-<!-- <?php
+<?php
+include '../database/config.php';
+include './sidebar.php';
+session_start();
 
-// include '../config.php';
-// session_start();
-
-// page redirect
 // $usermail="";
 // $usermail=$_SESSION['usermail'];
 // if($usermail == true){
 
 // }else{
-//   header("location: http://localhost/hotelmanage_system/index.php");
+//   header("location: http://localhost/lostandfound/index.php");
 // }
-
-?> -->
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,6 +19,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/dashboard.css" />
+    <link rel="stylesheet" href="/css/" />
     <!-- loading bar -->
     <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
     <link rel="stylesheet" href="/css/style.css" />

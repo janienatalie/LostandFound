@@ -1,7 +1,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lost & Found laporan</title>
-<link rel="stylesheet" href="reports.css">
+<link rel="stylesheet" href="./css/reports.css">
+<link rel="stylesheet" href="../css/style.css">
 <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -9,8 +10,51 @@
 </head>
 <body>
 <div class="content">
-        <h2>Laporan</h2>
-        <div class="search-container">
+  <div class="title">
+     <h2>Laporan</h2>
+  </div>
+  <div class="dropdown">
+        <div class="controls-container">
+          <div class="dropdown-lost-and-found">
+            <select
+              name="lost-found"
+              class="dropdownlostandfound"
+              id="dropdown"
+            >
+              <option hidden value="" disabled selected>
+                Kehilangan atau Penemuan
+              </option>
+              <option value="Lost">Kehilangan</option>
+              <option value="Found">Penemuan</option>
+            </select>
+          </div>
+
+          <div class="dropdown-campus">
+            <select name="campus" class="dropdowncampus" id="dropdowncampus">
+              <option hidden value="" disabled selected>Kampus</option>
+              <option value="CampusE">Kampus E</option>
+              <option value="CampusD">Kampus D</option>
+              <option value="CampusG">Kampus G</option>
+              <option value="CampusH">Kampus H</option>
+              <option value="CampusF8">Kampus F8</option>
+            </select>
+          </div>
+
+          <div class="search-bar">
+            <!-- Ikon pencarian -->
+            <input
+              type="search"
+              id="query"
+              name="q"
+              placeholder="Cari..."
+              aria-label="Search through site content"
+            />
+            <i class="fa fa-search search-icon" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+
+        <!-- <div class="search-container">
           <div class="dropdown">
             <select>
               <option value="" disabled selected>Hilang atau Ditemukan</option>
@@ -27,7 +71,7 @@
             />
             <i class="fas fa-search"></i>
           </div>
-        </div>
+        </div> -->
 
     <div class="table">
         <table>
@@ -66,6 +110,6 @@
             </a>
         </div>
     </div>
-</div>
+  </div>
 </body>
 </html>
