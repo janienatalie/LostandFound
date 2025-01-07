@@ -9,57 +9,79 @@ h1 {
 }
 
 .container {
+  width: 90%;
+  margin: 20px auto;
+  /* <!--tambah--> */
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 30px 10px;
-  height: auto;
-  width: auto;
+  flex-direction: column;
+  align-items: flex-start;
 }
-
-.dropdown,
-.search-box {
-  border: 1px solid #763996;
-  border-radius: 8px;
-  padding: 10px 30px;
-  font-size: 16px;
-  color: #763996;
+h2 {
+  color: #6a1b9a;
+  text-align: left;
 }
 
 .dropdown {
-  background-color: #ffffff;
-}
-
-.dropdown:focus,
-.search-box:focus {
-  outline: none;
-  border-color: #763996;
+  display: flex;
+  width: 274px; /* Lost and Found */
+  padding: 14px 20px;
+  border-radius: 12px;
+  border: 2px solid #763996;
+  font-size: 16px;
+  background-color: white;
+  color: #c7c7c7;
+  margin-bottom: 25px;
 }
 
 .search-box {
   display: flex;
+  width: 209px; /* Lebar search bar */
+  height: 20px;
+  padding: 0px 14px; /* Padding kiri dan kanan */
+  justify-content: space-between;
   align-items: center;
+  border-radius: 12px;
+  border: 2px solid #763996;
+  color: #c7c7c7;
+  font-size: 16px;
+  background-color: white;
+  margin-left: auto;
+  margin-bottom: 25px;
+}
+
+.dropdown select {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #3b3b3b;
+  flex: 1;
+  background: transparent;
+  cursor: pointer;
+}
+
+.search-container {
+  display: flex; 
+  justify-content: flex-start; 
+  align-items: center; 
+  gap: 20px; 
+  margin-top: 20px; 
+  width: 100%; 
 }
 
 .search-box input {
   border: none;
   outline: none;
   font-size: 16px;
+  color: #0b0a0a;
+  flex: 1;
+  background: transparent;
 }
 
-.search-box svg {
-  width: 20px;
-  height: 20px;
-  fill: #763996;
+.search-box i {
+  color: #800080;
+  margin-left: 10px;
 }
 
-.table {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: none;
-  overflow-x: auto;
-}
 
 table {
   width: 100%;
