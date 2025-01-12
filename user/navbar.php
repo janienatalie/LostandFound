@@ -38,7 +38,7 @@ if (isset($_GET['logout'])) {
         list-style: none;
         display: flex;
         gap: 20px;
-        align-items: center; /* Added to align items vertically */
+        align-items: center;
     }
 
     .navbar nav ul li {
@@ -86,8 +86,9 @@ if (isset($_GET['logout'])) {
 
     /* Style untuk tombol logout */
     .logout-btn {
+        display: inline-block;
         background-color: #763996;
-        color: white;
+        color: #ff9934 !important; /* Override default link color */
         padding: 8px 20px;
         border: none;
         border-radius: 5px;
@@ -100,9 +101,14 @@ if (isset($_GET['logout'])) {
     }
 
     .logout-btn:hover {
-        background-color: #622c80;
-        color: white;
+        background-color: #ff9934;
+        color: #763996 !important; /* Override default link color */
         text-decoration: none;
+    }
+
+    /* Remove the active underline style for logout button */
+    .navbar nav ul li:last-child::after {
+        display: none;
     }
 </style>
 <script>
@@ -146,7 +152,7 @@ if (isset($_GET['logout'])) {
                         <a href="listofitems.php">Daftar Barang</a>
                     </li>
                     <li>
-                        <a href="#" onclick="confirmLogout()" class="logout-btn">Keluar</a>
+                        <button onclick="confirmLogout()" class="logout-btn">Keluar</button>
                     </li>
                 </ul>
             </nav>
