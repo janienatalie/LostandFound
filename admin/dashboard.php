@@ -1,107 +1,186 @@
 <?php
+session_start();
 include '../database/config.php';
 include './sidebar.php';
-session_start();
 
-// $usermail="";
-// $usermail=$_SESSION['usermail'];
-// if($usermail == true){
 
-// }else{
-//   header("location: http://localhost/lostandfound/index.php");
-// }
+
+// Count lost items
+$lost_query = "SELECT COUNT(*) as lost_count FROM LostItems";
+$lost_result = mysqli_query($conn, $lost_query);
+$lost_data = mysqli_fetch_assoc($lost_result);
+$lost_count = $lost_data['lost_count'];
+
+// Count found items
+$found_query = "SELECT COUNT(*) as found_count FROM FoundItems";
+$found_result = mysqli_query($conn, $found_query);
+$found_data = mysqli_fetch_assoc($found_result);
+$found_count = $found_data['found_count'];
+
+// Count users (excluding admins)
+$users_query = "SELECT COUNT(*) as users_count FROM Users";
+$users_result = mysqli_query($conn, $users_query);
+$users_data = mysqli_fetch_assoc($users_result);
+$users_count = $users_data['users_count'];
+
+// Check for query errors
+function checkQueryError($result, $query_type) {
+    global $conn;
+    if (!$result) {
+        echo "Error fetching " . $query_type . ": " . mysqli_error($conn);
+        return true;
+    }
+    return false;
+}
+
+// Check all queries for errors
+$has_errors = checkQueryError($lost_result, "lost items") ||
+              checkQueryError($found_result, "found items") ||
+              checkQueryError($users_result, "users");
+
+// Close the database connection
+mysqli_close($conn);
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/dashboard.css" />
-    <link rel="stylesheet" href="/css/" />
-    <!-- loading bar -->
+    <!-- <link rel="stylesheet" href="./css/dashboard.css" /> -->
     <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
     <link rel="stylesheet" href="/css/style.css" />
-    <!-- fontowesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <title>Lost and Found - Admin</title>
-  </head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Poppins', sans-serif;
+        }
 
-  <body>
-    <div class="titlepage">
-      <h2>Dasbor</h2>
-    </div>
+        .dashboard-content {
+            margin-left: 20%; /* Sesuaikan dengan lebar sidebar */
+            padding: 20px 40px;
+        }
 
-    <div class="rectangle">
-      <h2>Jumlah Barang yang Hilang</h2>
-      <h3>28</h3>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="81"
-        height="78"
-        viewBox="0 0 81 78"
-        fill="none"
-      >
-        <path
-          d="M53.2486 68.334H48.8987C47.7451 68.334 46.6387 67.895 45.8229 67.1136C45.0071 66.3322 44.5488 65.2724 44.5488 64.1673V22.5007C44.5488 21.3956 45.0071 20.3358 45.8229 19.5544C46.6387 18.773 47.7451 18.334 48.8987 18.334H74.9982C76.1518 18.334 77.2582 18.773 78.074 19.5544C78.8898 20.3358 79.3481 21.3956 79.3481 22.5007V30.834"
-          stroke="white"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <path
-          d="M66.2984 18.3337V5.83366C66.2984 4.72859 65.8401 3.66878 65.0243 2.88738C64.2085 2.10598 63.1021 1.66699 61.9485 1.66699H5.39971C4.24604 1.66699 3.13963 2.10598 2.32386 2.88738C1.5081 3.66878 1.0498 4.72859 1.0498 5.83366V55.8337C1.0498 56.9387 1.5081 57.9985 2.32386 58.7799C3.13963 59.5613 4.24604 60.0003 5.39971 60.0003H44.5488M70.6483 76.667V76.7087M70.6483 64.167C72.5983 64.161 74.4899 63.5286 76.0203 62.371C77.5507 61.2133 78.6314 59.5973 79.0895 57.7817C79.5476 55.9661 79.3565 54.0557 78.547 52.3564C77.7374 50.657 76.3561 49.267 74.6241 48.4087C72.8936 47.5595 70.9141 47.2963 69.0075 47.6617C67.101 48.0271 65.3796 48.9996 64.1234 50.4212M57.5986 22.5003H66.2984"
-          stroke="white"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-    </div>
-    <div class="rectangle">
-      <h2>Jumlah Barang yang Ditemukan</h2>
-      <h3>10</h3>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="81"
-        height="74"
-        viewBox="0 0 81 74"
-        fill="none"
-      >
-        <path
-          d="M44.5488 49.584V22.5007C44.5488 21.3956 45.0071 20.3358 45.8229 19.5544C46.6387 18.773 47.7451 18.334 48.8987 18.334H74.9982C76.1518 18.334 77.2582 18.773 78.074 19.5544C78.8898 20.3358 79.3481 21.3956 79.3481 22.5007V39.1673"
-          stroke="white"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <path
-          d="M66.2984 18.3337V5.83366C66.2984 4.72859 65.8401 3.66878 65.0243 2.88738C64.2086 2.10598 63.1021 1.66699 61.9485 1.66699H5.39971C4.24604 1.66699 3.13963 2.10598 2.32386 2.88738C1.5081 3.66878 1.0498 4.72859 1.0498 5.83366V55.8337C1.0498 56.9387 1.5081 57.9985 2.32386 58.7799C3.13963 59.5613 4.24604 60.0003 5.39971 60.0003H35.849M57.5986 22.5003H66.2984M53.2487 64.167L61.9485 72.5003L79.3481 55.8337"
-          stroke="white"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-    </div>
-    <div class="rectangle">
-      <h2>Jumlah Pengguna</h2>
-      <h3>28</h3>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="90"
-        height="86"
-        viewBox="0 0 90 86"
-        fill="none"
-      >
-        <mask
+        .titlepage {
+            color: #763996;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .titlepage h2 {
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .stats-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .rectangle {
+            width: 950px;
+            height: 130px;
+            flex-shrink: 0;
+            border-radius: 10px;
+            background: #763996;
+            position: relative;
+        }
+
+        .rectangle h2,
+        .rectangle h3 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-shrink: 0;
+            color: #fff;
+            padding-top: 22px;
+            padding-left: 28px;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin: 0;
+        }
+
+        .rectangle svg {
+            position: absolute;
+            left: 850px;
+            bottom: 40px;
+            width: 60px;
+            height: 60px;
+        }
+
+        @media (max-width: 40rem) {
+            .dashboard-content {
+                margin-left: 0;
+                padding: 20px;
+            }
+
+            .rectangle {
+                width: 100%;
+                max-width: 950px;
+            }
+
+            .rectangle svg {
+                left: auto;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dashboard-content">
+        <div class="titlepage">
+            <h2>Dasbor</h2>
+        </div>
+
+        <div class="stats-wrapper">
+            <div class="rectangle">
+                <h2>Jumlah Barang yang Hilang</h2>
+                <h3><?php echo $has_errors ? "Error loading data" : number_format($lost_count); ?></h3>
+ 
+                <svg xmlns="http://www.w3.org/2000/svg" width="81" height="78" viewBox="0 0 81 78" fill="none">
+                    <path
+                        d="M53.2486 68.334H48.8987C47.7451 68.334 46.6387 67.895 45.8229 67.1136C45.0071 66.3322 44.5488 65.2724 44.5488 64.1673V22.5007C44.5488 21.3956 45.0071 20.3358 45.8229 19.5544C46.6387 18.773 47.7451 18.334 48.8987 18.334H74.9982C76.1518 18.334 77.2582 18.773 78.074 19.5544C78.8898 20.3358 79.3481 21.3956 79.3481 22.5007V30.834"
+                        stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    />
+                    <path
+                        d="M66.2984 18.3337V5.83366C66.2984 4.72859 65.8401 3.66878 65.0243 2.88738C64.2085 2.10598 63.1021 1.66699 61.9485 1.66699H5.39971C4.24604 1.66699 3.13963 2.10598 2.32386 2.88738C1.5081 3.66878 1.0498 4.72859 1.0498 5.83366V55.8337C1.0498 56.9387 1.5081 57.9985 2.32386 58.7799C3.13963 59.5613 4.24604 60.0003 5.39971 60.0003H44.5488M70.6483 76.667V76.7087M70.6483 64.167C72.5983 64.161 74.4899 63.5286 76.0203 62.371C77.5507 61.2133 78.6314 59.5973 79.0895 57.7817C79.5476 55.9661 79.3565 54.0557 78.547 52.3564C77.7374 50.657 76.3561 49.267 74.6241 48.4087C72.8936 47.5595 70.9141 47.2963 69.0075 47.6617C67.101 48.0271 65.3796 48.9996 64.1234 50.4212M57.5986 22.5003H66.2984"
+                        stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    />
+                </svg>
+            </div>
+
+            <div class="rectangle">
+                <h2>Jumlah Barang yang Ditemukan</h2>
+                <h3><?php echo $has_errors ? "Error loading data" : number_format($found_count); ?></h3>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="81" height="74" viewBox="0 0 81 74" fill="none">
+                    <path
+                        d="M44.5488 49.584V22.5007C44.5488 21.3956 45.0071 20.3358 45.8229 19.5544C46.6387 18.773 47.7451 18.334 48.8987 18.334H74.9982C76.1518 18.334 77.2582 18.773 78.074 19.5544C78.8898 20.3358 79.3481 21.3956 79.3481 22.5007V39.1673"
+                        stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    />
+                    <path
+                        d="M66.2984 18.3337V5.83366C66.2984 4.72859 65.8401 3.66878 65.0243 2.88738C64.2086 2.10598 63.1021 1.66699 61.9485 1.66699H5.39971C4.24604 1.66699 3.13963 2.10598 2.32386 2.88738C1.5081 3.66878 1.0498 4.72859 1.0498 5.83366V55.8337C1.0498 56.9387 1.5081 57.9985 2.32386 58.7799C3.13963 59.5613 4.24604 60.0003 5.39971 60.0003H35.849M57.5986 22.5003H66.2984M53.2487 64.167L61.9485 72.5003L79.3481 55.8337"
+                        stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    />
+                </svg>
+            </div>
+
+            <div class="rectangle">
+                <h2>Jumlah Pengguna</h2>
+                <h3><?php echo $has_errors ? "Error loading data" : number_format($users_count);?></h3>
+                <svg xmlns="http://www.w3.org/2000/svg" width="90" height="86" viewBox="0 0 90 86" fill="none">
+                <mask
           id="mask0_511_1514"
           style="mask-type: luminance"
           maskUnits="userSpaceOnUse"
@@ -142,12 +221,12 @@ session_start();
             stroke-linejoin="round"
           />
         </mask>
-        <g mask="url(#mask0_511_1514)">
-          <path d="M-7 -7H97.3977V93H-7V-7Z" fill="white" />
-        </g>
-      </svg>
+                    <g mask="url(#mask0_511_1514)">
+                        <path d="M-7 -7H97.3977V93H-7V-7Z" fill="white" />
+                    </g>
+                </svg>
+            </div>
+        </div>
     </div>
-  </body>
-
-  <script src="./javascript/script.js"></script>
+</body>
 </html>
