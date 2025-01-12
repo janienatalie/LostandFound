@@ -184,9 +184,9 @@ input[type="search"]::-ms-clear {
   font-size: 16px;
 }
 
-.listofitemstable tr:nth-child(even) {
-  background-color: #c7c7c7; /* Memberikan warna latar belakang pada baris genap */
-}
+/* .listofitemstable tr:nth-child(even) {
+  background-color: #c7c7c7; Memberikan warna latar belakang pada baris genap
+} */
 
 /* .span {
   color: #ffffff;

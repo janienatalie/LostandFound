@@ -13,6 +13,8 @@ session_start();
       <!-- Multiple CSS files yang mungkin konflik -->
       <link rel="stylesheet" href="./css/listofitems.css" />
       <link rel="stylesheet" href="../css/style.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+
   </head>
   <body>
   <?php include 'navbar.php'; ?>
@@ -221,6 +223,105 @@ session_start();
         }
 
         console.log('Script loaded completely');
+
+        // Tambahkan setelah deklarasi variabel di bagian atas script
+const searchInput = document.getElementById('query');
+
+// Tambahkan event listener untuk search input
+if (searchInput) {
+    searchInput.addEventListener('input', debounce(() => {
+        filterTable(searchInput.value.toLowerCase());
+    }, 300));
+}
+
+// Fungsi debounce untuk menghindari terlalu banyak pemanggilan fungsi
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// Fungsi untuk memfilter tabel
+function filterTable(searchTerm) {
+    const tableBody = document.querySelector('.listofitemstable tbody');
+    const rows = tableBody.getElementsByTagName('tr');
+    let hasResults = false;
+
+    for (const row of rows) {
+        let text = '';
+        const cells = row.getElementsByTagName('td');
+        
+        // Mengumpulkan teks dari setiap sel kecuali kolom foto
+        for (let i = 0; i < cells.length - 1; i++) {
+            text += cells[i].textContent.toLowerCase() + ' ';
+        }
+
+        if (text.includes(searchTerm)) {
+            row.style.display = '';
+            hasResults = true;
+        } else {
+            row.style.display = 'none';
+        }
+    }
+
+    // Jika tidak ada hasil yang ditemukan
+    if (!hasResults) {
+        if (!document.getElementById('no-results-row')) {
+            const noResultsRow = document.createElement('tr');
+            noResultsRow.id = 'no-results-row';
+            noResultsRow.innerHTML = '<td colspan="5" style="text-align: center;">Tidak ada hasil yang ditemukan</td>';
+            tableBody.appendChild(noResultsRow);
+        }
+    } else {
+        const noResultsRow = document.getElementById('no-results-row');
+        if (noResultsRow) {
+            noResultsRow.remove();
+        }
+    }
+}
+
+// Modifikasi fungsi updateTable yang sudah ada
+function updateTable(data) {
+    console.log('Updating table with data:', data);
+    const tbody = document.querySelector('.listofitemstable tbody');
+    
+    if (!tbody) {
+        console.error('Table body not found!');
+        return;
+    }
+    
+    tbody.innerHTML = '';
+
+    if (!data || data.length === 0) {
+        const row = document.createElement('tr');
+        row.innerHTML = '<td colspan="5" style="text-align: center;">Tidak ada data</td>';
+        tbody.appendChild(row);
+        return;
+    }
+
+    data.forEach(item => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${item.barang || ''}</td>
+            <td>${item.lokasi_kampus || ''}</td>
+            <td>${item.tempat || ''}</td>
+            <td>${formatDate(item.tanggal) || ''}</td>
+            <td>${item.foto_barang ? `<img src="${item.foto_barang}" alt="Foto Barang" style="max-width: 100px;">` : 'Tidak ada foto'}</td>
+        `;
+        tbody.appendChild(row);
+    });
+
+    // Terapkan filter pencarian jika ada
+    if (searchInput && searchInput.value) {
+        filterTable(searchInput.value.toLowerCase());
+    }
+}
     </script>
   </body>
 </html>
