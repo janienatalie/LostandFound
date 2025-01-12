@@ -1,5 +1,13 @@
 <?php
 $currentPage = basename($_SERVER['PHP_SELF']);
+
+// Logout logic
+if (isset($_GET['logout'])) {
+    session_start();
+    session_destroy();
+    header("Location: ../index.php");
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -30,6 +38,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
         list-style: none;
         display: flex;
         gap: 20px;
+        align-items: center; /* Added to align items vertically */
     }
 
     .navbar nav ul li {
@@ -60,7 +69,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
         content: '';
         position: absolute;
         left: 0;
-        bottom: -8px; /* Jarak antara teks dan garis */
+        bottom: -8px;
         width: 100%;
         height: 2px;
         background-color: #ff9934;
@@ -70,19 +79,48 @@ $currentPage = basename($_SERVER['PHP_SELF']);
     .navbar-scrolled {
         background-color: #ffffff;
     }
+
     .navbar nav ul li a::selection {
         display: none;
+    }
+
+    /* Style untuk tombol logout */
+    .logout-btn {
+        background-color: #763996;
+        color: white;
+        padding: 8px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        margin-left: 20px;
+    }
+
+    .logout-btn:hover {
+        background-color: #622c80;
+        color: white;
+        text-decoration: none;
     }
 </style>
 <script>
     window.addEventListener('scroll', function() {
         const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 50) { // Ubah angka sesuai kebutuhan
+        if (window.scrollY > 50) {
             navbar.classList.add('navbar-scrolled');
         } else {
             navbar.classList.remove('navbar-scrolled');
         }
     });
+
+    // Confirmation before logout
+    function confirmLogout() {
+        if (confirm('Apakah Anda yakin ingin keluar?')) {
+            window.location.href = '?logout=true';
+        }
+    }
 </script>
 </head>
 <body>
@@ -106,6 +144,9 @@ $currentPage = basename($_SERVER['PHP_SELF']);
                     </li>
                     <li class="<?php echo $currentPage == 'listofitems.php' ? 'active' : ''; ?>">
                         <a href="listofitems.php">Daftar Barang</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="confirmLogout()" class="logout-btn">Keluar</a>
                     </li>
                 </ul>
             </nav>
