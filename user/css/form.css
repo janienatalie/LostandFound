@@ -8,7 +8,7 @@
   margin: 10px;
   margin: 20px auto;
   max-width: 1200px;
-  margin-bottom: 80px; /* memberi ruang untuk footer */
+  /* margin-bottom: 80px; memberi ruang untuk footer */
   margin-top: 100px;
 }
 
@@ -43,9 +43,9 @@ form {
   padding: 20px;
 }
 
-.form-group {
+/* .form-group {
   margin-bottom: 10px;
-}
+} */
 
 .form-group label {
   display: block;
@@ -71,7 +71,7 @@ select:focus {
 
 .form-section {
   min-height: calc(100vh - 140px); /* 70px untuk navbar + 70px untuk footer */
-  padding-bottom: 80px; /* memberi ruang untuk footer */
+  /* padding-bottom: 80px; memberi ruang untuk footer */
 }
 
 .required {

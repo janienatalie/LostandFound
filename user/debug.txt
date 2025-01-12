@@ -28458,3 +28458,4755 @@ Results: Array
 
 )
 
+2025-01-12 14:03:27 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+2025-01-12 14:03:27 Request received
+     (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-10
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736233472_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736267708_download (1).png
+        )
+
+    [3] => Array
+        (
+            [barang] => Dompet
+            [lokasi_kampus] => Kampus E
+            [tempat] => Kantin
+            [tanggal] => 2024-01-10
+            [foto_barang] => 
+        )
+
+)
+
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+(
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736233472_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736267708_download (1).png
+        )
+
+    [3] => Array
+        (
+            [barang] => Dompet
+            [lokasi_kampus] => Kampus E
+            [tempat] => Kantin
+            [tanggal] => 2024-01-10
+            [foto_barang] => 
+        )
+
+)
+
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-10
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736233472_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736267708_download (1).png
+        )
+
+    [3] => Array
+        (
+            [barang] => Dompet
+            [lokasi_kampus] => Kampus E
+            [tempat] => Kantin
+            [tanggal] => 2024-01-10
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:03:46 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+2025-01-12 14:03:46 Request received
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-10
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736233472_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736267708_download (1).png
+        )
+
+    [3] => Array
+        (
+            [barang] => Dompet
+            [lokasi_kampus] => Kampus E
+            [tempat] => Kantin
+            [tanggal] => 2024-01-10
+            [foto_barang] => 
+        )
+
+)
+
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-10
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736233472_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736267708_download (1).png
+        )
+
+    [3] => Array
+        (
+            [barang] => Dompet
+            [lokasi_kampus] => Kampus E
+            [tempat] => Kantin
+            [tanggal] => 2024-01-10
+            [foto_barang] => 
+        )
+
+)
+
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-10
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736233472_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736267708_download (1).png
+        )
+
+    [3] => Array
+        (
+            [barang] => Dompet
+            [lokasi_kampus] => Kampus E
+            [tempat] => Kantin
+            [tanggal] => 2024-01-10
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:03:52 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-10
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736233472_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736267708_download (1).png
+        )
+
+    [3] => Array
+        (
+            [barang] => Dompet
+            [lokasi_kampus] => Kampus E
+            [tempat] => Kantin
+            [tanggal] => 2024-01-10
+            [foto_barang] => 
+        )
+
+)
+
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-10
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736233472_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736267708_download (1).png
+        )
+
+    [3] => Array
+        (
+            [barang] => Dompet
+            [lokasi_kampus] => Kampus E
+            [tempat] => Kantin
+            [tanggal] => 2024-01-10
+            [foto_barang] => 
+        )
+
+)
+
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-10
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736233472_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736267708_download (1).png
+        )
+
+    [3] => Array
+        (
+            [barang] => Dompet
+            [lokasi_kampus] => Kampus E
+            [tempat] => Kantin
+            [tanggal] => 2024-01-10
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:14:12 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+2025-01-12 14:14:12 Request received
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-10
+            [foto_barang] => 
+        )
+
+    [2] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736233472_Partner Kami.png
+        )
+
+    [3] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736267708_download (1).png
+        )
+
+    [4] => Array
+        (
+            [barang] => Dompet
+            [lokasi_kampus] => Kampus E
+            [tempat] => Kantin
+            [tanggal] => 2024-01-10
+            [foto_barang] => 
+        )
+
+)
+
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-10
+            [foto_barang] => 
+        )
+
+    [2] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736233472_Partner Kami.png
+        )
+
+    [3] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736267708_download (1).png
+        )
+
+    [4] => Array
+        (
+            [barang] => Dompet
+            [lokasi_kampus] => Kampus E
+            [tempat] => Kantin
+            [tanggal] => 2024-01-10
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:14:13 Request received
+POST data: Array
+(
+    [type] => Found
+    [campus] => 
+)
+
+Query: SELECT barang_ditemukan as barang, 
+                 lokasi_kampus, 
+                 tempat_menemukan as tempat, 
+                 tanggal_menemukan as tanggal, 
+                 foto_barang 
+          FROM FoundItems ORDER BY tanggal_menemukan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus F8
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736233674_Home.png
+        )
+
+    [1] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-02
+            [foto_barang] => 
+        )
+
+    [2] => Array
+        (
+            [barang] => Kunci
+            [lokasi_kampus] => Kampus E
+            [tempat] => Parkiran
+            [tanggal] => 2024-01-10
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:19:23 Request received
+2025-01-12 14:19:23 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+2025-01-12 14:19:23 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-10
+            [foto_barang] => 
+        )
+
+    [2] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736233472_Partner Kami.png
+        )
+
+    [3] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736267708_download (1).png
+        )
+
+    [4] => Array
+        (
+            [barang] => Dompet
+            [lokasi_kampus] => Kampus E
+            [tempat] => Kantin
+            [tanggal] => 2024-01-10
+            [foto_barang] => 
+        )
+
+)
+
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-10
+            [foto_barang] => 
+        )
+
+    [2] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736233472_Partner Kami.png
+        )
+
+    [3] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736267708_download (1).png
+        )
+
+    [4] => Array
+        (
+            [barang] => Dompet
+            [lokasi_kampus] => Kampus E
+            [tempat] => Kantin
+            [tanggal] => 2024-01-10
+            [foto_barang] => 
+        )
+
+)
+
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-10
+            [foto_barang] => 
+        )
+
+    [2] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736233472_Partner Kami.png
+        )
+
+    [3] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736267708_download (1).png
+        )
+
+    [4] => Array
+        (
+            [barang] => Dompet
+            [lokasi_kampus] => Kampus E
+            [tempat] => Kantin
+            [tanggal] => 2024-01-10
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:19:25 Request received
+POST data: Array
+(
+    [type] => Found
+    [campus] => 
+)
+
+Query: SELECT barang_ditemukan as barang, 
+                 lokasi_kampus, 
+                 tempat_menemukan as tempat, 
+                 tanggal_menemukan as tanggal, 
+                 foto_barang 
+          FROM FoundItems ORDER BY tanggal_menemukan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus F8
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736233674_Home.png
+        )
+
+    [1] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-02
+            [foto_barang] => 
+        )
+
+    [2] => Array
+        (
+            [barang] => Kunci
+            [lokasi_kampus] => Kampus E
+            [tempat] => Parkiran
+            [tanggal] => 2024-01-10
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:19:37 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+2025-01-12 14:19:37 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-10
+            [foto_barang] => 
+        )
+
+    [2] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736233472_Partner Kami.png
+        )
+
+    [3] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736267708_download (1).png
+        )
+
+    [4] => Array
+        (
+            [barang] => Dompet
+            [lokasi_kampus] => Kampus E
+            [tempat] => Kantin
+            [tanggal] => 2024-01-10
+            [foto_barang] => 
+        )
+
+)
+
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-10
+            [foto_barang] => 
+        )
+
+    [2] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736233472_Partner Kami.png
+        )
+
+    [3] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736267708_download (1).png
+        )
+
+    [4] => Array
+        (
+            [barang] => Dompet
+            [lokasi_kampus] => Kampus E
+            [tempat] => Kantin
+            [tanggal] => 2024-01-10
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:19:39 Request received
+POST data: Array
+(
+    [type] => Found
+    [campus] => 
+)
+
+Query: SELECT barang_ditemukan as barang, 
+                 lokasi_kampus, 
+                 tempat_menemukan as tempat, 
+                 tanggal_menemukan as tanggal, 
+                 foto_barang 
+          FROM FoundItems ORDER BY tanggal_menemukan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-02-01
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus F8
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736233674_Home.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-02
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci
+            [lokasi_kampus] => Kampus E
+            [tempat] => Parkiran
+            [tanggal] => 2024-01-10
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:20:31 Request received
+2025-01-12 14:20:31 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+2025-01-12 14:20:31 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-10
+            [foto_barang] => 
+        )
+
+    [2] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-08
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736233472_Partner Kami.png
+        )
+
+    [4] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736267708_download (1).png
+        )
+
+    [5] => Array
+        (
+            [barang] => Dompet
+            [lokasi_kampus] => Kampus E
+            [tempat] => Kantin
+            [tanggal] => 2024-01-10
+            [foto_barang] => 
+        )
+
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+     [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-10
+            [foto_barang] => 
+        )
+
+    [2] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-08
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736233472_Partner Kami.png
+        )
+
+    [4] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736267708_download (1).png
+        )
+
+    [5] => Array
+        (
+            [barang] => Dompet
+            [lokasi_kampus] => Kampus E
+            [tempat] => Kantin
+            [tanggal] => 2024-01-10
+            [foto_barang] => 
+        )
+
+)
+
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-10
+            [foto_barang] => 
+        )
+
+    [2] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-08
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736233472_Partner Kami.png
+        )
+
+    [4] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736267708_download (1).png
+        )
+
+    [5] => Array
+        (
+            [barang] => Dompet
+            [lokasi_kampus] => Kampus E
+            [tempat] => Kantin
+            [tanggal] => 2024-01-10
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:21:03 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+2025-01-12 14:21:03 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-10
+            [foto_barang] => 
+        )
+
+    [2] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-08
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736233472_Partner Kami.png
+        )
+
+    [4] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736267708_download (1).png
+        )
+
+    [5] => Array
+        (
+            [barang] => Dompet
+            [lokasi_kampus] => Kampus E
+            [tempat] => Kantin
+            [tanggal] => 2024-01-10
+            [foto_barang] => 
+        )
+
+)
+
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-10
+            [foto_barang] => 
+        )
+
+    [2] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-08
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736233472_Partner Kami.png
+        )
+
+    [4] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736267708_download (1).png
+        )
+
+    [5] => Array
+        (
+            [barang] => Dompet
+            [lokasi_kampus] => Kampus E
+            [tempat] => Kantin
+            [tanggal] => 2024-01-10
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:21:03 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-10
+            [foto_barang] => 
+        )
+
+    [2] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-08
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736233472_Partner Kami.png
+        )
+
+    [4] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736267708_download (1).png
+        )
+
+    [5] => Array
+        (
+            [barang] => Dompet
+            [lokasi_kampus] => Kampus E
+            [tempat] => Kantin
+            [tanggal] => 2024-01-10
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:21:04 Request received
+2025-01-12 14:21:04 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-10
+            [foto_barang] => 
+        )
+
+    [2] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-08
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736233472_Partner Kami.png
+        )
+
+    [4] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736267708_download (1).png
+        )
+
+    [5] => Array
+        (
+            [barang] => Dompet
+            [lokasi_kampus] => Kampus E
+            [tempat] => Kantin
+            [tanggal] => 2024-01-10
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:21:04 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-10
+            [foto_barang] => 
+        )
+
+    [2] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-08
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736233472_Partner Kami.png
+        )
+
+    [4] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736267708_download (1).png
+        )
+
+    [5] => Array
+        (
+            [barang] => Dompet
+            [lokasi_kampus] => Kampus E
+            [tempat] => Kantin
+            [tanggal] => 2024-01-10
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:21:28 Request received
+2025-01-12 14:21:28 Request received
+
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+2025-01-12 14:21:28 Request received
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+     [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-10
+            [foto_barang] => 
+        )
+
+    [2] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-08
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736233472_Partner Kami.png
+        )
+
+    [4] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736267708_download (1).png
+        )
+
+    [5] => Array
+        (
+            [barang] => Dompet
+            [lokasi_kampus] => Kampus E
+            [tempat] => Kantin
+            [tanggal] => 2024-01-10
+            [foto_barang] => 
+        )
+
+)
+
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-10
+            [foto_barang] => 
+        )
+
+    [2] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-08
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736233472_Partner Kami.png
+        )
+
+    [4] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736267708_download (1).png
+        )
+
+    [5] => Array
+        (
+            [barang] => Dompet
+            [lokasi_kampus] => Kampus E
+            [tempat] => Kantin
+            [tanggal] => 2024-01-10
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:21:41 Request received
+POST data: Array
+(
+    [type] => Found
+    [campus] => 
+)
+
+Query: SELECT barang_ditemukan as barang, 
+                 lokasi_kampus, 
+                 tempat_menemukan as tempat, 
+                 tanggal_menemukan as tanggal, 
+                 foto_barang 
+          FROM FoundItems ORDER BY tanggal_menemukan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-02-01
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-10
+            [foto_barang] => 
+        )
+
+    [2] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus F8
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736233674_Home.png
+        )
+
+    [3] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-02
+            [foto_barang] => 
+        )
+
+    [4] => Array
+        (
+            [barang] => Kunci
+            [lokasi_kampus] => Kampus E
+            [tempat] => Parkiran
+            [tanggal] => 2024-01-10
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:22:01 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-10
+            [foto_barang] => 
+        )
+
+    [2] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-08
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736233472_Partner Kami.png
+        )
+
+    [4] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736267708_download (1).png
+        )
+
+    [5] => Array
+        (
+            [barang] => Dompet
+            [lokasi_kampus] => Kampus E
+            [tempat] => Kantin
+            [tanggal] => 2024-01-10
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:22:33 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+2025-01-12 14:22:33 Request received
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [2] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-10
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-08
+            [foto_barang] => 
+        )
+
+    [4] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736233472_Partner Kami.png
+        )
+
+    [5] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736267708_download (1).png
+        )
+
+    [6] => Array
+        (
+            [barang] => Dompet
+            [lokasi_kampus] => Kampus E
+            [tempat] => Kantin
+            [tanggal] => 2024-01-10
+            [foto_barang] => 
+        )
+
+)
+
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [2] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-10
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-08
+            [foto_barang] => 
+        )
+
+    [4] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736233472_Partner Kami.png
+        )
+
+    [5] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736267708_download (1).png
+        )
+
+    [6] => Array
+        (
+            [barang] => Dompet
+            [lokasi_kampus] => Kampus E
+            [tempat] => Kantin
+            [tanggal] => 2024-01-10
+            [foto_barang] => 
+        )
+
+)
+
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [2] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-10
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-08
+            [foto_barang] => 
+        )
+
+    [4] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736233472_Partner Kami.png
+        )
+
+    [5] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus D
+            [tempat] => Masjid
+            [tanggal] => 2025-01-07
+            [foto_barang] => uploads/1736267708_download (1).png
+        )
+
+    [6] => Array
+        (
+            [barang] => Dompet
+            [lokasi_kampus] => Kampus E
+            [tempat] => Kantin
+            [tanggal] => 2024-01-10
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:23:26 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+)
+
+2025-01-12 14:23:26 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+)
+
+2025-01-12 14:23:26 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+)
+
+2025-01-12 14:23:29 Request received
+POST data: Array
+(
+    [type] => Found
+    [campus] => 
+)
+
+Query: SELECT barang_ditemukan as barang, 
+                 lokasi_kampus, 
+                 tempat_menemukan as tempat, 
+                 tanggal_menemukan as tanggal, 
+                 foto_barang 
+          FROM FoundItems ORDER BY tanggal_menemukan DESC
+Results: Array
+(
+)
+
+2025-01-12 14:23:42 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+2025-01-12 14:23:42 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+2025-01-12 14:23:42 Request received
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:24:00 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688238_Partner Kami.png
+        )
+
+)
+
+2025-01-12 14:24:00 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688238_Partner Kami.png
+        )
+
+)
+
+2025-01-12 14:24:18 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688238_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:24:18 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+2025-01-12 14:24:18 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688238_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688238_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:24:44 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688238_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:24:44 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688238_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:24:44 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688238_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:25:18 Request received
+2025-01-12 14:25:18 Request received
+
+    [campus] => 
+)
+
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+2025-01-12 14:25:18 Request received
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688238_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688238_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:25:20 Request received
+POST data: Array
+(
+    [type] => Found
+    [campus] => 
+)
+
+Query: SELECT barang_ditemukan as barang, 
+                 lokasi_kampus, 
+                 tempat_menemukan as tempat, 
+                 tanggal_menemukan as tanggal, 
+                 foto_barang 
+          FROM FoundItems ORDER BY tanggal_menemukan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688317_Tentang.png
+        )
+
+)
+
+2025-01-12 14:25:46 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688238_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:25:46 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688238_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:25:48 Request received
+POST data: Array
+(
+    [type] => Found
+    [campus] => 
+)
+
+Query: SELECT barang_ditemukan as barang, 
+                 lokasi_kampus, 
+                 tempat_menemukan as tempat, 
+                 tanggal_menemukan as tanggal, 
+                 foto_barang 
+          FROM FoundItems ORDER BY tanggal_menemukan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688317_Tentang.png
+        )
+
+    [1] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:26:05 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+2025-01-12 14:26:05 Request received
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688238_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688238_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:26:09 Request received
+POST data: Array
+(
+    [type] => Found
+    [campus] => 
+)
+
+Query: SELECT barang_ditemukan as barang, 
+                 lokasi_kampus, 
+                 tempat_menemukan as tempat, 
+                 tanggal_menemukan as tanggal, 
+                 foto_barang 
+          FROM FoundItems ORDER BY tanggal_menemukan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688317_Tentang.png
+        )
+
+    [1] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [2] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:26:31 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+2025-01-12 14:26:31 Request received
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688238_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688238_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:26:54 Request received
+2025-01-12 14:26:54 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688238_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688238_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:26:57 Request received
+POST data: Array
+(
+    [type] => Found
+    [campus] => 
+)
+
+Query: SELECT barang_ditemukan as barang, 
+                 lokasi_kampus, 
+                 tempat_menemukan as tempat, 
+                 tanggal_menemukan as tanggal, 
+                 foto_barang 
+          FROM FoundItems ORDER BY tanggal_menemukan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688317_Tentang.png
+        )
+
+    [1] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [2] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => tangga
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:27:25 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688238_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:27:25 Request received
+2025-01-12 14:27:25 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688238_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:27:26 Request received
+POST data: Array
+(
+    [type] => Found
+    [campus] => 
+)
+
+Query: SELECT barang_ditemukan as barang, 
+                 lokasi_kampus, 
+                 tempat_menemukan as tempat, 
+                 tanggal_menemukan as tanggal, 
+                 foto_barang 
+          FROM FoundItems ORDER BY tanggal_menemukan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688317_Tentang.png
+        )
+
+    [1] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [2] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => tangga
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [4] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => aaaaaaaa
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:27:41 Request received
+2025-01-12 14:27:41 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688238_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:27:44 Request received
+POST data: Array
+(
+    [type] => Found
+    [campus] => 
+)
+
+Query: SELECT barang_ditemukan as barang, 
+                 lokasi_kampus, 
+                 tempat_menemukan as tempat, 
+                 tanggal_menemukan as tanggal, 
+                 foto_barang 
+          FROM FoundItems ORDER BY tanggal_menemukan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688317_Tentang.png
+        )
+
+    [1] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [2] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => tangga
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [4] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => aaaaaaaa
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [5] => Array
+        (
+            [barang] => gwrgwrg
+            [lokasi_kampus] => Kampus F8
+            [tempat] => gwrgwgw
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:27:59 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+2025-01-12 14:27:59 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688238_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:27:59 Request received
+     (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688238_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688238_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:28:01 Request received
+POST data: Array
+(
+    [type] => Found
+    [campus] => 
+)
+
+Query: SELECT barang_ditemukan as barang, 
+                 lokasi_kampus, 
+                 tempat_menemukan as tempat, 
+                 tanggal_menemukan as tanggal, 
+                 foto_barang 
+          FROM FoundItems ORDER BY tanggal_menemukan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus G
+            [tempat] => gwrgwrg
+            [tanggal] => 2025-01-17
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688317_Tentang.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [4] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => tangga
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [5] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => aaaaaaaa
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [6] => Array
+        (
+            [barang] => gwrgwrg
+            [lokasi_kampus] => Kampus F8
+            [tempat] => gwrgwgw
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:28:29 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+2025-01-12 14:28:29 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+arang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688238_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688238_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688238_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:28:33 Request received
+POST data: Array
+(
+    [type] => Found
+    [campus] => 
+)
+
+Query: SELECT barang_ditemukan as barang, 
+                 lokasi_kampus, 
+                 tempat_menemukan as tempat, 
+                 tanggal_menemukan as tanggal, 
+                 foto_barang 
+          FROM FoundItems ORDER BY tanggal_menemukan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus G
+            [tempat] => gwrgwrg
+            [tanggal] => 2025-01-17
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688317_Tentang.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [4] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => tangga
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [5] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => aaaaaaaa
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [6] => Array
+        (
+            [barang] => gwrgwrg
+            [lokasi_kampus] => Kampus F8
+            [tempat] => gwrgwgw
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [7] => Array
+        (
+            [barang] => qqqq
+            [lokasi_kampus] => Kampus G
+            [tempat] => qqq
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:32:14 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688238_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:32:14 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688238_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:32:14 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688238_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:34:14 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688238_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:34:14 Request received
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688238_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688238_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:34:18 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688238_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:34:18 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+2025-01-12 14:34:18 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688238_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688238_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:34:20 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688238_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+2025-01-12 14:35:40 Request received
+2025-01-12 14:35:40 Request received
+
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688238_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688238_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus D
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [1] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => Kampus E
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => uploads/1736688238_Partner Kami.png
+        )
+
+    [2] => Array
+        (
+            [barang] => File
+            [lokasi_kampus] => 
+            [tempat] => Masjid
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+    [3] => Array
+        (
+            [barang] => Kunci Motor
+            [lokasi_kampus] => 
+            [tempat] => Toilet lantai 3
+            [tanggal] => 2025-01-12
+            [foto_barang] => 
+        )
+
+)
+

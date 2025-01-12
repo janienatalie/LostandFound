@@ -102,7 +102,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
                         <a href="formlost.php">Formulir Kehilangan</a>
                     </li>
                     <li class="<?php echo $currentPage == 'formfound.php' ? 'active' : ''; ?>">
-                        <a href="formfound.php">Form Penemuan</a>
+                        <a href="formfound.php">Formulir Penemuan</a>
                     </li>
                     <li class="<?php echo $currentPage == 'listofitems.php' ? 'active' : ''; ?>">
                         <a href="listofitems.php">Daftar Barang</a>
