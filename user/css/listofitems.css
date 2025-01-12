@@ -10,12 +10,13 @@
   margin: 10px;
   margin: 20px auto;
   max-width: 1200px;
+  margin-top: 100px;
 }
 
 .title {
   color: #763996;
   font-family: "Poppins", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   text-align: left;
 }
 
@@ -47,16 +48,16 @@
   font-family: "Poppins", sans-serif;
 }
 
-.dropdownlostandfound option[value=""],
-.dropdowncampus option[value=""] {
-  color: #c7c7c7; /* Warna placeholder */
-}
-
 .dropdowncampus input:focus,
 select:focus,
 .dropdownlostandfound input:focus,
 select:focus {
   outline: none;
+}
+
+.dropdownlostandfound option[value=""],
+.dropdowncampus option[value=""] {
+  color: #c7c7c7; /* Warna placeholder */
 }
 
 /* Search bar, diposisikan di kanan */
@@ -187,42 +188,20 @@ input[type="search"]::-ms-clear {
   background-color: #c7c7c7; /* Memberikan warna latar belakang pada baris genap */
 }
 
-.footer {
-  display: flex;
-  justify-content: center; /* Menempatkan konten di tengah horizontal */
-  align-items: center; /* Menempatkan konten di tengah vertikal */
-  width: 100%; /* Lebar footer sesuai lebar halaman */
-  height: 70px; /* Tinggi footer */
-  bottom: 0; /* Footer tetap berada di bawah */
-  background-color: #763996; /* Warna latar footer */
-}
-
-.copyrights-lost {
-  display: flex;
-  justify-content: flex-end; /* Menempatkan teks copyright di tengah secara horizontal */
-  margin-right: 40px;
-  font-family: "Open Sans-Regular", Helvetica;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 16px;
-  width: 100%; /* Memastikan lebar teks mengisi seluruh footer */
-}
-
-.span {
+/* .span {
   color: #ffffff;
 }
 
 .text-wrapper-2 {
   font-family: "Open Sans-Bold", Helvetica;
   font-weight: 700;
-}
+} */
 
 /* Responsivitas */
 @media (max-width: 768px) {
   .dropdown-lost-and-found,
   .dropdown-campus,
   .search-bar,
-  .footer,
   .frame {
     width: 100%;
   }

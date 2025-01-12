@@ -1,5 +1,4 @@
 <?php
-include './navbar.php';
 include '../database/config.php';
 session_start();
 
@@ -75,6 +74,7 @@ $conn->close();
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
+  <?php include './navbar.php';?>
     <div class="form-section">
       <h2>Form Kehilangan</h2>
       <p>
@@ -129,5 +129,6 @@ $conn->close();
         <button type="submit">Kirim</button>
       </form>
     </div>
+    <?php include './footer.php';?>
   </body>
 </html>
