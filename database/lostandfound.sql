@@ -37,5 +37,18 @@ CREATE TABLE `signup` (
 INSERT INTO `signup` (`userID`, `name`, `npm`, `phone`, `username`, `password`) VALUES
 (1, 'janie', '10122654', '089630770165', 'janie123', 'janie');
 
+CREATE TABLE `items` (
+    `itemID` int NOT NULL AUTO_INCREMENT,
+    `userID` int NOT NULL,
+    `status` enum('Lost','Found') NOT NULL,
+    `item_name` varchar(100) NOT NULL,
+    `campus` varchar(100) NOT NULL,
+    `location` varchar(255) NOT NULL,
+    `date` date NOT NULL,
+    `image_url` varchar(255) NOT NULL,
+    PRIMARY KEY (`itemID`),
+    FOREIGN KEY (`userID`) REFERENCES `signup`(`userID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 -- Commit transaction --
 COMMIT;

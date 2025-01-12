@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>List Of Items</title>
@@ -30,8 +31,8 @@
           <i class="fas fa-search"></i>
         </div>
       </div>
-      <div class="listofitemstable" class="table-responsive-xl">
-        <table>
+      <div class="listofitemstable table-responsive-xl">
+        <table id="itemTable">
           <thead>
             <tr>
               <th>No</th>
@@ -44,69 +45,66 @@
               <th>Foto Barang</th>
             </tr>
           </thead>
-          <tbody></tbody>
+          <tbody id="tableBody">
+            <!-- Data akan dimasukkan di sini secara dinamis -->
+          </tbody>
         </table>
       </div>
     </div>
+
     <script>
-      document.querySelectorAll(".dropdown").forEach((dropdown) => {
-        const select = dropdown.querySelector("select");
+      // Fungsi untuk mengambil data barang dari server
+      function fetchItems() {
+        fetch("get_items.php")
+          .then((response) => response.json())
+          .then((data) => {
+            const tbody = document.getElementById("tableBody");
+            tbody.innerHTML = "";
 
-        select.addEventListener("focus", () => {
-          dropdown.classList.add("active");
-        });
+            data.forEach((item, index) => {
+              const row = document.createElement("tr");
+              row.setAttribute("data-status", item.status);
+              row.innerHTML = `
+                <td>${index + 1}</td>
+                <td>${item.name}</td>
+                <td>${item.npm}</td>
+                <td>${item.campus}</td>
+                <td>${item.item_name}</td>
+                <td>${item.location}</td>
+                <td>${item.date}</td>
+                <td><img src="${
+                  item.image_url
+                }" alt="Item Image" style="max-width: 100px;"></td>
+              `;
+              tbody.appendChild(row);
+            });
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+      }
 
-        select.addEventListener("blur", () => {
-          dropdown.classList.remove("active");
-        });
-      });
-
-      // Fungsi untuk melakukan pencarian
+      // Fungsi untuk mencari data dalam tabel
       function searchTable() {
-        // Ambil nilai dari input pencarian dan ubah ke huruf kecil untuk pencocokan
         const searchValue = document
-          .querySelector(".search-container input")
+          .getElementById("searchInput")
           .value.toLowerCase();
+        const rows = document.querySelectorAll("#tableBody tr");
 
-        // Ambil semua baris dalam tabel (kecuali header)
-        const tableRows = document.querySelectorAll("table tbody tr");
-
-        // Loop melalui setiap baris tabel
-        tableRows.forEach((row) => {
-          // Ambil teks dari kolom Items
-          const itemsText = row.children[4].textContent.toLowerCase();
-
-          // Cek apakah nilai pencarian ada di kolom Items
-          if (itemsText.includes(searchValue)) {
-            // Tampilkan baris jika cocok
-            row.style.display = "";
-          } else {
-            // Sembunyikan baris jika tidak cocok
-            row.style.display = "none";
-          }
+        rows.forEach((row) => {
+          const text = row.textContent.toLowerCase();
+          row.style.display = text.includes(searchValue) ? "" : "none";
         });
       }
 
-      // Fungsi untuk menangani tombol "Has Been Found"
-      function markAsFound(button) {
-        const row = button.closest("tr");
-        row.style.backgroundColor = "#d4edda"; // Ubah warna baris sebagai tanda sudah ditemukan
-        button.disabled = true; // Nonaktifkan tombol setelah ditekan
-        button.textContent = "Found"; // Ubah teks tombol
-      }
+      // Fungsi untuk memfilter berdasarkan status (Lost/Found)
+      function filterByDropdown() {
+        const selectedValue = document.getElementById("dropdown").value;
+        const rows = document.querySelectorAll("#tableBody tr");
 
-      // Fungsi untuk menangani tombol "Delete"
-      function deleteRow(button) {
-        const row = button.closest("tr");
-        row.remove(); // Hapus baris dari tabel
-      }
-
-      // Fungsi untuk memfilter tabel berdasarkan status
-      function filterTable(status) {
-        const tableRows = document.querySelectorAll("table tbody tr");
-
-        tableRows.forEach((row) => {
-          if (row.getAttribute("data-status") === status || status === "") {
+        rows.forEach((row) => {
+          const status = row.getAttribute("data-status");
+          if (selectedValue === "" || status === selectedValue) {
             row.style.display = "";
           } else {
             row.style.display = "none";
@@ -114,26 +112,14 @@
         });
       }
 
-      // Tambahkan event listener ke tombol pencarian
+      // Event listeners
+      document.addEventListener("DOMContentLoaded", fetchItems);
       document
-        .querySelector(".search-container button")
-        .addEventListener("click", searchTable);
-
-      // Opsional: Tambahkan event listener ke input untuk pencarian langsung saat mengetik
+        .getElementById("dropdown")
+        .addEventListener("change", filterByDropdown);
       document
-        .querySelector(".search-container input")
+        .getElementById("searchInput")
         .addEventListener("input", searchTable);
-
-      // Tambahkan event listener ke tombol "Has Been Found" dan "Delete"
-      document
-        .querySelectorAll("table .action-buttons button")
-        .forEach((button) => {
-          if (button.textContent.includes("Has Been Found")) {
-            button.addEventListener("click", () => markAsFound(button));
-          } else if (button.textContent.includes("Delete")) {
-            button.addEventListener("click", () => deleteRow(button));
-          }
-        });
     </script>
   </body>
 </html>
