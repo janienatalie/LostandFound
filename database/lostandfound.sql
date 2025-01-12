@@ -1,13 +1,4 @@
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-DROP DATABASE IF EXISTS lostandfound;
-CREATE DATABASE IF NOT EXISTS lostandfound;
-
-DROP USER IF EXISTS 'lostandfound_user'@'%';
-CREATE USER IF NOT EXISTS 'lostandfound_user'@'%' IDENTIFIED BY 'password';
-GRANT SELECT, INSERT, UPDATE, DELETE ON lostandfound.* TO 'lostandfound_user'@'%';
+CREATE DATABASE lostandfound;
 USE lostandfound;
 
 
