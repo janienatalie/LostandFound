@@ -1,5 +1,4 @@
 <?php
-include './navbar.php';
 include '../database/config.php';
 session_start();
 ?>
@@ -10,27 +9,15 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lost & Found - Gunadarma University</title>
-    <link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="./css/home.css">
+ 
     
 </head>
 <body>
-    <!-- Header Section -->
-    <!-- <header>
-        <div class="navbar">
-            <div class="logo">
-                <img src="/image/logo.png" alt="Lost & Found Logo" class="logo-image">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#">Beranda</a></li>
-                    <li><a href="#">Formulir Kehilangan</a></li>
-                    <li><a href="#">Form Penemuan</a></li>
-                    <li><a href="#">Daftar Barang</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header> -->
+<?php include './navbar.php';?>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -91,10 +78,6 @@ session_start();
         </div>
         </section>
     </main>
-
-    <!-- Footer Section -->
-    <!-- <footer>
-        <p>&copy; 2024 Gunadarma University Lost & Found. kelompok 6.</p>
-    </footer> -->
+    <?php include './footer.php';?>
 </body>
 </html>
