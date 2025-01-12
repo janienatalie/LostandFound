@@ -39,6 +39,17 @@ session_start();
               <option value="Kampus F8">Kampus F8</option>
             </select>
           </div>
+          <div class="search-bar">
+            <!-- Ikon pencarian -->
+            <input
+              type="search"
+              id="query"
+              name="q"
+              placeholder="Cari..."
+              aria-label="Search through site content"
+            />
+            <i class="fa fa-search search-icon" aria-hidden="true"></i>
+          </div>
         </div>
       </div>
       <div class="listofitemstable">
