@@ -28458,3 +28458,2456 @@ Results: Array
 
 )
 
+2025-01-12 13:59:00 Request received
+2025-01-12 13:59:00 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+2025-01-12 13:59:00 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+2025-01-12 13:59:31 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => Kampus E
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems WHERE lokasi_kampus = ? ORDER BY tanggal_kehilangan DESC
+2025-01-12 13:59:39 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => Kampus D
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems WHERE lokasi_kampus = ? ORDER BY tanggal_kehilangan DESC
+2025-01-12 13:59:49 Request received
+POST data: Array
+(
+    [type] => Found
+    [campus] => Kampus D
+)
+
+Query: SELECT barang_ditemukan as barang, 
+                 lokasi_kampus, 
+                 tempat_menemukan as tempat, 
+                 tanggal_menemukan as tanggal, 
+                 foto_barang 
+          FROM FoundItems WHERE lokasi_kampus = ? ORDER BY tanggal_menemukan DESC
+2025-01-12 13:59:51 Request received
+POST data: Array
+(
+    [type] => Found
+    [campus] => Kampus H
+)
+
+Query: SELECT barang_ditemukan as barang, 
+                 lokasi_kampus, 
+                 tempat_menemukan as tempat, 
+                 tanggal_menemukan as tanggal, 
+                 foto_barang 
+          FROM FoundItems WHERE lokasi_kampus = ? ORDER BY tanggal_menemukan DESC
+2025-01-12 14:00:29 Request received
+2025-01-12 14:00:29 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+2025-01-12 14:00:29 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+2025-01-12 14:10:36 Request received
+2025-01-12 14:10:36 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+2025-01-12 14:10:36 Request received
+Results: Array
+(
+)
+
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+)
+
+2025-01-12 14:10:42 Request received
+POST data: Array
+(
+    [type] => Found
+    [campus] => 
+)
+
+Query: SELECT barang_ditemukan as barang, 
+                 lokasi_kampus, 
+                 tempat_menemukan as tempat, 
+                 tanggal_menemukan as tanggal, 
+                 foto_barang 
+          FROM FoundItems ORDER BY tanggal_menemukan DESC
+Results: Array
+(
+)
+
+2025-01-12 14:10:43 Request received
+POST data: Array
+(
+    [type] => Found
+    [campus] => Kampus E
+)
+
+Query: SELECT barang_ditemukan as barang, 
+                 lokasi_kampus, 
+                 tempat_menemukan as tempat, 
+                 tanggal_menemukan as tanggal, 
+                 foto_barang 
+          FROM FoundItems WHERE lokasi_kampus = ? ORDER BY tanggal_menemukan DESC
+Results: Array
+(
+)
+
+2025-01-12 14:11:32 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:11:32 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:11:32 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:12:38 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+2025-01-12 14:12:38 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+2025-01-12 14:12:38 Request received
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:12:40 Request received
+POST data: Array
+(
+    [type] => Found
+    [campus] => 
+)
+
+Query: SELECT barang_ditemukan as barang, 
+                 lokasi_kampus, 
+                 tempat_menemukan as tempat, 
+                 tanggal_menemukan as tanggal, 
+                 foto_barang 
+          FROM FoundItems ORDER BY tanggal_menemukan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => 
+            [tempat] => kamar mandi
+            [tanggal] => 2025-01-09
+            [foto_barang] => uploads/1736687555_Screenshot 2025-01-12 201212.png
+        )
+
+)
+
+2025-01-12 14:12:44 Request received
+POST data: Array
+(
+    [type] => Found
+    [campus] => Kampus D
+)
+
+Query: SELECT barang_ditemukan as barang, 
+                 lokasi_kampus, 
+                 tempat_menemukan as tempat, 
+                 tanggal_menemukan as tanggal, 
+                 foto_barang 
+          FROM FoundItems WHERE lokasi_kampus = ? ORDER BY tanggal_menemukan DESC
+Results: Array
+(
+)
+
+2025-01-12 14:12:54 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:12:54 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:12:56 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => Kampus D
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems WHERE lokasi_kampus = ? ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:12:59 Request received
+POST data: Array
+(
+    [type] => Found
+    [campus] => Kampus D
+)
+
+Query: SELECT barang_ditemukan as barang, 
+                 lokasi_kampus, 
+                 tempat_menemukan as tempat, 
+                 tanggal_menemukan as tanggal, 
+                 foto_barang 
+          FROM FoundItems WHERE lokasi_kampus = ? ORDER BY tanggal_menemukan DESC
+Results: Array
+(
+)
+
+2025-01-12 14:13:04 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:13:04 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+2025-01-12 14:13:04 Request received
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:13:08 Request received
+POST data: Array
+(
+    [type] => Found
+    [campus] => 
+)
+
+Query: SELECT barang_ditemukan as barang, 
+                 lokasi_kampus, 
+                 tempat_menemukan as tempat, 
+                 tanggal_menemukan as tanggal, 
+                 foto_barang 
+          FROM FoundItems ORDER BY tanggal_menemukan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => 
+            [tempat] => kamar mandi
+            [tanggal] => 2025-01-09
+            [foto_barang] => uploads/1736687555_Screenshot 2025-01-12 201212.png
+        )
+
+)
+
+2025-01-12 14:13:35 Request received
+2025-01-12 14:13:35 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:13:39 Request received
+POST data: Array
+(
+    [type] => Found
+    [campus] => 
+)
+
+Query: SELECT barang_ditemukan as barang, 
+                 lokasi_kampus, 
+                 tempat_menemukan as tempat, 
+                 tanggal_menemukan as tanggal, 
+                 foto_barang 
+          FROM FoundItems ORDER BY tanggal_menemukan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => 
+            [tempat] => kamar mandi
+            [tanggal] => 2025-01-10
+            [foto_barang] => uploads/1736687612_Screenshot 2025-01-12 201212.png
+        )
+
+    [1] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => 
+            [tempat] => kamar mandi
+            [tanggal] => 2025-01-09
+            [foto_barang] => uploads/1736687555_Screenshot 2025-01-12 201212.png
+        )
+
+)
+
+2025-01-12 14:13:42 Request received
+POST data: Array
+(
+    [type] => Found
+    [campus] => Kampus D
+)
+
+Query: SELECT barang_ditemukan as barang, 
+                 lokasi_kampus, 
+                 tempat_menemukan as tempat, 
+                 tanggal_menemukan as tanggal, 
+                 foto_barang 
+          FROM FoundItems WHERE lokasi_kampus = ? ORDER BY tanggal_menemukan DESC
+Results: Array
+(
+)
+
+2025-01-12 14:15:31 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+2025-01-12 14:15:31 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+
+        )
+
+)
+
+2025-01-12 14:15:31 Request received
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:15:33 Request received
+POST data: Array
+(
+    [type] => Found
+    [campus] => 
+)
+
+Query: SELECT barang_ditemukan as barang, 
+                 lokasi_kampus, 
+                 tempat_menemukan as tempat, 
+                 tanggal_menemukan as tanggal, 
+                 foto_barang 
+          FROM FoundItems ORDER BY tanggal_menemukan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => 
+            [tempat] => kamar mandi
+            [tanggal] => 2025-01-10
+            [foto_barang] => uploads/1736687612_Screenshot 2025-01-12 201212.png
+        )
+
+    [1] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => 
+            [tempat] => kamar mandi
+            [tanggal] => 2025-01-09
+            [foto_barang] => uploads/1736687555_Screenshot 2025-01-12 201212.png
+        )
+
+)
+
+2025-01-12 14:17:03 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+2025-01-12 14:17:03 Request received
+     (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:17:03 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:25:33 Request received
+2025-01-12 14:25:33 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:25:36 Request received
+POST data: Array
+(
+    [type] => Found
+    [campus] => 
+)
+
+Query: SELECT barang_ditemukan as barang, 
+                 lokasi_kampus, 
+                 tempat_menemukan as tempat, 
+                 tanggal_menemukan as tanggal, 
+                 foto_barang 
+          FROM FoundItems ORDER BY tanggal_menemukan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => 
+            [tempat] => kamar mandi
+            [tanggal] => 2025-01-10
+            [foto_barang] => uploads/1736687612_Screenshot 2025-01-12 201212.png
+        )
+
+    [1] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => 
+            [tempat] => kamar mandi
+            [tanggal] => 2025-01-09
+            [foto_barang] => uploads/1736687555_Screenshot 2025-01-12 201212.png
+        )
+
+)
+
+2025-01-12 14:25:38 Request received
+POST data: Array
+(
+    [type] => Found
+    [campus] => Kampus D
+)
+
+Query: SELECT barang_ditemukan as barang, 
+                 lokasi_kampus, 
+                 tempat_menemukan as tempat, 
+                 tanggal_menemukan as tanggal, 
+                 foto_barang 
+          FROM FoundItems WHERE lokasi_kampus = ? ORDER BY tanggal_menemukan DESC
+Results: Array
+(
+)
+
+2025-01-12 14:27:41 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:27:41 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:27:41 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:27:51 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+2025-01-12 14:27:51 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:27:51 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:36:01 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+2025-01-12 14:36:01 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:36:01 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:36:05 Request received
+2025-01-12 14:36:05 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:36:05 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+2025-01-12 14:36:05 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:36:05 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:38:05 Request received
+2025-01-12 14:38:05 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:38:05 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:38:08 Request received
+POST data: Array
+(
+    [type] => Found
+    [campus] => 
+)
+
+Query: SELECT barang_ditemukan as barang, 
+                 lokasi_kampus, 
+                 tempat_menemukan as tempat, 
+                 tanggal_menemukan as tanggal, 
+                 foto_barang 
+          FROM FoundItems ORDER BY tanggal_menemukan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => 
+            [tempat] => kamar mandi
+            [tanggal] => 2025-01-10
+            [foto_barang] => uploads/1736687612_Screenshot 2025-01-12 201212.png
+        )
+
+    [1] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => 
+            [tempat] => kamar mandi
+            [tanggal] => 2025-01-09
+            [foto_barang] => uploads/1736687555_Screenshot 2025-01-12 201212.png
+        )
+
+)
+
+2025-01-12 14:38:09 Request received
+POST data: Array
+(
+    [type] => Found
+    [campus] => Kampus D
+)
+
+Query: SELECT barang_ditemukan as barang, 
+                 lokasi_kampus, 
+                 tempat_menemukan as tempat, 
+                 tanggal_menemukan as tanggal, 
+                 foto_barang 
+          FROM FoundItems WHERE lokasi_kampus = ? ORDER BY tanggal_menemukan DESC
+Results: Array
+(
+)
+
+2025-01-12 14:38:12 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:38:12 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:38:12 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:38:14 Request received
+POST data: Array
+(
+    [type] => Found
+    [campus] => 
+)
+
+Query: SELECT barang_ditemukan as barang, 
+                 lokasi_kampus, 
+                 tempat_menemukan as tempat, 
+                 tanggal_menemukan as tanggal, 
+                 foto_barang 
+          FROM FoundItems ORDER BY tanggal_menemukan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => 
+            [tempat] => kamar mandi
+            [tanggal] => 2025-01-10
+            [foto_barang] => uploads/1736687612_Screenshot 2025-01-12 201212.png
+        )
+
+    [1] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => 
+            [tempat] => kamar mandi
+            [tanggal] => 2025-01-09
+            [foto_barang] => uploads/1736687555_Screenshot 2025-01-12 201212.png
+        )
+
+)
+
+2025-01-12 14:38:15 Request received
+POST data: Array
+(
+    [type] => Found
+    [campus] => Kampus D
+)
+
+Query: SELECT barang_ditemukan as barang, 
+                 lokasi_kampus, 
+                 tempat_menemukan as tempat, 
+                 tanggal_menemukan as tanggal, 
+                 foto_barang 
+          FROM FoundItems WHERE lokasi_kampus = ? ORDER BY tanggal_menemukan DESC
+Results: Array
+(
+)
+
+2025-01-12 14:38:22 Request received
+POST data: Array
+(
+    [type] => Found
+    [campus] => Kampus E
+)
+
+Query: SELECT barang_ditemukan as barang, 
+                 lokasi_kampus, 
+                 tempat_menemukan as tempat, 
+                 tanggal_menemukan as tanggal, 
+                 foto_barang 
+          FROM FoundItems WHERE lokasi_kampus = ? ORDER BY tanggal_menemukan DESC
+Results: Array
+(
+)
+
+2025-01-12 14:38:25 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:38:25 Request received
+2025-01-12 14:38:25 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:38:27 Request received
+POST data: Array
+(
+    [type] => Found
+    [campus] => 
+)
+
+Query: SELECT barang_ditemukan as barang, 
+                 lokasi_kampus, 
+                 tempat_menemukan as tempat, 
+                 tanggal_menemukan as tanggal, 
+                 foto_barang 
+          FROM FoundItems ORDER BY tanggal_menemukan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => 
+            [tempat] => kamar mandi
+            [tanggal] => 2025-01-10
+            [foto_barang] => uploads/1736687612_Screenshot 2025-01-12 201212.png
+        )
+
+    [1] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => 
+            [tempat] => kamar mandi
+            [tanggal] => 2025-01-09
+            [foto_barang] => uploads/1736687555_Screenshot 2025-01-12 201212.png
+        )
+
+)
+
+2025-01-12 14:39:16 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:39:16 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:39:19 Request received
+POST data: Array
+(
+    [type] => Found
+    [campus] => 
+)
+
+Query: SELECT barang_ditemukan as barang, 
+                 lokasi_kampus, 
+                 tempat_menemukan as tempat, 
+                 tanggal_menemukan as tanggal, 
+                 foto_barang 
+          FROM FoundItems ORDER BY tanggal_menemukan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => 
+            [tempat] => kamar mandi
+            [tanggal] => 2025-01-10
+            [foto_barang] => uploads/1736687612_Screenshot 2025-01-12 201212.png
+        )
+
+    [1] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => 
+            [tempat] => kamar mandi
+            [tanggal] => 2025-01-09
+            [foto_barang] => uploads/1736687555_Screenshot 2025-01-12 201212.png
+        )
+
+)
+
+2025-01-12 14:39:46 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:39:46 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+2025-01-12 14:39:46 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:39:47 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:39:47 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:39:47 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:39:50 Request received
+POST data: Array
+(
+    [type] => Found
+    [campus] => 
+)
+
+Query: SELECT barang_ditemukan as barang, 
+                 lokasi_kampus, 
+                 tempat_menemukan as tempat, 
+                 tanggal_menemukan as tanggal, 
+                 foto_barang 
+          FROM FoundItems ORDER BY tanggal_menemukan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => 
+            [tempat] => kamar mandi
+            [tanggal] => 2025-01-10
+            [foto_barang] => uploads/1736687612_Screenshot 2025-01-12 201212.png
+        )
+
+    [1] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => 
+            [tempat] => kamar mandi
+            [tanggal] => 2025-01-09
+            [foto_barang] => uploads/1736687555_Screenshot 2025-01-12 201212.png
+        )
+
+)
+
+2025-01-12 14:39:51 Request received
+POST data: Array
+(
+    [type] => Found
+    [campus] => Kampus D
+)
+
+Query: SELECT barang_ditemukan as barang, 
+                 lokasi_kampus, 
+                 tempat_menemukan as tempat, 
+                 tanggal_menemukan as tanggal, 
+                 foto_barang 
+          FROM FoundItems WHERE lokasi_kampus = ? ORDER BY tanggal_menemukan DESC
+Results: Array
+(
+)
+
+2025-01-12 14:40:08 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:40:08 Request received
+2025-01-12 14:40:08 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:40:10 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => Kampus D
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems WHERE lokasi_kampus = ? ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:40:12 Request received
+POST data: Array
+(
+    [type] => Found
+    [campus] => Kampus D
+)
+
+Query: SELECT barang_ditemukan as barang, 
+                 lokasi_kampus, 
+                 tempat_menemukan as tempat, 
+                 tanggal_menemukan as tanggal, 
+                 foto_barang 
+          FROM FoundItems WHERE lokasi_kampus = ? ORDER BY tanggal_menemukan DESC
+Results: Array
+(
+)
+
+2025-01-12 14:40:15 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+2025-01-12 14:40:15 Request received
+, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:40:15 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:40:18 Request received
+POST data: Array
+(
+    [type] => Found
+    [campus] => 
+)
+
+Query: SELECT barang_ditemukan as barang, 
+                 lokasi_kampus, 
+                 tempat_menemukan as tempat, 
+                 tanggal_menemukan as tanggal, 
+                 foto_barang 
+          FROM FoundItems ORDER BY tanggal_menemukan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => 
+            [tempat] => kamar mandi
+            [tanggal] => 2025-01-10
+            [foto_barang] => uploads/1736687612_Screenshot 2025-01-12 201212.png
+        )
+
+    [1] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => 
+            [tempat] => kamar mandi
+            [tanggal] => 2025-01-09
+            [foto_barang] => uploads/1736687555_Screenshot 2025-01-12 201212.png
+        )
+
+)
+
+2025-01-12 14:41:43 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:41:43 Request received
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+POST data: Array
+(
+    [type] => Lost
+    [campus] => 
+)
+
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Query: SELECT barang_hilang as barang, 
+                 lokasi_kampus, 
+                 tempat_kehilangan as tempat, 
+                 tanggal_kehilangan as tanggal, 
+                 foto_barang 
+          FROM LostItems ORDER BY tanggal_kehilangan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => Kampus D
+            [tempat] => tangga
+            [tanggal] => 2025-01-06
+            [foto_barang] => uploads/1736687489_Screenshot 2025-01-12 200122.png
+        )
+
+)
+
+2025-01-12 14:41:45 Request received
+POST data: Array
+(
+    [type] => Found
+    [campus] => 
+)
+
+Query: SELECT barang_ditemukan as barang, 
+                 lokasi_kampus, 
+                 tempat_menemukan as tempat, 
+                 tanggal_menemukan as tanggal, 
+                 foto_barang 
+          FROM FoundItems ORDER BY tanggal_menemukan DESC
+Results: Array
+(
+    [0] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => 
+            [tempat] => kamar mandi
+            [tanggal] => 2025-01-10
+            [foto_barang] => uploads/1736687612_Screenshot 2025-01-12 201212.png
+        )
+
+    [1] => Array
+        (
+            [barang] => dompet
+            [lokasi_kampus] => 
+            [tempat] => kamar mandi
+            [tanggal] => 2025-01-09
+            [foto_barang] => uploads/1736687555_Screenshot 2025-01-12 201212.png
+        )
+
+)
+
+2025-01-12 14:41:47 Request received
+POST data: Array
+(
+    [type] => Found
+    [campus] => Kampus D
+)
+
+Query: SELECT barang_ditemukan as barang, 
+                 lokasi_kampus, 
+                 tempat_menemukan as tempat, 
+                 tanggal_menemukan as tanggal, 
+                 foto_barang 
+          FROM FoundItems WHERE lokasi_kampus = ? ORDER BY tanggal_menemukan DESC
+Results: Array
+(
+)
+
