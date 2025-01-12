@@ -43,7 +43,6 @@ session_start();
             <option value="">Pilih Lokasi Kampus</option>
             <option value="Kampus D">Kampus D</option>
             <option value="Kampus E">Kampus E</option>
-            <option value="Kampus F4">Kampus F4</option>
             <option value="Kampus F8">Kampus F8</option>
             <option value="Kampus G">Kampus G</option>
             <option value="Kampus H">Kampus H</option>
