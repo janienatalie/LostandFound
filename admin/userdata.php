@@ -34,6 +34,9 @@ if (!$result) {
         />
         <i class="fas fa-search"></i>
       </div>
+
+      <div class="table-wrapper">
+
       <table class="userTable">
         <thead>
           <tr>
@@ -64,6 +67,7 @@ if (!$result) {
           ?>
         </tbody>
       </table>
+      </div>
     </div>
 
     <script>

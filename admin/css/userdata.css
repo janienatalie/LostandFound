@@ -8,11 +8,12 @@ body {
 }
 
 .container {
-  width: 90%;
   margin: 20px auto;
+  padding: 20px 40px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin-left: 20%;
 }
 
 h1 {
@@ -50,6 +51,30 @@ h1 {
 .search-box i {
   color: #800080;
   margin-left: 10px;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 20px;
+  /* Untuk tampilan scrollbar yang lebih baik */
+  scrollbar-width: thin;
+  scrollbar-color: #763996 #f0f0f0;
+}
+
+/* Style untuk scrollbar pada webkit browsers */
+.table-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.table-wrapper::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 4px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+  background: #763996;
+  border-radius: 4px;
 }
 
 .userTable {
