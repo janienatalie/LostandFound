@@ -52,22 +52,41 @@ h1 {
   margin-left: 10px;
 }
 
-table {
+.userTable {
+  width: 100%; /* Membuat tabel mengisi lebar kontainer */
+  margin-top: 50px;
+  overflow-x: auto; /* Menambahkan scroll horizontal jika tabel terlalu lebar */
+}
+
+.userTable table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 10px;
+  table-layout: fixed; /* Mengatur lebar kolom agar lebih konsisten */
 }
 
-th,
-td {
-  padding: 10px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
+.userTable thead {
+  background-color: #763996;
+  color: white;
+  text-align: center;
+  font-size: 16px;
 }
 
-th {
-  background-color: #6a1b9a;
-  color: #fff;
+.userTable tbody {
+  text-align: center;
+}
+
+.userTable td,
+.userTable th {
+  padding: 10px; /* Menyelaraskan padding antara th dan td */
+  border: 1px solid #ddd; /* Menambahkan border antara sel */
+  font-size: 16px;
+}
+
+.userTable th {
+  padding-top: 12px; /* Memberikan sedikit ruang di bagian atas */
+  padding-bottom: 12px; /* Memberikan ruang di bagian bawah */
+  /* font-weight: bold; */
+  font-size: 16px;
 }
 
 @media (max-width: 600px) {
