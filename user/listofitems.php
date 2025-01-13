@@ -7,14 +7,11 @@ session_start();
 <html>
   <head>
       <!-- Style font di-embed langsung -->
-      <style>
-        @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-      </style>
-      <!-- Multiple CSS files yang mungkin konflik -->
-      <link rel="stylesheet" href="./css/listofitems.css" />
-      <link rel="stylesheet" href="../css/style.css" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
-
+      <!-- Multiple CSS files yang mungkin konflik -->
+      <link rel="stylesheet" href="../css/style.css" />
+      <link rel="stylesheet" href="./css/navbar.css" />
+      <link rel="stylesheet" href="./css/listofitems.css" />
   </head>
   <body>
   <?php include 'navbar.php'; ?>

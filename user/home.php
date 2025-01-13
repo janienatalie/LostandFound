@@ -10,11 +10,9 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lost & Found - Gunadarma University</title>
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/navbar.css" />
-    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <!-- <link rel="stylesheet" href="../css/footer.css" /> -->
     <link rel="stylesheet" href="./css/home.css">
- 
-    
 </head>
 <body>
 <?php include './navbar.php';?>

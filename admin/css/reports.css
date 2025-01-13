@@ -4,11 +4,11 @@
   box-sizing: border-box;
 }
 
-/* .content {
+.content {
   margin: 10px;
   margin: 20px auto;
   max-width: 1200px;
-} */
+}
 
 .title {
   color: #763996;

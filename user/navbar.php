@@ -39,6 +39,8 @@ if (isset($_GET['logout'])) {
         display: flex;
         gap: 20px;
         align-items: center;
+        margin: 0;
+        padding: 0;
     }
 
     .navbar nav ul li {
@@ -78,56 +80,86 @@ if (isset($_GET['logout'])) {
     /* Style untuk navbar saat di-scroll */
     .navbar-scrolled {
         background-color: #ffffff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
 
     .navbar nav ul li a::selection {
         display: none;
     }
 
-    /* Style untuk tombol logout */
-    .logout-btn {
-        display: inline-block;
+    /* Style untuk semua button di navbar */
+    button.nav-button {
         background-color: #763996;
-        color: #ff9934 !important; /* Override default link color */
+        color: #ff9934;
         padding: 8px 20px;
-        border: none;
+        border: 2px solid #763996;
         border-radius: 5px;
         cursor: pointer;
         font-size: 16px;
         font-weight: 500;
         transition: all 0.3s ease;
+        display: inline-block;
+        outline: none;
         text-decoration: none;
-        margin-left: 20px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        height: 40px; /* Tetapkan tinggi spesifik */
+        line-height: 1; /* Untuk vertical alignment teks */
+        margin: 0; /* Reset margin */
+        white-space: nowrap; /* Mencegah text wrapping */
+        min-width: 100px; /* Lebar minimum */
+        font-family: inherit; /* Memastikan font konsisten */
+    }  
+
+    button.nav-button:hover {
+        background-color: transparent;
+        color: #763996;
+        border: 2px solid #763996;
+        text-decoration: none;
     }
 
-    .logout-btn:hover {
-        background-color: #ff9934;
-        color: #763996 !important; /* Override default link color */
-        text-decoration: none;
-    }
-
-    /* Remove the active underline style for logout button */
+    /* Remove the active underline style for button container */
     .navbar nav ul li:last-child::after {
         display: none;
     }
-</style>
-<script>
-    window.addEventListener('scroll', function() {
-        const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 50) {
-            navbar.classList.add('navbar-scrolled');
-        } else {
-            navbar.classList.remove('navbar-scrolled');
-        }
-    });
 
-    // Confirmation before logout
-    function confirmLogout() {
-        if (confirm('Apakah Anda yakin ingin keluar?')) {
-            window.location.href = '?logout=true';
-        }
+    .navbar nav ul li:last-child {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        height: auto;
     }
-</script>
+
+    /* Reset potensial conflicting styles */
+    .navbar nav ul li button.nav-button * {
+        box-sizing: border-box;
+    }
+
+    .navbar button.nav-button:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(118, 57, 150, 0.3);
+    }
+    </style>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+
+        // Confirmation before logout
+        function confirmLogout() {
+            if (confirm('Apakah Anda yakin ingin keluar?')) {
+                window.location.href = '?logout=true';
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -152,7 +184,7 @@ if (isset($_GET['logout'])) {
                         <a href="listofitems.php">Daftar Barang</a>
                     </li>
                     <li>
-                        <button onclick="confirmLogout()" class="logout-btn">Keluar</button>
+                        <button onclick="confirmLogout()" class="nav-button">Keluar</button>
                     </li>
                 </ul>
             </nav>

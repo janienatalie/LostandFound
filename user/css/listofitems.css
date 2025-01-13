@@ -76,12 +76,12 @@ select:focus {
   margin-left: auto; /* Mengarahkan search bar ke kanan */
 }
 
-button {
+/* button {
   all: unset;
   cursor: pointer;
   width: 44px;
   height: 44px;
-}
+} */
 
 svg {
   color: #763996;

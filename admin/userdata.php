@@ -7,7 +7,8 @@ include './sidebar.php';
 <html>
   <head>
     <title>Data Pengguna</title>
-    <link rel="stylesheet" href="/admin/css/userdata.css" />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./css/userdata.css">    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"

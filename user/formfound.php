@@ -11,12 +11,13 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Load style.css terlebih dahulu -->
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="./css/navbar.css" />
     <!-- Kemudian CSS spesifik halaman -->
-    <link rel="stylesheet" href="./css/form.css" />
     <!-- loading bar -->
     <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
     <!-- fontowesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="./css/form.css" />
     <title>Lost and Found - List of Items</title>
   </head>
   <body>

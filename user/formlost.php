@@ -63,16 +63,21 @@ $conn->close();
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lost & Found - Gunadarma University</title>
-    <link rel="stylesheet" href="./css/form.css" />
+    
+    <!-- Global styles first -->
     <link rel="stylesheet" href="../css/style.css" />
-  </head>
+    
+    <!-- Navbar styles -->
+    <link rel="stylesheet" href="./css/navbar.css" />
+
+    
+    <!-- Page specific styles last -->
+    <link rel="stylesheet" href="./css/form.css" />
+</head>
   <body>
   <?php include './navbar.php';?>
     <div class="form-section">
