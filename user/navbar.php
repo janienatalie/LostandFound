@@ -10,18 +10,16 @@
 </head>
 <body>
     <!-- Header Section -->
-    <header>
-        <div class="navbar">
-            <div class="logo">
-                <img src="../image/logo.png" alt="Lost & Found Logo" class="logo-image">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="home.php">Beranda</a></li>
-                    <li><a href="formlost.php">Formulir Kehilangan</a></li>
-                    <li><a href="formfound.php">Form Penemuan</a></li>
-                    <li><a href="listofitems.php">Daftar Barang</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <header class="navbar">
+  <div class="logo">
+    <img src="logo.png" alt="Lost & Found Logo" class="logo-image" />
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#" class="nav-link">Beranda</a></li>
+      <li><a href="#" class="nav-link">Formulir Kehilangan</a></li>
+      <li><a href="#" class="nav-link">Form Penemuan</a></li>
+      <li><a href="#" class="nav-link">Daftar Barang</a></li>
+    </ul>
+  </nav>
+</header>
