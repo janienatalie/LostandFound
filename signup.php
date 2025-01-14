@@ -1,48 +1,99 @@
 <?php
-include './database/config.php';
 session_start();
+include './database/config.php';
 
-// Proses jika formulir dikirim
+// Function to validate input
+function validateInput($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+
+// Process form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Ambil data dari formulir
-    $nama = trim($_POST['name']);
-    $npm = trim($_POST['npm']);
-    $nomor_telepon = trim($_POST['phone']);
-    $username = trim($_POST['username']);
-    $password = trim($_POST['password']);
-    $confirm_password = trim($_POST['confirm-password']);
+    // Get and validate form data
+    $nama = validateInput($_POST['name']);
+    $npm = validateInput($_POST['npm']);
+    $phone = validateInput($_POST['phone']);
+    $username = validateInput($_POST['username']);
+    $password = $_POST['password'];
+    $confirmPassword = $_POST['confirm-password'];
 
-    // Validasi data
-    if (empty($nama) || empty($npm) || empty($nomor_telepon) || empty($username) || empty($password) || empty($confirm_password)) {
-        echo "<script>alert('Semua field harus diisi.');</script>";
-    } elseif ($password !== $confirm_password) {
-        echo "<script>alert('Password dan konfirmasi password tidak cocok.'); window.location.href = 'signup.php';</script>";
-    } else {
-        // Hash password
-        $password_hash = password_hash($password, PASSWORD_DEFAULT);
+    // Initialize error array
+    $isError = false;
+    
+    // Validate required fields
+    // if (empty($nama)) {
+    //     echo "<script>alert('Nama harus diisi!');</script>";
+    //     $isError = true;
+    // }
+    // if (empty($npm)) {
+    //     echo "<script>alert('NPM harus diisi!');</script>";
+    //     $isError = true;
+    // }
+    // if (empty($phone)) {
+    //     echo "<script>alert('Nomor Telepon harus diisi!');</script>";
+    //     $isError = true;
+    // }
+    // if (empty($username)) {
+    //     echo "<script>alert('Username harus diisi!');</script>";
+    //     $isError = true;
+    // }
+    // if (empty($password)) {
+    //     echo "<script>alert('Password harus diisi!');</script>";
+    //     $isError = true;
+    // }
 
-        // Query untuk menyimpan data
-        $sql = "INSERT INTO Users (nama, npm, nomor_telepon, username, password_hash) VALUES (?, ?, ?, ?, ?)";
+    // Validate password match
+    if ($password !== $confirmPassword) {
+        echo "<script>alert('Password tidak cocok!');</script>";
+        $isError = true;
+    }
 
-        // Gunakan prepared statement untuk mencegah SQL Injection
-        $stmt = $conn->prepare($sql);
-        if ($stmt) {
-            $stmt->bind_param("sssss", $nama, $npm, $nomor_telepon, $username, $password_hash);
+    // Check if username already exists
+    $stmt = $conn->prepare("SELECT COUNT(*) as count FROM Users WHERE username = ?");
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $row = $result->fetch_assoc();
+    
+    if ($row['count'] > 0) {
+        echo "<script>alert('Username sudah digunakan!');</script>";
+        $isError = true;
+    }
+    $stmt->close();
 
-            // Eksekusi statement
+    // If no errors, proceed with registration
+    if (!$isError) {
+        try {
+            // Hash the password
+            $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+
+            // Prepare SQL statement
+            $stmt = $conn->prepare("INSERT INTO Users (nama, npm, nomor_telepon, username, password_hash) VALUES (?, ?, ?, ?, ?)");
+            $stmt->bind_param("sssss", $nama, $npm, $phone, $username, $passwordHash);
+            
+            // Execute statement with form data
             if ($stmt->execute()) {
-                echo "<script>alert('Pendaftaran berhasil. Silakan login.'); window.location.href = 'index.php';</script>";
+                // Set success message
+                echo "<script>
+                    alert('Registrasi berhasil! Silahkan login.');
+                    window.location.href = 'index.php';
+                </script>";
+                exit();
             } else {
-                echo "<script>alert('Terjadi kesalahan: " . $stmt->error . "');</script>";
+                echo "<script>alert('Registrasi gagal: " . $stmt->error . "');</script>";
             }
-
             $stmt->close();
-        } else {
-            echo "<script>alert('Terjadi kesalahan: " . $conn->error . "');</script>";
+
+        } catch(Exception $e) {
+            echo "<script>alert('Registrasi gagal: " . addslashes($e->getMessage()) . "');</script>";
         }
     }
 }
 
+// Close database connection
 $conn->close();
 ?>
 
@@ -80,7 +131,7 @@ $conn->close();
               <input type="text" id="npm" name="npm">
                 
               <p>Nomor Telepon</p>
-              <input type="number" id="phone" name="phone">
+              <input type="text" id="phone" name="phone">
                 
               <p>Nama Pengguna</p>
               <input type="text" id="username" name="username">
