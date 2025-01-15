@@ -54,7 +54,7 @@
   border: 2px solid #763996;
   border-radius: 5px;
   padding: 8px;
-  height: 20px;
+  height: 30px;
 }
 
 .form-container input:focus {
@@ -85,11 +85,13 @@
 .info {
   font-size: 14px;
   position: absolute;
-  bottom: -50px;
+  bottom: -80px;
 }
 
 .info-signup {
   font-size: 14px;
+  position: absolute;
+  bottom: -190px;
 }
 
 .info.active {
