@@ -1,10 +1,10 @@
 <?php
 include '../database/config.php';
-include './sidebar.php'
+include './sidebar.php';
 
 // Query untuk mengambil data pengguna
 $query = "SELECT id, nama, username, npm, nomor_telepon FROM Users ORDER BY nama";
-$result = mysqli_query($koneksi, $query);
+$result = mysqli_query($conn, $query);
 ?>
 
 <!DOCTYPE html>
