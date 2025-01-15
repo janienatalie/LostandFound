@@ -1,17 +1,6 @@
 <?php
-// Konfigurasi database
-$host = "localhost"; // Nama host database
-$user = "root"; // Username database
-$password = ""; // Password database
-$database = "lostandfound2"; // Nama database
-
-// Membuat koneksi ke database
-$koneksi = mysqli_connect($host, $user, $password, $database);
-
-// Cek koneksi
-if (mysqli_connect_errno()) {
-    die("Koneksi database gagal: " . mysqli_connect_error());
-}
+include '../database/config.php';
+include './sidebar.php'
 
 // Query untuk mengambil data pengguna
 $query = "SELECT id, nama, username, npm, nomor_telepon FROM Users ORDER BY nama";
@@ -25,7 +14,6 @@ $result = mysqli_query($koneksi, $query);
     <link rel="stylesheet" href="/admin/css/userdata.css" />
 </head>
 <body>
-    <?php include 'navbar.php'; ?>
     <div class="list-of-items">
         <div class="title">
             <h2>Data Pengguna</h2>
@@ -73,8 +61,6 @@ $result = mysqli_query($koneksi, $query);
             </table>
         </div>
     </div>
-    <?php include './footer.php';?>
-
     <script>
         const searchInput = document.getElementById("query");
 
