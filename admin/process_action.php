@@ -2,16 +2,8 @@
 header('Content-Type: application/json');
 
 // Koneksi database
-$host = "localhost";
-$user = "root";
-$password = "";
-$database = "lostandfound2";
+include '../database/config.php';
 
-$koneksi = mysqli_connect($host, $user, $password, $database);
-
-if (mysqli_connect_errno()) {
-    die(json_encode(['success' => false, 'message' => 'Koneksi database gagal']));
-}
 
 $action = $_POST['action'] ?? '';
 $id = intval($_POST['id'] ?? 0);

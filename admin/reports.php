@@ -1,17 +1,6 @@
 <?php        
-// Koneksi ke database    
-$servername = "localhost"; // Ganti dengan server Anda    
-$username = "root"; // Ganti dengan username database Anda    
-$password = ""; // Ganti dengan password database Anda    
-$dbname = "lostandfound"; // Ganti dengan nama database Anda    
-    
-// Membuat koneksi    
-$conn = new mysqli($servername, $username, $password, $dbname);    
-    
-// Memeriksa koneksi    
-if ($conn->connect_error) {    
-    die("Koneksi gagal: " . $conn->connect_error);    
-}    
+   include '../database/config.php';
+   include './sidebar.php';
     
 // Mengambil data dari tabel founditems dengan join ke tabel users    
 $sqlFound = "    

@@ -1,17 +1,6 @@
 <?php  
-// Koneksi ke database    
-$servername = "localhost" ; // Ganti dengan server Anda    
-$username = "root";    
-$password = "";    
-$dbname = "lostandfound";
-   
-// Membuat koneksi    
-$conn = new mysqli($servername, $username, $password, $dbname);    
-   
-// Memeriksa koneksi    
-if ($conn->connect_error) {    
-    die("Koneksi gagal: " . $conn->connect_error);    
-}    
+   include '../database/config.php';
+  
 
 // Mendapatkan data dari query string  
 $data = isset($_GET['data']) ? json_decode($_GET['data'], true) : [];  
