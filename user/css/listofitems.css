@@ -184,19 +184,6 @@ input[type="search"]::-ms-clear {
   font-size: 16px;
 }
 
-/* .listofitemstable tr:nth-child(even) {
-  background-color: #c7c7c7; Memberikan warna latar belakang pada baris genap
-} */
-
-/* .span {
-  color: #ffffff;
-}
-
-.text-wrapper-2 {
-  font-family: "Open Sans-Bold", Helvetica;
-  font-weight: 700;
-} */
-
 /* Responsivitas */
 @media (max-width: 768px) {
   .dropdown-lost-and-found,

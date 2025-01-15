@@ -15,7 +15,7 @@ if (!file_exists('../assets/vendor/tcpdf/tcpdf.php')) {
 }
 require_once('../assets/vendor/tcpdf/tcpdf.php');   
 
-$pdf = new TCPDF('P', 'mm', 'A4', true, 'UTF-8', false); // Mengatur ukuran kertas A4    
+$pdf = new TCPDF('P', 'mm', 'A2', true, 'UTF-8', false); // Mengatur ukuran kertas A4    
 $pdf->SetCreator(PDF_CREATOR);    
 $pdf->SetAuthor('Delia');    
 $pdf->SetTitle('Laporan Lost & Found');    
@@ -36,7 +36,9 @@ $pdf->Cell(30, 10, 'Kampus', 1, 0, 'C');
 $pdf->Cell(25, 10, 'Barang', 1, 0, 'C');    
 $pdf->Cell(20, 10, 'Lokasi', 1, 0, 'C');    
 $pdf->Cell(25, 10, 'Tanggal', 1, 0, 'C');    
-$pdf->Cell(40, 10, 'Status', 1, 1, 'C'); // Menambahkan kolom Status    
+$pdf->Cell(100, 10, 'Foto', 1, 0, 'C');    
+$pdf->Cell(40, 10, 'Status', 1, 1, 'C'); // Menambahkan kolom Status
+
    
 // Data tabel    
 $pdf->SetFont('helvetica', '', 12);    
@@ -48,7 +50,8 @@ foreach ($data as $row) {
     $pdf->Cell(30, 10, $row['kampus'], 1, 0, 'C');    
     $pdf->Cell(25, 10, $row['barang'], 1, 0, 'L');    
     $pdf->Cell(20, 10, $row['lokasi'], 1, 0, 'L');    
-    $pdf->Cell(25, 10, $row['tanggal'], 1, 0, 'C');    
+    $pdf->Cell(25, 10, $row['tanggal'], 1, 0, 'C'); 
+    $pdf->Cell(100, 10, $row['foto'], 1, 0, 'C');       
     $pdf->Cell(40, 10, $row['status'], 1, 1, 'C'); // Menambahkan status    
 }     
    
@@ -56,6 +59,7 @@ foreach ($data as $row) {
 $conn->close();    
    
 // Output PDF    
+$pdf->Image('../uploads', 10, 10, 50, 50, 'JPG');
 $pdf->Output('Laporan_Lost_Found.pdf', 'I'); // 'I' untuk menampilkan di browser    
 ?>
 

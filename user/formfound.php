@@ -90,7 +90,7 @@ session_start();
 
         $foto_barang = null;
         if (!empty($foto['name'])) {
-            $target_dir = "uploads/";
+            $target_dir = "../uploads/";
             if (!is_dir($target_dir)) {
                 mkdir($target_dir, 0777, true);
             }

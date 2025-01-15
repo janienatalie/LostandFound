@@ -56,7 +56,14 @@ if ($resultLost->num_rows > 0) {
 
     
 $data = array_merge($foundData, $lostData);    
-$dataJson = json_encode($data);    
+$dataJson = json_encode($data);   
+
+// foreach($foundData as $item) {
+//     echo "Found item foto: " . $item['foto'] . "<br>";
+// }
+// foreach($lostData as $item) {
+//     echo "Lost item foto: " . $item['foto'] . "<br>";
+// }
 ?> 
     
 <!DOCTYPE html>        
@@ -80,7 +87,6 @@ $dataJson = json_encode($data);
             width: 50px;
             height: 50px;
             object-fit: cover;
-            border-radius: 4px;
         }
     </style>    
     <link rel="stylesheet" href="./css/reports.css">        
@@ -123,14 +129,8 @@ $dataJson = json_encode($data);
                         <td>${row.lokasi}</td>        
                         <td>${row.tanggal}</td>     
                         <td>${row.status}</td>    
-                        <td>
-                            ${row.foto ? 
-                                `<img src="../uploads/${row.foto}" class="item-image" alt="Foto Barang" 
-                                onerror="this.src='../assets/images/no-image.png'">`
-                                : 
-                                '<span>Tidak ada foto</span>'
-                            }
-                        </td>                    `;        
+                        <td>${row.foto ? `<img src="../uploads/ ${row.foto}" alt="Foto Barang" style="max-width: 100px;">` : 'Tidak ada foto'}</td>
+                    `;        
                     tableBody.appendChild(tr);        
                 });        
             }    
@@ -258,7 +258,7 @@ $dataJson = json_encode($data);
         const tableBody = document.querySelector('tbody');      
         tableBody.innerHTML = '';      
 
-        if (filteredData.length === 0) {        
+        if (!filteredData ||filteredData.length === 0) {        
             tableBody.innerHTML = '<tr><td colspan="9" style="text-align:center;">Tidak ada data ditemukan</td></tr>';        
         } else {        
             filteredData.forEach((row, index) => {        
@@ -272,7 +272,15 @@ $dataJson = json_encode($data);
                     <td>${row.lokasi}</td>        
                     <td>${row.tanggal}</td>     
                     <td>${row.status}</td>
-                    <td><img src="../uploads/${row.foto}" class="item-image" alt="Foto Barang"></td>          
+                    <td>
+                        ${row.foto ? 
+                            `<img src="../uploads/${row.foto}" class="item-image" alt="Foto Barang" 
+                            onerror="console.log('Error loading image:', '../uploads/${row.foto}')" 
+                            />`
+                            : 
+                            '<span>Tidak ada foto</span>'
+                        }
+                    </td>          
                 `;        
                 tableBody.appendChild(tr);        
             });        
