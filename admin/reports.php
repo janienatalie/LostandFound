@@ -59,7 +59,8 @@ $dataJson = json_encode($data);
 <html lang="en">        
 <head>        
     <meta charset="UTF-8">        
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />       
     <title>Lost & Found Laporan</title>    
     <style> 
         .dropdownlostandfound, .dropdowncampus {  
@@ -179,7 +180,8 @@ $dataJson = json_encode($data);
                         name="q"        
                         placeholder="Cari..."        
                         aria-label="Search"        
-                    />        
+                    />      
+                    <i class="fa fa-search search-icon" aria-hidden="true"></i>  
                 </div>        
             </div>        
         </div>        
