@@ -10,7 +10,11 @@ if (empty($data)) {
 }  
  
 // Membuat objek TCPDF    
-require_once ('tcpdf/tcpdf.php');    
+if (!file_exists('../assets/vendor/tcpdf/tcpdf.php')) {
+    die('File TCPDF tidak ditemukan.');
+}
+require_once('../assets/vendor/tcpdf/tcpdf.php');   
+
 $pdf = new TCPDF('P', 'mm', 'A4', true, 'UTF-8', false); // Mengatur ukuran kertas A4    
 $pdf->SetCreator(PDF_CREATOR);    
 $pdf->SetAuthor('Delia');    
