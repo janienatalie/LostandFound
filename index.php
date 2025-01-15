@@ -1,7 +1,6 @@
 <?php
 include './database/config.php';
 session_start(); // Start the session
-$isFirstLogin = true;
 
 // Proses jika formulir dikirim
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -42,7 +41,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             echo "<script>alert('Nama pengguna atau kata sandi tidak valid.'); window.location.href = 'index.php';</script>";;
         }
-
     }
 }
 
@@ -70,13 +68,13 @@ $conn->close();
 
             <!-- Button option -->
             <div style="display: flex">
-                <button class="button-option-admin <?php echo $isFirstLogin ? 'active' : ''; ?>" id="button-option-admin">Admin</button>
-                <button class="button-option-user" id="button-option-user">Pengguna</button>
+                <button class="button-option-admin" id="button-option-admin">Admin</button>
+                <button class="button-option-user active" id="button-option-user">Pengguna</button>
             </div>
 
             <!-- Field -->
             <form class="form-container" method="POST" action="" id="login-form">
-                <input type="hidden" id="user_type" name="user_type" value="admin">
+                <input type="hidden" id="user_type" name="user_type" value="user">
                 <p>Nama Pengguna</p>
                 <input type="text" id="username" name="username" required>
 

@@ -1,5 +1,4 @@
 <?php
-include './navbar.php';
 include '../database/config.php';
 session_start();
 
@@ -64,17 +63,23 @@ $conn->close();
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lost & Found - Gunadarma University</title>
+    
+    <!-- Global styles first -->
+    <link rel="stylesheet" href="../css/style.css" />
+    
+    <!-- Navbar styles -->
+    <link rel="stylesheet" href="./css/navbar.css" />
+
+    
+    <!-- Page specific styles last -->
     <link rel="stylesheet" href="./css/form.css" />
-    <link rel="stylesheet" href="/css/style.css" />
-  </head>
+</head>
   <body>
+  <?php include './navbar.php';?>
     <div class="form-section">
       <h2>Form Kehilangan</h2>
       <p>
@@ -96,7 +101,6 @@ $conn->close();
             <option value="">Pilih Lokasi Kampus</option>
             <option value="Kampus D">Kampus D</option>
             <option value="Kampus E">Kampus E</option>
-            <option value="Kampus F4">Kampus F4</option>
             <option value="Kampus F8">Kampus F8</option>
             <option value="Kampus G">Kampus G</option>
             <option value="Kampus H">Kampus H</option>
@@ -129,5 +133,6 @@ $conn->close();
         <button type="submit">Kirim</button>
       </form>
     </div>
+    <?php include './footer.php';?>
   </body>
 </html>

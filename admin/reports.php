@@ -1,9 +1,9 @@
 <?php        
 // Koneksi ke database    
-$servername = "localhost";  
-$username = "root";     
-$password = "";  
-$dbname = "lostandfound";   
+$servername = "localhost"; // Ganti dengan server Anda    
+$username = "root"; // Ganti dengan username database Anda    
+$password = ""; // Ganti dengan password database Anda    
+$dbname = "lostandfound"; // Ganti dengan nama database Anda    
     
 // Membuat koneksi    
 $conn = new mysqli($servername, $username, $password, $dbname);    
@@ -88,7 +88,7 @@ $dataJson = json_encode($data);
     <script>        
    
         const data = <?php echo $dataJson; ?>;      
-        let filteredData = [];  
+        let filteredData = []; // Variabel global untuk data yang difilter  
   
         function applyFilters() {      
             const lostFound = document.querySelector('[name="lost-found"]').value;      
@@ -140,9 +140,9 @@ $dataJson = json_encode($data);
         
             lostAndFoundDropdown.addEventListener('change', function() {    
                 if (this.value) {    
-                    this.classList.add('active');     
+                    this.classList.add('active'); // Tambahkan kelas active jika ada pilihan    
                 } else {    
-                    this.classList.remove('active');  
+                    this.classList.remove('active'); // Hapus kelas active jika tidak ada pilihan    
                 }    
             });        
         
@@ -210,7 +210,8 @@ $dataJson = json_encode($data);
                     <th>Status</th>        
                 </tr>        
             </thead>        
-            <tbody>                
+            <tbody>        
+                <!-- Data akan diisi oleh JavaScript -->        
             </tbody>        
         </table>        
         <div class="print-container">  

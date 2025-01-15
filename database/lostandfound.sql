@@ -1,13 +1,4 @@
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-DROP DATABASE IF EXISTS lostandfound;
-CREATE DATABASE IF NOT EXISTS lostandfound;
-
-DROP USER IF EXISTS 'lostandfound_user'@'%';
-CREATE USER IF NOT EXISTS 'lostandfound_user'@'%' IDENTIFIED BY 'password';
-GRANT SELECT, INSERT, UPDATE, DELETE ON lostandfound.* TO 'lostandfound_user'@'%';
+CREATE DATABASE lostandfound;
 USE lostandfound;
 
 
@@ -20,8 +11,6 @@ CREATE TABLE Users (
     username VARCHAR(50) UNIQUE NOT NULL,
     password_hash VARCHAR(255) NOT NULL -- Kata sandi akan disimpan dalam bentuk hash
 );
-
-INSERT INTO `users`(`id`, `nama`, `npm`, `nomor_telepon`, `username`, `password_hash`) VALUES (1,'kevin', '10122645', '08963818319343', 'kevin', 'kevin123');
 
 -- Tabel untuk menyimpan data admin
 CREATE TABLE Admins (

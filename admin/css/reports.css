@@ -1,29 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .content {
-  flex-grow: 1;
-  padding: 20px;
-}
-
-h1 {
-  color: #763996;
-  margin-left: 10px;
-}
-
-.container {
-  width: 90%;
+  margin: 10px;
   margin: 20px auto;
-  /* <!--tambah--> */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  max-width: 1200px;
 }
-h2 {
-  color: #6a1b9a;
+
+.title {
+  color: #763996;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
   text-align: left;
+  margin-left: 12px;
 }
 
 .dropdown {
+  margin-top: 30px;
+  margin-left: 12px;
+}
+
+/* Kontainer untuk semua elemen (dropdown dan search bar) */
+.controls-container {
+  display: flex; /* Tata letak horizontal */
+  justify-content: flex-start; /* Elemen mulai dari kiri */
+  align-items: center; /* Luruskan secara vertikal */
+  gap: 20px; /* Jarak antar elemen */
+  margin-top: 20px; /* Jarak dari elemen sebelumnya */
+  width: 100%; /* Pastikan kontainer memenuhi lebar layar */
+}
+
+/* Dropdown Lost and Found */
+.dropdownlostandfound,
+.dropdowncampus {
   display: flex;
   width: 274px; /* Lost and Found */
+  padding: 14px 20px;
+  border-radius: 12px;
+  border: 2px solid #763996;
+  font-size: 16px;
+  background-color: white;
+  color: #c7c7c7; /* Warna teks default */
+  font-family: "Poppins", sans-serif;
+}
+
+.dropdownlostandfound option[value=""],
+.dropdowncampus option[value=""] {
+  color: #c7c7c7; /* Warna placeholder */
+}
+
+.dropdowncampus input:focus,
+select:focus,
+.dropdownlostandfound input:focus,
+select:focus {
+  outline: none;
+}
+
+/* Search bar, diposisikan di kanan */
+.search-bar {
+  display: flex;
+  width: 250px; /* Lebar search bar */
+  height: 54px;
+  padding: 0px 14px; /* Padding kiri dan kanan */
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+  border: 2px solid #763996;
+  color: #c7c7c7;
+  font-size: 16px;
+  background-color: white;
+  margin-left: auto; /* Mengarahkan search bar ke kanan */
+  margin-right: 20px;
+}
+
+.search-bar input {
+  all: unset;
+  width: 100%; /* Memenuhi lebar yang tersedia */
+  height: 100%; /* Tinggi sesuai dengan search bar */
+  padding: 6px 10px; /* Memberikan ruang untuk ikon di sebelah kiri */
+  font-size: 16px;
+  color: #763996;
+}
+
+.search-bar input::placeholder {
+  color: #c7c7c7;
+  opacity: 0.7;
+}
+
+.search-bar .search-icon {
+  color: #763996;
+}
+
+/* Hapus tanda 'X' pada browser modern */
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none; /* Hilangkan tampilan bawaan */
+  appearance: none;
+}
+
+/* Untuk Firefox */
+input[type="search"] {
+  -moz-appearance: textfield; /* Atur menjadi seperti input teks biasa */
+}
+
+/* Tambahan untuk kompatibilitas lintas browser */
+input[type="search"]::-ms-clear {
+  display: none; /* Hilangkan tombol pada Internet Explorer */
+}
+
+/* .dropdown {
+  display: flex;
+  width: 274px; 
   padding: 14px 20px;
   border-radius: 12px;
   border: 2px solid #763996;
@@ -34,9 +123,9 @@ h2 {
 
 .search-box {
   display: flex;
-  width: 274px; /* Lebar search bar */
+  width: 274px; /
   height: 20px;
-  padding: 0px 14px; /* Padding kiri dan kanan */
+  padding: 0px 14px; 
   justify-content: space-between;
   align-items: center;
   border-radius: 12px;
@@ -78,8 +167,7 @@ h2 {
 .search-box i {
   color: #800080;
   margin-left: 10px;
-}
-
+} */
 
 table {
   width: 100%;
@@ -99,11 +187,6 @@ body {
   padding: 20px;
 }
 
-h2 {
-  color: #763996;
-  margin-left: 10px;
-}
-
 .container {
   display: flex;
   justify-content: space-between;
@@ -113,20 +196,7 @@ h2 {
   width: auto;
 }
 
-.dropdown,
-.search-box {
-  border: 1px solid #763996;
-  border-radius: 8px;
-  padding: 10px 30px;
-  font-size: 16px;
-  color: #763996;
-}
-
-.dropdown {
-  background-color: #ffffff;
-}
-
-.dropdown:focus,
+/* .dropdown:focus,
 .search-box:focus {
   outline: none;
   border-color: #763996;
@@ -147,7 +217,7 @@ h2 {
   width: 20px;
   height: 20px;
   fill: #763996;
-}
+} */
 
 .table {
   background-color: #fff;

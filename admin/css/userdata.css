@@ -8,14 +8,14 @@ body {
 }
 
 .container {
-  width: 90%;
   margin: 20px auto;
+  padding: 20px 40px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin-left: 20%;
 }
 
-<<<<<<< HEAD
 h1 {
   color: #763996;
   font-family: Poppins;
@@ -23,12 +23,6 @@ h1 {
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-=======
-h2 {
-  color: #6a1b9a;
-  font-size: 2em;
-  margin-bottom: 20px;
->>>>>>> 22e2884fcb131589c51cc1bf4426f163ed3fa5ba
 }
 
 .search-box {
@@ -59,22 +53,65 @@ h2 {
   margin-left: 10px;
 }
 
-table {
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 20px;
+  /* Untuk tampilan scrollbar yang lebih baik */
+  scrollbar-width: thin;
+  scrollbar-color: #763996 #f0f0f0;
+}
+
+/* Style untuk scrollbar pada webkit browsers */
+.table-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.table-wrapper::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 4px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+  background: #763996;
+  border-radius: 4px;
+}
+
+.userTable {
+  width: 100%; /* Membuat tabel mengisi lebar kontainer */
+  margin-top: 50px;
+  overflow-x: auto; /* Menambahkan scroll horizontal jika tabel terlalu lebar */
+}
+
+.userTable table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 10px;
+  table-layout: fixed; /* Mengatur lebar kolom agar lebih konsisten */
 }
 
-th,
-td {
-  padding: 10px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
+.userTable thead {
+  background-color: #763996;
+  color: white;
+  text-align: center;
+  font-size: 16px;
 }
 
-th {
-  background-color: #6a1b9a;
-  color: #fff;
+.userTable tbody {
+  text-align: center;
+}
+
+.userTable td,
+.userTable th {
+  padding: 10px; /* Menyelaraskan padding antara th dan td */
+  border: 1px solid #ddd; /* Menambahkan border antara sel */
+  font-size: 16px;
+}
+
+.userTable th {
+  padding-top: 12px; /* Memberikan sedikit ruang di bagian atas */
+  padding-bottom: 12px; /* Memberikan ruang di bagian bawah */
+  /* font-weight: bold; */
+  font-size: 16px;
 }
 
 @media (max-width: 600px) {
