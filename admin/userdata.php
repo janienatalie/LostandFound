@@ -11,7 +11,7 @@ $result = mysqli_query($conn, $query);
 <html>
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
-    <link rel="stylesheet" href="/admin/css/userdata.css" />
+    <link rel="stylesheet" href="./css/userdata.css" />
 </head>
 <body>
     <div class="list-of-items">
