@@ -185,7 +185,15 @@ $dataJson = json_encode($data);
                 </div>        
             </div>        
         </div>        
-    </form>        
+    </form> 
+    <div class="print-container">  
+    <a class="print-button" id="printButton" href="#" target="_blank">    
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">  
+            <path d="M19 8h-1V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v5H5a3 3 0 0 0-3 3v5a1 1 0 0 0 1 1h2v4a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-4h2a1 1 0 0 0 1-1v-5a3 3 0 0 0-3-3ZM8 4h8v4H8Zm8 16H8v-3h8Zm3-5h-2v-2H7v2H5v-4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1Z"/>  
+        </svg>  
+        Print  
+    </a>      
+</div>         
       
     <div class="table">        
         <table>        
@@ -205,14 +213,7 @@ $dataJson = json_encode($data);
                 <!-- Data akan diisi oleh JavaScript -->        
             </tbody>        
         </table>        
-        <div class="print-container">  
-    <a class="print-button" id="printButton" href="#" target="_blank">    
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">  
-            <path d="M19 8h-1V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v5H5a3 3 0 0 0-3 3v5a1 1 0 0 0 1 1h2v4a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-4h2a1 1 0 0 0 1-1v-5a3 3 0 0 0-3-3ZM8 4h8v4H8Zm8 16H8v-3h8Zm3-5h-2v-2H7v2H5v-4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1Z"/>  
-        </svg>  
-        Print  
-    </a>      
-</div>  
+        
  
     </div>        
 </div>        

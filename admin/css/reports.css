@@ -167,17 +167,16 @@ input[type="search"]::-ms-clear {
   margin-left: 10px;
 } */
 
-table {
+/* table {
   width: 100%;
   border-collapse: collapse;
-}
+} */
 
 body {
   font-family: poppins, sans-serif;
   margin: 0;
   padding: 0;
   display: flex;
-  background-color: #f8f8f8;
 }
 
 .container {
@@ -213,35 +212,42 @@ body {
 } */
 
 .table {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: none;
+  width: 100%; /* Membuat tabel mengisi lebar kontainer */
+  margin-top: 30px;
   overflow-x: auto;
+  margin-left: 10px;
 }
 
-table {
+.table table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
+  margin-right: 30px;
 }
 
-tr {
+.table tr {
   text-align: center;
 }
 
-th,
+.table th,
 td {
-  padding: 15px;
+  padding: 10px;
   text-align: left;
-  border-bottom: 1px solid #ddd;
+  border: 1px solid #ddd;
 }
 
-th {
+.table tbody {
+  text-align: center;
+}
+
+.table th {
   background-color: #763996;
   color: white;
+  text-align: center;
+  font-size: 16px;
 }
 
-td.kampus {
+.table td {
   text-align: center;
 }
 
@@ -252,73 +258,17 @@ tr:nth-child(odd) {
 .print-button {
   display: inline-flex;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 30px;
   padding: 10px 20px;
   background-color: #ffffff;
   color: #763996;
-  border: 1px solid #763996;
-  border-radius: 5px;
+  border: 2px solid #763996;
+  border-radius: 10px;
   cursor: pointer;
   font-size: 16px;
   text-decoration: none;
   justify-content: center;
-}
-
-.print-button:hover {
-  background-color: #763996;
-  color: white;
-}
-
-.print-button svg {
-  margin-right: 10px;
-  fill: #763996;
-  width: 20px;
-  height: 20px;
-}
-
-.print-button:hover svg {
-  fill: white;
-}
-
-.print-container {
-  display: flex;
-  justify-content: flex-end;
-}
-
-tr {
-  text-align: center;
-}
-
-th,
-td {
-  padding: 15px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-
-th {
-  background-color: #763996;
-  color: white;
-  text-align: center;
-}
-
-tr:nth-child(odd) {
-  background-color: white;
-}
-
-.print-button {
-  display: inline-flex;
-  align-items: center;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #ffffff;
-  color: #763996;
-  border: 1px solid #763996;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  text-decoration: none;
-  justify-content: center;
+  margin-right: 20px;
 }
 
 .print-button:hover {
