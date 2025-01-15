@@ -1,6 +1,6 @@
 <?php  
 // Koneksi ke database    
-$servername = "localhost"; // Ganti dengan server Anda    
+$servername = "localhost" ; // Ganti dengan server Anda    
 $username = "root";    
 $password = "";    
 $dbname = "lostandfound";
