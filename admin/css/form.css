@@ -24,6 +24,21 @@
   margin-top: 30px;
 }
 
+.has-been-found-btn:hover,
+.delete-btn:hover {
+  opacity: 0.9;
+  transform: scale(0.98);
+}
+
+.has-been-found-btn:active,
+.delete-btn:active {
+  transform: scale(0.95);
+}
+
+.listofitemstable td button {
+  transition: all 0.2s ease;
+}
+
 /* Kontainer untuk semua elemen (dropdown dan search bar) */
 .controls-container {
   display: flex; /* Tata letak horizontal */

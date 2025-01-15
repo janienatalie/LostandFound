@@ -3,7 +3,7 @@
 $host = "localhost";
 $user = "root";
 $password = "";
-$database = "lostandfound";
+$database = "lostandfound2";
 
 // Membuat koneksi ke database
 $koneksi = mysqli_connect($host, $user, $password, $database);
@@ -132,33 +132,37 @@ $type = 'Lost';
 
         // Fungsi untuk memperbarui tabel
         function updateTable(data) {
-            const tbody = document.querySelector('.listofitemstable tbody');
-            tbody.innerHTML = '';
+    const tbody = document.querySelector('.listofitemstable tbody');
+    tbody.innerHTML = '';
 
-            if (!data || data.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="8" style="text-align: center;">Tidak ada data</td></tr>';
-                return;
-            }
+    if (!data || data.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="9" style="text-align: center;">Tidak ada data</td></tr>';
+        return;
+    }
 
-            data.forEach((item, index) => {
-                const row = document.createElement('tr');
-                row.innerHTML = `
-                    <td>${index + 1}</td>
-                    <td>${escapeHtml(item.nama)}</td>
-                    <td>${escapeHtml(item.npm)}</td>
-                    <td>${escapeHtml(item.kampus)}</td>
-                    <td>${escapeHtml(item.item)}</td>
-                    <td>${escapeHtml(item.lokasi)}</td>
-                    <td>${formatDate(item.tanggal)}</td>
-                    <td>${item.foto ? `<img src="${escapeHtml(item.foto)}" alt="Foto Barang" style="max-width: 100px;">` : 'Tidak ada foto'}</td>
-                `;
-                tbody.appendChild(row);
-            });
+    data.forEach((item, index) => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${index + 1}</td>
+            <td>${escapeHtml(item.nama)}</td>
+            <td>${escapeHtml(item.npm)}</td>
+            <td>${escapeHtml(item.kampus)}</td>
+            <td>${escapeHtml(item.item)}</td>
+            <td>${escapeHtml(item.lokasi)}</td>
+            <td>${formatDate(item.tanggal)}</td>
+            <td>${item.foto ? `<img src="${escapeHtml(item.foto)}" alt="Foto Barang" style="max-width: 100px;">` : 'Tidak ada foto'}</td>
+            <td>
+                <button class="has-been-found-btn" onclick="markAsFound(${item.id})" style="background-color: #763996; color: white; border: none; padding: 8px 12px; border-radius: 6px; margin-bottom: 5px; cursor: pointer; width: 100%;">Has Been Found</button>
+                <button class="delete-btn" onclick="deleteItem(${item.id})" style="background-color: #763996; color: white; border: none; padding: 8px 12px; border-radius: 6px; cursor: pointer; width: 100%;">Delete</button>
+            </td>
+        `;
+        tbody.appendChild(row);
+    });
 
-            if (searchInput.value) {
-                filterTable(searchInput.value.toLowerCase());
-            }
-        }
+    if (searchInput.value) {
+        filterTable(searchInput.value.toLowerCase());
+    }
+}
 
         // Fungsi untuk format tanggal
         function formatDate(dateString) {
@@ -250,6 +254,74 @@ $type = 'Lost';
                 lostFoundDropdown.dispatchEvent(new Event('change'));
             }
         });
+
+        // Fungsi untuk menandai barang sudah ditemukan
+async function markAsFound(itemId) {
+    if (!confirm('Apakah Anda yakin ingin menandai barang ini sebagai ditemukan?')) {
+        return;
+    }
+
+    try {
+        const formData = new FormData();
+        formData.append('action', 'markFound');
+        formData.append('id', itemId);
+        formData.append('type', lostFoundDropdown.value);
+
+        const response = await fetch('process_action.php', {
+            method: 'POST',
+            body: formData
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const result = await response.json();
+        if (result.success) {
+            alert('Barang berhasil ditandai sebagai ditemukan!');
+            fetchData(); // Menyegarkan tabel
+        } else {
+            alert('Gagal menandai barang sebagai ditemukan: ' + result.message);
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Terjadi kesalahan saat menandai barang');
+    }
+}
+
+// Fungsi untuk menghapus barang
+async function deleteItem(itemId) {
+    if (!confirm('Apakah Anda yakin ingin menghapus barang ini?')) {
+        return;
+    }
+
+    try {
+        const formData = new FormData();
+        formData.append('action', 'delete');
+        formData.append('id', itemId);
+        formData.append('type', lostFoundDropdown.value);
+
+        const response = await fetch('process_action.php', {
+            method: 'POST',
+            body: formData
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const result = await response.json();
+        if (result.success) {
+            alert('Barang berhasil dihapus!');
+            fetchData(); // Menyegarkan tabel
+        } else {
+            alert('Gagal menghapus barang: ' + result.message);
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Terjadi kesalahan saat menghapus barang');
+    }
+}
     </script>
 </body>
 </html>
