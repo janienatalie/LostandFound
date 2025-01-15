@@ -162,22 +162,6 @@ if (isset($_GET['logout'])) {
     </script>
 </head>
 <body>
-<<<<<<< HEAD
-    <!-- Header Section -->
-    <header class="navbar">
-  <div class="logo">
-    <img src="logo.png" alt="Lost & Found Logo" class="logo-image" />
-  </div>
-  <nav>
-    <ul>
-      <li><a href="#" class="nav-link">Beranda</a></li>
-      <li><a href="#" class="nav-link">Formulir Kehilangan</a></li>
-      <li><a href="#" class="nav-link">Form Penemuan</a></li>
-      <li><a href="#" class="nav-link">Daftar Barang</a></li>
-    </ul>
-  </nav>
-</header>
-=======
     <header>
         <div class="navbar">
             <div class="logo">
@@ -208,4 +192,3 @@ if (isset($_GET['logout'])) {
     </header>
 </body>
 </html>
->>>>>>> fc82328d596223ec76fa8d2885a7eee64cf1eb0f
