@@ -177,6 +177,8 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .container {
@@ -215,7 +217,6 @@ body {
   width: 100%; /* Membuat tabel mengisi lebar kontainer */
   margin-top: 30px;
   overflow-x: auto;
-  overflow-y: auto;
   margin-left: 10px;
 }
 

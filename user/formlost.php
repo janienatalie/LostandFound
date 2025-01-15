@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Proses upload file
     $foto_barang = null;
     if (!empty($foto['name'])) {
-        $target_dir = "uploads/";
+        $target_dir = "../uploads/";
 
         // Memeriksa apakah folder uploads ada
         if (!is_dir($target_dir)) {

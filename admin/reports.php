@@ -21,7 +21,7 @@ if ($resultFound->num_rows > 0) {
             'kampus' => $row['lokasi_kampus'],    
             'barang' => $row['barang_ditemukan'],    
             'lokasi' => $row['tempat_menemukan'],    
-            'tanggal' => date('d-m-Y', strtotime($row['tanggal_menemukan'])),
+            'tanggal' => date('d F Y', strtotime($row['tanggal_menemukan'])),
             'foto' => $row['foto_barang'],
             'status' => 'Barang Ditemukan'    
         ];    
@@ -46,7 +46,7 @@ if ($resultLost->num_rows > 0) {
             'kampus' => $row['lokasi_kampus'],    
             'barang' => $row['barang_hilang'],    
             'lokasi' => $row['tempat_kehilangan'],    
-            'tanggal' => date('d-m-Y', strtotime($row['tanggal_kehilangan'])),
+            'tanggal' => strftime('%d %B %Y', strtotime($row['tanggal_kehilangan'])),
             'foto' => $row['foto_barang'],    
             'status' => 'Belum Ditemukan'    
         ];    
