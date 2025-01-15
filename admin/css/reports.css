@@ -5,7 +5,7 @@
 }
 
 .content {
-  padding: 20px;
+  margin-top: 20px;
 }
 
 .title {
@@ -178,11 +178,6 @@ body {
   padding: 0;
   display: flex;
   background-color: #f8f8f8;
-}
-
-.content {
-  flex-grow: 1;
-  padding: 20px;
 }
 
 .container {

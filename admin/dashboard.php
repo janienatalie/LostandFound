@@ -74,10 +74,10 @@ mysqli_close($conn);
             margin-bottom: 15px;
         }
 
-        .titlepage h2 {
+        /* .titlepage h2 {
             margin: 0;
             font-weight: 500;
-        }
+        } */
 
         .stats-wrapper {
             display: flex;
