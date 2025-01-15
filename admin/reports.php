@@ -1,14 +1,16 @@
 <?php        
-   include '../database/config.php';
-   include './sidebar.php';
+include '../database/config.php';
+include './sidebar.php';
     
-// Mengambil data dari tabel founditems dengan join ke tabel users    
+// Update query untuk founditems
 $sqlFound = "    
-    SELECT u.nama, u.npm, f.lokasi_kampus, f.barang_ditemukan, f.tempat_menemukan, f.tanggal_menemukan     
+    SELECT u.nama, u.npm, f.lokasi_kampus, f.barang_ditemukan, f.tempat_menemukan, 
+           f.tanggal_menemukan, f.foto_barang     
     FROM founditems f    
     JOIN users u ON f.user_id = u.id    
 ";       
 $resultFound = $conn->query($sqlFound);    
+
     
 $foundData = [];    
 if ($resultFound->num_rows > 0) {    
@@ -19,15 +21,17 @@ if ($resultFound->num_rows > 0) {
             'kampus' => $row['lokasi_kampus'],    
             'barang' => $row['barang_ditemukan'],    
             'lokasi' => $row['tempat_menemukan'],    
-            'tanggal' => date('d-m-Y', strtotime($row['tanggal_menemukan'])), // Format tanggal  
+            'tanggal' => date('d-m-Y', strtotime($row['tanggal_menemukan'])),
+            'foto' => $row['foto_barang'],
             'status' => 'Barang Ditemukan'    
         ];    
     }    
 }  
     
-// Mengambil data dari tabel lostitems dengan join ke tabel users    
+// Update query untuk lostitems  
 $sqlLost = "    
-    SELECT u.nama, u.npm, l.lokasi_kampus, l.barang_hilang, l.tempat_kehilangan, l.tanggal_kehilangan     
+    SELECT u.nama, u.npm, l.lokasi_kampus, l.barang_hilang, l.tempat_kehilangan, 
+           l.tanggal_kehilangan, l.foto_barang     
     FROM lostitems l    
     JOIN users u ON l.user_id = u.id    
 ";    
@@ -42,18 +46,18 @@ if ($resultLost->num_rows > 0) {
             'kampus' => $row['lokasi_kampus'],    
             'barang' => $row['barang_hilang'],    
             'lokasi' => $row['tempat_kehilangan'],    
-            'tanggal' => date('d-m-Y', strtotime($row['tanggal_kehilangan'])),    
+            'tanggal' => date('d-m-Y', strtotime($row['tanggal_kehilangan'])),
+            'foto' => $row['foto_barang'],    
             'status' => 'Belum Ditemukan'    
         ];    
     }    
-}    
+}   
+
+
     
-// Menggabungkan data    
 $data = array_merge($foundData, $lostData);    
-    
-// Mengubah data menjadi JSON untuk digunakan di JavaScript    
 $dataJson = json_encode($data);    
-?>      
+?> 
     
 <!DOCTYPE html>        
 <html lang="en">        
@@ -72,6 +76,12 @@ $dataJson = json_encode($data);
         .dropdownlostandfound.active, .dropdowncampus.active {  
             color: #6a1b9a; /* Warna teks saat aktif */  
         }  
+        .item-image {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
     </style>    
     <link rel="stylesheet" href="./css/reports.css">        
     <link rel="stylesheet" href="../css/style.css">        
@@ -112,8 +122,15 @@ $dataJson = json_encode($data);
                         <td>${row.barang}</td>        
                         <td>${row.lokasi}</td>        
                         <td>${row.tanggal}</td>     
-                        <td>${row.status}</td>          
-                    `;        
+                        <td>${row.status}</td>    
+                        <td>
+                            ${row.foto ? 
+                                `<img src="../uploads/${row.foto}" class="item-image" alt="Foto Barang" 
+                                onerror="this.src='../assets/images/no-image.png'">`
+                                : 
+                                '<span>Tidak ada foto</span>'
+                            }
+                        </td>                    `;        
                     tableBody.appendChild(tr);        
                 });        
             }    
@@ -206,7 +223,8 @@ $dataJson = json_encode($data);
                     <th>Barang</th>        
                     <th>Lokasi</th>        
                     <th>Tanggal</th>        
-                    <th>Status</th>        
+                    <th>Status</th>   
+                    <th>Foto</th>     
                 </tr>        
             </thead>        
             <tbody>        
@@ -219,6 +237,48 @@ $dataJson = json_encode($data);
 </div>        
 </body>    
 <script>
+    function applyFilters() {      
+        const lostFound = document.querySelector('[name="lost-found"]').value;      
+        const campus = document.querySelector('[name="campus"]').value;      
+        const query = document.querySelector('[name="q"]').value.toLowerCase();      
+
+        filteredData = data.filter((row) => {      
+            const matchesLostFound = !lostFound || lostFound === 'Semua' || 
+                (lostFound === 'Barang Ditemukan' && row.status === 'Barang Ditemukan') || 
+                (lostFound === 'Belum Ditemukan' && row.status === 'Belum Ditemukan');      
+            const matchesCampus = !campus || row.kampus.toLowerCase().includes(campus.toLowerCase());      
+
+            const searchWords = query.split(' ');      
+            const allText = Object.values(row).join(' ').toLowerCase();      
+            const matchesQuery = searchWords.every(word => word ? allText.includes(word) : true);      
+
+            return matchesLostFound && matchesCampus && matchesQuery;      
+        });      
+
+        const tableBody = document.querySelector('tbody');      
+        tableBody.innerHTML = '';      
+
+        if (filteredData.length === 0) {        
+            tableBody.innerHTML = '<tr><td colspan="9" style="text-align:center;">Tidak ada data ditemukan</td></tr>';        
+        } else {        
+            filteredData.forEach((row, index) => {        
+                const tr = document.createElement('tr');        
+                tr.innerHTML = `        
+                    <td>${index + 1}</td>        
+                    <td>${row.nama}</td>        
+                    <td>${row.npm}</td>        
+                    <td>${row.kampus}</td>        
+                    <td>${row.barang}</td>        
+                    <td>${row.lokasi}</td>        
+                    <td>${row.tanggal}</td>     
+                    <td>${row.status}</td>
+                    <td><img src="../uploads/${row.foto}" class="item-image" alt="Foto Barang"></td>          
+                `;        
+                tableBody.appendChild(tr);        
+            });        
+        }    
+    }
+
     document.getElementById('printButton').addEventListener('click', function() {  
     const dataToPrint = encodeURIComponent(JSON.stringify(filteredData));  
     this.href = 'print_reports.php?data=' + dataToPrint;  
@@ -232,5 +292,5 @@ document.querySelector('.dropdownlostandfound').addEventListener('change', funct
     }  
 });  
 
-</script>    
+</script>
 </html>
