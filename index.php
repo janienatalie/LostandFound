@@ -1,49 +1,76 @@
 <?php
+session_start();
 include './database/config.php';
-session_start(); // Start the session
 
-// Proses jika formulir dikirim
+// Function to validate input
+function validateInput($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+
+// Process login
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Ambil data dari formulir
-    $username = trim($_POST['username']);
-    $password = trim($_POST['password']);
-    $user_type = trim($_POST['user_type']);
+    $username = validateInput($_POST['username']);
+    $password = $_POST['password'];
+    $userType = validateInput($_POST['user_type']);
+    
+    try {
+        if ($userType === 'admin') {
+            // Admin login
+            $stmt = $conn->prepare("SELECT * FROM Admins WHERE username = ?");
+            $stmt->bind_param("s", $username);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            $user = $result->fetch_assoc();
 
-    // Validasi data
-    if (empty($username) || empty($password)) {
-        echo "<script>alert('Harap isi semua kolom.');</script>";
-    } else {
-        // Query berdasarkan user_type
-        if ($user_type === 'admin') {
-            $query = "SELECT id, username, password_hash FROM Admins WHERE username = ?";
-        } else {
-            $query = "SELECT id, username, password_hash FROM users WHERE username = ?";
-        }
-
-        // Prepare and execute the query
-        $stmt = $conn->prepare($query);
-        $stmt->bind_param("s", $username);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        $user = $result->fetch_assoc();
-
-        if ($user && password_verify($password, $user['password_hash'])) {
-            // Set session variables
-            $_SESSION['user_id'] = $user['id'];
-            $_SESSION['username'] = $user['username'];
-            $_SESSION['user_type'] = $user_type;
-
-            if ($user_type === 'admin') {
-                echo "<script>alert('Berhasil Login sebagai Admin.'); window.location.href = './admin/dashboard.php';</script>";
+            if ($user) {
+                if ($password === $user['password_hash']) {
+                    $_SESSION['user_id'] = $user['id'];
+                    $_SESSION['username'] = $user['username'];
+                    $_SESSION['user_type'] = 'admin';
+                    
+                    header("Location: ./admin/dashboard.php");
+                    exit();
+                } else {
+                    echo "<script>alert('Password salah!');window.location.href = 'index.php';</script>";
+                }
             } else {
-                echo "<script>alert('Berhasil Login.'); window.location.href = './user/home.php';</script>";
+                echo "<script>alert('Username admin tidak ditemukan!');window.location.href = 'index.php';</script>";
             }
+            $stmt->close();
         } else {
-            echo "<script>alert('Nama pengguna atau kata sandi tidak valid.'); window.location.href = 'index.php';</script>";;
+            // Regular user login
+            $stmt = $conn->prepare("SELECT * FROM Users WHERE username = ?");
+            $stmt->bind_param("s", $username);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            $user = $result->fetch_assoc();
+
+            if ($user) {
+                if (password_verify($password, $user['password_hash'])) {
+                    $_SESSION['user_id'] = $user['id'];
+                    $_SESSION['username'] = $user['username'];
+                    $_SESSION['user_type'] = 'user';
+                    $_SESSION['nama'] = $user['nama'];
+                    
+                    header("Location: ./user/home.php");
+                    exit();
+                } else {
+                    echo "<script>alert('Password salah!');window.location.href = 'index.php';</script>";
+                }
+            } else {
+                echo "<script>alert('Username tidak ditemukan!');window.location.href = 'index.php';</script>";
+            }
+            $stmt->close();
         }
+    } catch(Exception $e) {
+        echo "<script>alert('Error: " . addslashes($e->getMessage()) . "');</script>";
     }
 }
 
+// Close database connection
 $conn->close();
 ?>
 
