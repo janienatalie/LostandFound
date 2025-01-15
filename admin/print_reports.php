@@ -1,6 +1,5 @@
 <?php  
-   include '../database/config.php';
-  
+include '../database/config.php';
 
 // Mendapatkan data dari query string  
 $data = isset($_GET['data']) ? json_decode($_GET['data'], true) : [];  

@@ -1,17 +1,6 @@
 <?php
-// Konfigurasi database
-$host = "localhost";
-$user = "root";
-$password = "";
-$database = "lostandfound2";
-
-// Membuat koneksi ke database
-$koneksi = mysqli_connect($host, $user, $password, $database);
-
-// Cek koneksi
-if (mysqli_connect_errno()) {
-    die("Koneksi database gagal: " . mysqli_connect_error());
-}
+   include '../database/config.php';
+   include './sidebar.php';
 
 // Cek jika ada request AJAX
 if (isset($_POST['ajax']) && $_POST['ajax'] === 'true') {
@@ -57,10 +46,9 @@ $type = 'Lost';
 <html>
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
-    <link rel="stylesheet" href="/admin/css/form.css" />
+    <link rel="stylesheet" href="./css/form.css" />
 </head>
 <body>
-    <?php include 'navbar.php'; ?>
     <div class="list-of-items">
         <div class="title">
             <h2>Daftar Barang</h2>
@@ -101,8 +89,6 @@ $type = 'Lost';
             </table>
         </div>
     </div>
-    <?php include './footer.php';?>
-
     <script>
         const lostFoundDropdown = document.getElementById("dropdown");
         const searchInput = document.getElementById("query");
