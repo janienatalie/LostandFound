@@ -12,7 +12,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {    
     die("Koneksi gagal: " . $conn->connect_error);    
 }    
- 
+
 // Mendapatkan data dari query string  
 $data = isset($_GET['data']) ? json_decode($_GET['data'], true) : [];  
  
@@ -58,7 +58,7 @@ foreach ($data as $row) {
     $pdf->Cell(20, 10, $row['lokasi'], 1, 0, 'L');    
     $pdf->Cell(25, 10, $row['tanggal'], 1, 0, 'C');    
     $pdf->Cell(40, 10, $row['status'], 1, 1, 'C'); // Menambahkan status    
-}    
+}     
    
 // Menutup koneksi    
 $conn->close();    

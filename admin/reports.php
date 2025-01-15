@@ -232,7 +232,6 @@ $dataJson = json_encode($data);
     this.href = 'print_reports.php?data=' + dataToPrint;  
 });  
 
-
 document.querySelector('.dropdownlostandfound').addEventListener('change', function() {  
     if (this.value) {  
         this.classList.add('active'); // Tambahkan kelas active jika ada pilihan  
