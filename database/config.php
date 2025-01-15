@@ -3,7 +3,7 @@
 $host = "localhost"; // Nama host database
 $user = "root"; // Username database
 $password = ""; // Password database
-$database = "lostandfound"; // Nama database
+$database = "lostandfound2"; // Nama database
 
 try {
     $conn = new mysqli($host, $user, $password, $database);
