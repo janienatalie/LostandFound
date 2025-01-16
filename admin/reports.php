@@ -5,9 +5,9 @@ include './sidebar.php';
 // Update query untuk founditems
 $sqlFound = "    
     SELECT u.nama, u.npm, f.lokasi_kampus, f.barang_ditemukan, f.tempat_menemukan, 
-           f.tanggal_menemukan, f.foto_barang     
+           f.tanggal_menemukan, f.foto_barang, 'Sudah Dikembalikan' as status   
     FROM founditems f    
-    JOIN users u ON f.user_id = u.id    
+    JOIN users u ON f.user_id = u.id where status = 'Sudah Dikembalikan'
 ";       
 $resultFound = $conn->query($sqlFound);    
 
@@ -21,9 +21,9 @@ if ($resultFound->num_rows > 0) {
             'kampus' => $row['lokasi_kampus'],    
             'barang' => $row['barang_ditemukan'],    
             'lokasi' => $row['tempat_menemukan'],    
-            'tanggal' => date('d F Y', strtotime($row['tanggal_menemukan'])),
+            'tanggal' => date('d-m-Y', strtotime($row['tanggal_menemukan'])),
             'foto' => $row['foto_barang'],
-            'status' => 'Barang Ditemukan'    
+            'status' => $row['status']    
         ];    
     }    
 }  
@@ -31,9 +31,9 @@ if ($resultFound->num_rows > 0) {
 // Update query untuk lostitems  
 $sqlLost = "    
     SELECT u.nama, u.npm, l.lokasi_kampus, l.barang_hilang, l.tempat_kehilangan, 
-           l.tanggal_kehilangan, l.foto_barang     
+           l.tanggal_kehilangan, l.foto_barang, 'Sudah Ditemukan' as status    
     FROM lostitems l    
-    JOIN users u ON l.user_id = u.id    
+    JOIN users u ON l.user_id = u.id where status = 'Sudah Ditemukan'    
 ";    
 $resultLost = $conn->query($sqlLost);    
     
@@ -46,9 +46,9 @@ if ($resultLost->num_rows > 0) {
             'kampus' => $row['lokasi_kampus'],    
             'barang' => $row['barang_hilang'],    
             'lokasi' => $row['tempat_kehilangan'],    
-            'tanggal' => strftime('%d %B %Y', strtotime($row['tanggal_kehilangan'])),
+            'tanggal' => date('d-m-Y', strtotime($row['tanggal_kehilangan'])),
             'foto' => $row['foto_barang'],    
-            'status' => 'Belum Ditemukan'    
+            'status' => $row['status']    
         ];    
     }    
 }   
@@ -174,8 +174,8 @@ $dataJson = json_encode($data);
             <div class="controls-container">        
             <div class="dropdown-lost-and-found">            
                 <select name="lost-found" class="dropdownlostandfound" id="dropdown">    
-                    <option value="Belum Ditemukan">Kehilangan</option>            
-                    <option value="Barang Ditemukan">Penemuan</option>            
+                    <option value="Lost">Kehilangan</option>            
+                    <option value="Found">Penemuan</option>            
                 </select>            
             </div>       
             
@@ -244,8 +244,8 @@ $dataJson = json_encode($data);
 
         filteredData = data.filter((row) => {      
             const matchesLostFound = !lostFound || lostFound === 'Semua' || 
-                (lostFound === 'Barang Ditemukan' && row.status === 'Barang Ditemukan') || 
-                (lostFound === 'Belum Ditemukan' && row.status === 'Belum Ditemukan');      
+                (lostFound === 'Lost' && row.status === 'Sudah Ditemukan') || 
+                (lostFound === 'Found' && row.status === 'Sudah Dikembalikan');      
             const matchesCampus = !campus || row.kampus.toLowerCase().includes(campus.toLowerCase());      
 
             const searchWords = query.split(' ');      
