@@ -59,7 +59,6 @@ foreach ($data as $row) {
 $conn->close();    
    
 // Output PDF    
-$pdf->Image('../uploads', 10, 10, 50, 50, 'JPG');
 $pdf->Output('Laporan_Lost_Found.pdf', 'I'); // 'I' untuk menampilkan di browser    
 ?>
 
