@@ -100,6 +100,16 @@ $dataJson = json_encode($allData);
                         <option value="Found">Penemuan</option>
                     </select>
                 </div>
+                <div class="dropdown-campus">          
+                <select name="campus" class="dropdowncampus" id="dropdowncampus">          
+                    <option value="">Kampus</option>          
+                    <option value="E">Kampus E</option>          
+                    <option value="D">Kampus D</option>          
+                    <option value="G">Kampus G</option>          
+                    <option value="H">Kampus H</option>          
+                    <option value="F8">Kampus F8</option>          
+                </select>          
+            </div>
                 <div class="search-bar">
                     <input type="search" id="query" name="q" placeholder="Cari..." 
                            aria-label="Search through site content" />
@@ -193,7 +203,7 @@ $dataJson = json_encode($allData);
 
 
 function markFound(id, status) {
-    if (status === 'Lost') {
+    if (status === 'Lost' || status === 'Found') {
         fetch('updateStatus.php', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -266,6 +276,7 @@ function removeRowFromTable(id) {
         const lostFoundSelect = document.querySelector('.dropdownlostandfound');
         const searchInput = document.querySelector('#query');
 
+
         lostFoundSelect.value = "Lost";
 
         lostFoundSelect.addEventListener('change', updateTable);
@@ -274,6 +285,56 @@ function removeRowFromTable(id) {
         // Initial table update
         updateTable();
     });
+    
+    const campusDropdown = document.getElementById('dropdowncampus')
+
+    if (!campusDropdown) {
+            console.error('Dropdowns not found!');
+        } else {
+            console.log('Dropdowns found successfully');
+        }
+
+        async function fetchData() {
+            try {
+                console.log('Fetching data...');
+                const campus = campusDropdown.value || '';
+                
+                console.log('Campus:', campus);
+
+                // Get current URL path
+                const currentPath = window.location.pathname;
+                const basePath = currentPath.substring(0, currentPath.lastIndexOf('/') + 1);
+                const fetchUrl = basePath + 'fetch_items.php';
+                
+                console.log('Fetching from:', fetchUrl);
+
+                const response = await fetch(fetchUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: `type=${type}&campus=${campus}`
+                });
+
+                console.log('Response received:', response.status);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                console.log('Data received:', data);
+                
+                updateTable(data);
+            } catch (error) {
+                console.error('Error in fetchData:', error);
+            }
+        }
+
+        
+
     </script>
+
+    
 </body>
 </html>
