@@ -1,32 +1,55 @@
 <?php
-include '../database/config.php'; // Pastikan koneksi ke database sudah benar
+include '../database/config.php';
 
 // Mengambil data yang dikirim dari frontend
 $data = json_decode(file_get_contents('php://input'), true);
 
-if (isset($data['id']) && isset($data['status'])) {
-    $id = $data['id']; // ID barang
-    $status = $data['status']; // Status baru (Lost / Found)
+if (isset($data['id'])) {
+    $id = $data['id']; // ID barang yang akan diperbarui statusnya
 
-    // Menentukan tabel dan kolom mana yang akan diperbarui
-    if ($status == 'Found') {
-        $sql = "UPDATE FoundItems SET status = 'Found' WHERE id = ?";
-    } elseif ($status == 'Lost') {
-        $sql = "UPDATE LostItems SET status = 'Lost' WHERE id = ?";
-    } else {
-        echo json_encode(['status' => 'error', 'message' => 'Status tidak valid']);
-        exit;
+    // Update status barang menjadi "Sudah Ditemukan" pada tabel LostItems
+    $updateSqlLost = "UPDATE LostItems SET status = 'Sudah Ditemukan' WHERE id = ?";
+    $updateSqlFound = "UPDATE FoundItems SET status = 'Sudah Ditemukan' WHERE id = ?";
+
+    // Cek apakah data ada di tabel LostItems
+    $stmtLost = $conn->prepare("SELECT id FROM LostItems WHERE id = ?");
+    $stmtLost->bind_param("i", $id);
+    $stmtLost->execute();
+    $resultLost = $stmtLost->get_result();
+
+    if ($resultLost->num_rows > 0) {
+        $stmtUpdateLost = $conn->prepare($updateSqlLost);
+        $stmtUpdateLost->bind_param("i", $id);
+
+        if ($stmtUpdateLost->execute()) {
+            echo json_encode(['status' => 'success', 'message' => 'Status berhasil diperbarui di tabel LostItems']);
+            exit;
+        } else {
+            echo json_encode(['status' => 'error', 'message' => 'Gagal memperbarui status di tabel LostItems']);
+            exit;
+        }
     }
 
-    // Menyiapkan dan menjalankan query
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("i", $id); // Bind ID dengan parameter query
+    // Cek apakah data ada di tabel FoundItems
+    $stmtFound = $conn->prepare("SELECT id FROM FoundItems WHERE id = ?");
+    $stmtFound->bind_param("i", $id);
+    $stmtFound->execute();
+    $resultFound = $stmtFound->get_result();
 
-    if ($stmt->execute()) {
-        echo json_encode(['status' => 'success', 'message' => 'Status barang telah diperbarui']);
-    } else {
-        echo json_encode(['status' => 'error', 'message' => 'Gagal memperbarui status barang']);
+    if ($resultFound->num_rows > 0) {
+        $stmtUpdateFound = $conn->prepare($updateSqlFound);
+        $stmtUpdateFound->bind_param("i", $id);
+
+        if ($stmtUpdateFound->execute()) {
+            echo json_encode(['status' => 'success', 'message' => 'Status berhasil diperbarui di tabel FoundItems']);
+            exit;
+        } else {
+            echo json_encode(['status' => 'error', 'message' => 'Gagal memperbarui status di tabel FoundItems']);
+            exit;
+        }
     }
+
+    echo json_encode(['status' => 'error', 'message' => 'ID barang tidak ditemukan di kedua tabel']);
 } else {
     echo json_encode(['status' => 'error', 'message' => 'Data tidak lengkap']);
 }
