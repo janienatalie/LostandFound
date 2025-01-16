@@ -30,6 +30,7 @@ CREATE TABLE LostItems (
     tempat_kehilangan VARCHAR(255) NOT NULL,
     tanggal_kehilangan DATE NOT NULL,
     foto_barang VARCHAR(255), -- Lokasi atau nama file gambar barang
+    status ENUM('Lost', 'Sudah Ditemukan') NOT NULL DEFAULT 'Lost',
     FOREIGN KEY (user_id) REFERENCES Users(id) ON DELETE CASCADE
 );
 
@@ -42,5 +43,6 @@ CREATE TABLE FoundItems (
     tempat_menemukan VARCHAR(255) NOT NULL,
     tanggal_menemukan DATE NOT NULL,
     foto_barang VARCHAR(255), -- Lokasi atau nama file gambar barang
+    status ENUM('Found', 'Sudah Dikembalikan') NOT NULL DEFAULT 'Found',
     FOREIGN KEY (user_id) REFERENCES Users(id) ON DELETE CASCADE
 );
