@@ -188,6 +188,7 @@ body {
   margin: 30px 10px;
   height: auto;
   width: auto;
+  margin-right: 100px;
 }
 
 /* .dropdown:focus,
@@ -255,6 +256,13 @@ td {
 
 tr:nth-child(odd) {
   background-color: white;
+}
+
+.table th:nth-child(1), /* Untuk header kolom "No" */
+.table td:nth-child(1) {
+  /* Untuk data di kolom "No" */
+  width: 50px; /* Ganti dengan ukuran yang diinginkan */
+  text-align: center; /* Menyelaraskan teks di tengah */
 }
 
 .print-button {
