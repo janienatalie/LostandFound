@@ -1,52 +1,90 @@
 <?php
-   include '../database/config.php';
-   include './sidebar.php';
+include '../database/config.php';
+include './sidebar.php';
 
-// Cek jika ada request AJAX
-if (isset($_POST['ajax']) && $_POST['ajax'] === 'true') {
-    $type = isset($_POST['type']) ? $_POST['type'] : 'Lost';
-    
-    $table = ($type == 'Lost') ? 'LostItems' : 'FoundItems';
-    $itemColumn = ($type == 'Lost') ? 'barang_hilang' : 'barang_ditemukan';
-    $locationColumn = ($type == 'Lost') ? 'tempat_kehilangan' : 'tempat_menemukan';
-    $dateColumn = ($type == 'Lost') ? 'tanggal_kehilangan' : 'tanggal_menemukan';
-    
-    $query = "SELECT $table.*, Users.nama, Users.npm 
-              FROM $table 
-              JOIN Users ON $table.user_id = Users.id 
-              ORDER BY $dateColumn DESC";
-    
-    $result = mysqli_query($koneksi, $query);
-    $items = [];
-    
-    if ($result) {
-        while ($row = mysqli_fetch_assoc($result)) {
-            $items[] = [
-                'nama' => $row['nama'],
-                'npm' => $row['npm'],
-                'kampus' => $row['lokasi_kampus'],
-                'item' => ($type == 'Lost') ? $row['barang_hilang'] : $row['barang_ditemukan'],
-                'lokasi' => ($type == 'Lost') ? $row['tempat_kehilangan'] : $row['tempat_menemukan'],
-                'tanggal' => $row['tanggal_kehilangan'] ?? $row['tanggal_menemukan'],
-                'foto' => $row['foto_barang']
-            ];
-        }
-    }
-    
-    header('Content-Type: application/json');
-    echo json_encode($items);
-    exit;
+// Function untuk format tanggal
+function formatTanggal($date) {
+    return date('d F Y', strtotime($date));
 }
 
-// Default ke 'Lost' jika bukan request AJAX
-$type = 'Lost';
+// Query untuk mengambil data barang hilang
+$sqlLost = "
+    SELECT u.nama, u.npm, l.lokasi_kampus, l.barang_hilang as item, 
+           l.tempat_kehilangan as lokasi, l.tanggal_kehilangan as tanggal,
+           l.foto_barang as foto, 'Lost' as status, l.id as lost_id
+    FROM LostItems l
+    JOIN Users u ON l.user_id = u.id
+";
+
+// Query untuk mengambil data barang ditemukan
+$sqlFound = "
+    SELECT u.nama, u.npm, f.lokasi_kampus, f.barang_ditemukan as item,
+           f.tempat_menemukan as lokasi, f.tanggal_menemukan as tanggal,
+           f.foto_barang as foto, 'Found' as status, f.id as found_id
+    FROM FoundItems f
+    JOIN Users u ON f.user_id = u.id
+";
+
+// Gabungkan kedua query
+$sql = "$sqlLost UNION ALL $sqlFound";
+$result = $conn->query($sql);
+
+// Array untuk menyimpan semua data
+$allData = [];
+
+if ($result) {
+    while ($row = $result->fetch_assoc()) {
+        $allData[] = $row;
+    }
+}
+
+// Konversi data ke JSON untuk digunakan di JavaScript
+$dataJson = json_encode($allData);
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Barang Lost & Found</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <link rel="stylesheet" href="./css/form.css" />
+    <style>
+        /* Gaya untuk mengubah warna placeholder dropdown */
+        .dropdownlostandfound option:disabled {
+            color: #9b59b6; /* Warna ungu untuk placeholder */
+        }
+
+        /* Gaya untuk mengubah warna dropdown ketika nilai terpilih adalah 'Kehilangan' */
+        .dropdownlostandfound {
+            color: #9b59b6; /* Warna ungu pada teks pilihan */
+        }
+
+        /* Gaya untuk tombol kelola */
+        .btn-kelola {
+            padding: 5px 10px;
+            margin: 3px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .btn-sudah-ditemukan {
+            background-color: #28a745; /* Hijau */
+            color: white;
+        }
+
+        .btn-belum-ditemukan {
+            background-color: #ffc107; /* Kuning */
+            color: white;
+        }
+
+        .btn-delete {
+            background-color: #dc3545; /* Merah */
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <div class="list-of-items">
@@ -80,7 +118,8 @@ $type = 'Lost';
                         <th>Item</th>
                         <th>Lokasi</th>
                         <th>Tanggal</th>
-                        <th>Foto Barang</th>
+                        <th>Foto</th>
+                        <th>Kelola</th> <!-- Kolom Kelola -->
                     </tr>
                 </thead>
                 <tbody>
@@ -89,225 +128,138 @@ $type = 'Lost';
             </table>
         </div>
     </div>
+
     <script>
-        const lostFoundDropdown = document.getElementById("dropdown");
-        const searchInput = document.getElementById("query");
+    // Terima data dari PHP
+    const allData = <?php echo $dataJson; ?>;
+    let filteredData = allData;
 
-        // Fungsi untuk memuat data
-        async function fetchData() {
-            try {
-                const formData = new FormData();
-                formData.append('type', lostFoundDropdown.value);
-                formData.append('ajax', 'true');
-
-                const response = await fetch(window.location.href, {
-                    method: 'POST',
-                    body: formData
-                });
-
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-
-                const data = await response.json();
-                updateTable(data);
-            } catch (error) {
-                console.error('Error:', error);
-            }
-        }
-
-        // Fungsi untuk memperbarui tabel
-        function updateTable(data) {
-    const tbody = document.querySelector('.listofitemstable tbody');
-    tbody.innerHTML = '';
-
-    if (!data || data.length === 0) {
-        tbody.innerHTML = '<tr><td colspan="9" style="text-align: center;">Tidak ada data</td></tr>';
-        return;
+    // Fungsi untuk format tanggal dalam bahasa Indonesia
+    function formatTanggalIndo(dateString) {
+        const date = new Date(dateString);
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        return new Intl.DateTimeFormat('id-ID', options).format(date);
     }
 
-    data.forEach((item, index) => {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-            <td>${index + 1}</td>
-            <td>${escapeHtml(item.nama)}</td>
-            <td>${escapeHtml(item.npm)}</td>
-            <td>${escapeHtml(item.kampus)}</td>
-            <td>${escapeHtml(item.item)}</td>
-            <td>${escapeHtml(item.lokasi)}</td>
-            <td>${formatDate(item.tanggal)}</td>
-            <td>${item.foto ? `<img src="${escapeHtml(item.foto)}" alt="Foto Barang" style="max-width: 100px;">` : 'Tidak ada foto'}</td>
-            <td>
-                <button class="has-been-found-btn" onclick="markAsFound(${item.id})" style="background-color: #763996; color: white; border: none; padding: 8px 12px; border-radius: 6px; margin-bottom: 5px; cursor: pointer; width: 100%;">Has Been Found</button>
-                <button class="delete-btn" onclick="deleteItem(${item.id})" style="background-color: #763996; color: white; border: none; padding: 8px 12px; border-radius: 6px; cursor: pointer; width: 100%;">Delete</button>
-            </td>
-        `;
-        tbody.appendChild(row);
-    });
+    function updateTable() {
+        const tableBody = document.querySelector('tbody');
+        tableBody.innerHTML = '';
+        const lostFoundFilter = document.querySelector('.dropdownlostandfound').value;
+        const searchQuery = document.querySelector('#query').value.toLowerCase();
 
-    if (searchInput.value) {
-        filterTable(searchInput.value.toLowerCase());
-    }
-}
+        // Filter data berdasarkan kriteria
+        filteredData = allData.filter(item => {
+            const matchesType = !lostFoundFilter || item.status === lostFoundFilter;
+            const matchesSearch = Object.values(item).some(value => 
+                value && value.toString().toLowerCase().includes(searchQuery)
+            );
+            return matchesType && matchesSearch;
+        });
 
-        // Fungsi untuk format tanggal
-        function formatDate(dateString) {
-            if (!dateString) return "";
-            const options = { year: 'numeric', month: 'long', day: 'numeric' };
-            return new Date(dateString).toLocaleDateString('id-ID', options);
-        }
-
-        // Fungsi untuk escape HTML
-        function escapeHtml(str) {
-            const div = document.createElement('div');
-            div.textContent = str;
-            return div.innerHTML;
-        }
-
-        // Fungsi debounce
-        function debounce(func, wait) {
-            let timeout;
-            return function executedFunction(...args) {
-                const later = () => {
-                    clearTimeout(timeout);
-                    func(...args);
-                };
-                clearTimeout(timeout);
-                timeout = setTimeout(later, wait);
-            };
-        }
-
-        // Fungsi untuk memfilter tabel
-        function filterTable(searchTerm) {
-            const tableBody = document.querySelector(".listofitemstable tbody");
-            const rows = tableBody.getElementsByTagName("tr");
-            let hasResults = false;
-
-            for (const row of rows) {
-                let text = "";
-                const cells = row.getElementsByTagName("td");
-
-                for (let i = 0; i < cells.length - 1; i++) {
-                    text += cells[i].textContent.toLowerCase() + " ";
-                }
-
-                if (text.includes(searchTerm)) {
-                    row.style.display = "";
-                    hasResults = true;
-                } else {
-                    row.style.display = "none";
-                }
-            }
-
-            if (!hasResults) {
-                if (!document.getElementById("no-results-row")) {
-                    const noResultsRow = document.createElement("tr");
-                    noResultsRow.id = "no-results-row";
-                    noResultsRow.innerHTML = '<td colspan="8" style="text-align: center;">Tidak ada hasil yang ditemukan</td>';
-                    tableBody.appendChild(noResultsRow);
-                }
-            } else {
-                const noResultsRow = document.getElementById("no-results-row");
-                if (noResultsRow) {
-                    noResultsRow.remove();
-                }
-            }
-        }
-
-        // Event listener untuk dropdown
-        if (lostFoundDropdown) {
-            lostFoundDropdown.addEventListener('change', () => {
-                fetchData();
-                if (lostFoundDropdown.value) {
-                    lostFoundDropdown.style.color = '#763996';
-                } else {
-                    lostFoundDropdown.style.color = '#c7c7c7';
-                }
+        // Tampilkan data yang sudah difilter
+        if (filteredData.length === 0) {
+            tableBody.innerHTML = '<tr><td colspan="9" class="no-data">Tidak ada data ditemukan</td></tr>';
+        } else {
+            filteredData.forEach((item, index) => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>${index + 1}</td>
+                    <td>${item.nama}</td>
+                    <td>${item.npm}</td>
+                    <td>${item.lokasi_kampus}</td>
+                    <td>${item.item}</td>
+                    <td>${item.lokasi}</td>
+                    <td>${formatTanggalIndo(item.tanggal)}</td>
+                    <td>
+                        ${item.foto ? 
+                            `<img src="../uploads/${item.foto}" class="item-image" alt="Foto Barang" 
+                            onerror="console.log('Error loading image:', '../uploads/${item.foto}')" 
+                            />`
+                            : 
+                            '<span>Tidak ada foto</span>'
+                        }
+                    </td>
+                    <td>
+                        <button class="btn-kelola btn-sudah-ditemukan" onclick="markFound(${item.lost_id || item.found_id}, '${item.status}')">Barang Sudah Ditemukan</button>
+                        <button class="btn-kelola btn-belum-ditemukan" onclick="markNotFound(${item.lost_id || item.found_id}, '${item.status}')">Barang Belum Ditemukan</button>
+                        <button class="btn-kelola btn-delete" onclick="deleteItem(${item.lost_id || item.found_id})">Delete</button>
+                    </td>
+                `;
+                tableBody.appendChild(tr);
             });
         }
+    }
 
-        // Event listener untuk pencarian
-        if (searchInput) {
-            searchInput.addEventListener("input", debounce(() => {
-                filterTable(searchInput.value.toLowerCase());
-            }, 300));
-        }
-
-        // Load data saat halaman dimuat
-        document.addEventListener('DOMContentLoaded', () => {
-            if (lostFoundDropdown) {
-                lostFoundDropdown.value = 'Lost';
-                lostFoundDropdown.dispatchEvent(new Event('change'));
+    // Fungsi untuk menandai barang sudah ditemukan
+    function markFound(id, status) {
+        // Kirim data ke server untuk memperbarui status barang ke ditemukan
+        fetch('updateStatus.php', {
+            method: 'POST',
+            body: JSON.stringify({ id, status: 'Found' }),
+            headers: {
+                'Content-Type': 'application/json'
             }
-        });
-
-        // Fungsi untuk menandai barang sudah ditemukan
-async function markAsFound(itemId) {
-    if (!confirm('Apakah Anda yakin ingin menandai barang ini sebagai ditemukan?')) {
-        return;
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert('Barang telah dipindahkan ke halaman ditemukan!');
+            updateTable();
+        })
+        .catch(error => console.error('Error:', error));
     }
 
-    try {
-        const formData = new FormData();
-        formData.append('action', 'markFound');
-        formData.append('id', itemId);
-        formData.append('type', lostFoundDropdown.value);
-
-        const response = await fetch('process_action.php', {
+    // Fungsi untuk menandai barang belum ditemukan
+    function markNotFound(id, status) {
+        // Kirim data ke server untuk memperbarui status barang ke belum ditemukan
+        fetch('updateStatus.php', {
             method: 'POST',
-            body: formData
-        });
-
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        const result = await response.json();
-        if (result.success) {
-            alert('Barang berhasil ditandai sebagai ditemukan!');
-            fetchData(); // Menyegarkan tabel
-        } else {
-            alert('Gagal menandai barang sebagai ditemukan: ' + result.message);
-        }
-    } catch (error) {
-        console.error('Error:', error);
-        alert('Terjadi kesalahan saat menandai barang');
-    }
-}
-
-// Fungsi untuk menghapus barang
-async function deleteItem(itemId) {
-    if (!confirm('Apakah Anda yakin ingin menghapus barang ini?')) {
-        return;
+            body: JSON.stringify({ id, status: 'Lost' }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert('Barang telah dipindahkan ke halaman kehilangan!');
+            updateTable();
+        })
+        .catch(error => console.error('Error:', error));
     }
 
-    try {
-        const formData = new FormData();
-        formData.append('action', 'delete');
-        formData.append('id', itemId);
-        formData.append('type', lostFoundDropdown.value);
-
-        const response = await fetch('process_action.php', {
-            method: 'POST',
-            body: formData
-        });
-
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+    // Fungsi untuk menghapus item
+    function deleteItem(id) {
+        const confirmation = confirm("Apakah Anda yakin ingin menghapus data ini?");
+        if (confirmation) {
+            // Kirim permintaan ke server untuk menghapus item dari database
+            fetch('deleteItem.php', {
+                method: 'POST',
+                body: JSON.stringify({ id }),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Barang telah dihapus!');
+                updateTable();
+            })
+            .catch(error => console.error('Error:', error));
         }
-
-        const result = await response.json();
-        if (result.success) {
-            alert('Barang berhasil dihapus!');
-            fetchData(); // Menyegarkan tabel
-        } else {
-            alert('Gagal menghapus barang: ' + result.message);
-        }
-    } catch (error) {
-        console.error('Error:', error);
-        alert('Terjadi kesalahan saat menghapus barang');
     }
-}
+
+    // Event listeners
+    document.addEventListener('DOMContentLoaded', () => {
+        const lostFoundSelect = document.querySelector('.dropdownlostandfound');
+        const searchInput = document.querySelector('#query');
+
+        lostFoundSelect.value = "Lost";
+
+        lostFoundSelect.addEventListener('change', updateTable);
+        searchInput.addEventListener('input', updateTable);
+
+        // Initial table update
+        updateTable();
+    });
     </script>
 </body>
 </html>

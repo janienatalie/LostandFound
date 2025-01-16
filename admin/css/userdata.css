@@ -183,6 +183,13 @@ input[type="search"]::-ms-clear {
   font-size: 16px;
 }
 
+.listofitemstable th:nth-child(1), /* Untuk header kolom "No" */
+.listofitemstable td:nth-child(1) {
+  /* Untuk data di kolom "No" */
+  width: 50px; /* Ganti dengan ukuran yang diinginkan */
+  text-align: center; /* Menyelaraskan teks di tengah */
+}
+
 /* .listofitemstable tr:nth-child(even) {
   background-color: #c7c7c7; Memberikan warna latar belakang pada baris genap
 } */
