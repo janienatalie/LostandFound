@@ -75,18 +75,19 @@ $dataJson = json_encode($data);
     <title>Lost & Found Laporan</title>    
     <style> 
         .dropdownlostandfound, .dropdowncampus {  
-            border: 1px solid #6a1b9a; /* Border default */  
+            border: 1px solid #763996; /* Border default */  
             padding: 10px; /* Padding untuk dropdown */  
             border-radius: 5px; /* Sudut melengkung */  
         }  
         
         .dropdownlostandfound.active, .dropdowncampus.active {  
-            color: #6a1b9a; /* Warna teks saat aktif */  
+            color: #763996; /* Warna teks saat aktif */  
         }  
         .item-image {
-            max-width: 100%; /* Mencegah gambar melebihi lebar container */
-            height: auto; /* Menjaga rasio aspek gambar */
-            display: inline-block; /* Memastikan gambar mengikuti ukuran kontennya */
+            max-width: auto;
+            height: 110px;
+            display: block;
+            margin: 0 auto;
         }
     </style>    
     <link rel="stylesheet" href="./css/reports.css">        
@@ -141,7 +142,7 @@ $dataJson = json_encode($data);
                         <td>${row.lokasi}</td>        
                         <td>${formatTanggal(row.tanggal)}</td>     
                         <td>${row.status}</td>    
-                        <td>${row.foto ? `<img src="../uploads/ ${row.foto}" alt="Foto Barang" style="max-width: 100px;">` : 'Tidak ada foto'}</td>
+                        <td style="min-width: 2200px; padding: 10px;">${row.foto ? `<img src="../uploads/ ${row.foto}" alt="Foto Barang" style="max-width: 100px;">` : 'Tidak ada foto'}</td>
                     `;        
                     tableBody.appendChild(tr);        
                 });        

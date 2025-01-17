@@ -65,11 +65,13 @@ $dataJson = json_encode($allData);
 
         /* Gaya untuk tombol kelola */
         .btn-kelola {
-            padding: 5px 10px;
+            padding: 10px 15px;
             margin: 3px;
             cursor: pointer;
             border: none;
             border-radius: 5px;
+            width: 140px;
+            font-size: 15px;
         }
 
         .btn-sudah-ditemukan {
@@ -129,7 +131,7 @@ $dataJson = json_encode($allData);
                         <th>Nama</th>
                         <th>NPM</th>
                         <th>Kampus</th>
-                        <th>Item</th>
+                        <th>Barang</th>
                         <th>Lokasi</th>
                         <th>Tanggal</th>
                         <th>Foto</th>

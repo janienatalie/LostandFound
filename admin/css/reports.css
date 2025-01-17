@@ -8,6 +8,7 @@
   margin-top: 20px;
   margin-left: 3px;
   margin-right: 20px;
+  max-width: 975px;
 }
 
 .title {
@@ -231,16 +232,17 @@ body::-webkit-scrollbar {
 .table {
   width: 100%;
   margin-top: 30px;
-  overflow-x: auto;
   margin-left: 10px;
+  overflow-x: auto; /* Untuk scroll horizontal */
+  white-space: nowrap; /* Mencegah wrapping konten */
 }
 
 .table table {
-  width: 100%;
+  min-width: 100%; /* Minimal mengambil lebar container */
+  table-layout: fixed; /* Biarkan kolom menyesuaikan konten */
   border-collapse: collapse;
-  /* Hapus table-layout: fixed untuk mengizinkan kolom menyesuaikan konten */
   margin-right: 30px;
-  white-space: nowrap; /* Mencegah text wrapping */
+  margin-bottom: 20px;
 }
 
 .table tr {
@@ -248,17 +250,14 @@ body::-webkit-scrollbar {
 }
 
 .table th,
-td {
+.table td {
   padding: 10px;
-  text-align: left;
+  text-align: center;
   border: 1px solid #ddd;
-  /* Tambahkan minimum width untuk mencegah kolom terlalu sempit */
-  min-width: 50px;
-  /* Tambahkan maximum width untuk mencegah kolom terlalu lebar */
-  max-width: 300px;
-  /* Tambahkan pengaturan untuk text yang terlalu panjang */
-  white-space: normal;
-  word-wrap: break-word;
+  vertical-align: middle;
+  white-space: normal; /* Izinkan text untuk wrap */
+  word-wrap: break-word; /* Memastikan kata panjang bisa wrap */
+  overflow-wrap: break-word; /* Alternatif untuk word-wrap */
 }
 
 .table tbody {
@@ -281,12 +280,55 @@ tr:nth-child(odd) {
 }
 
 /* Khusus untuk kolom nomor, tetap gunakan width tetap */
+/* Atur minimal width untuk setiap kolom */
+/* Atur lebar spesifik untuk setiap kolom */
 .table th:nth-child(1),
 .table td:nth-child(1) {
-  width: 50px;
-  min-width: 50px;
-  max-width: 50px;
-  text-align: center;
+  /* No */
+  width: 60px;
+  min-width: 60px;
+}
+.table th:nth-child(2),
+.table td:nth-child(2) {
+  /* Nama */
+  width: 140px;
+  min-width: 140px;
+}
+.table th:nth-child(3),
+.table td:nth-child(3) {
+  /* NPM */
+  width: 100px;
+  min-width: 100px;
+}
+.table th:nth-child(4),
+.table td:nth-child(4) {
+  /* Kampus */
+  width: 100px;
+  min-width: 100px;
+}
+.table th:nth-child(5),
+.table td:nth-child(5) {
+  /* Barang */
+  width: 150px;
+  min-width: 150px;
+}
+.table th:nth-child(6),
+.table td:nth-child(6) {
+  /* Lokasi */
+  width: 150px;
+  min-width: 150px;
+}
+.table th:nth-child(7),
+.table td:nth-child(7) {
+  /* Tanggal */
+  width: 150px;
+  min-width: 150px;
+}
+.table th:nth-child(8),
+.table td:nth-child(8) {
+  /* Status */
+  width: 220px;
+  min-width: 220px;
 }
 
 .print-button {

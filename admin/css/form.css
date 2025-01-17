@@ -187,7 +187,8 @@ input[type="search"]::-ms-clear {
 .listofitemstable table {
   width: 100%;
   border-collapse: collapse;
-  table-layout: fixed; /* Mengatur lebar kolom agar lebih konsisten */
+  table-layout: auto; /* Mengubah dari fixed ke auto agar lebar menyesuaikan konten */
+  margin-bottom: 20px;
 }
 
 .listofitemstable thead {
@@ -203,16 +204,81 @@ input[type="search"]::-ms-clear {
 
 .listofitemstable td,
 .listofitemstable th {
-  padding: 10px; /* Menyelaraskan padding antara th dan td */
-  border: 1px solid #ddd; /* Menambahkan border antara sel */
+  padding: 15px;
+  border: 1px solid #ddd;
   font-size: 16px;
+  max-width: 270px; /* Maksimum lebar untuk setiap sel */
+  word-wrap: break-word; /* Memungkinkan text untuk wrap ke bawah */
+  white-space: normal; /* Memungkinkan text untuk multi-line */
 }
 
-.listofitemstable th:nth-child(1), /* Untuk header kolom "No" */
+.listofitemstable th:nth-child(1),
 .listofitemstable td:nth-child(1) {
-  /* Untuk data di kolom "No" */
-  width: 50px; /* Ganti dengan ukuran yang diinginkan */
-  text-align: center; /* Menyelaraskan teks di tengah */
+  /* No */
+  width: 60px;
+  min-width: 60px;
+}
+.listofitemstable th:nth-child(2),
+.listofitemstable td:nth-child(2) {
+  /* Nama */
+  width: 140px;
+  min-width: 140px;
+}
+.listofitemstable th:nth-child(3),
+.listofitemstable td:nth-child(3) {
+  /* NPM */
+  width: 100px;
+  min-width: 100px;
+}
+.listofitemstable th:nth-child(4),
+.listofitemstable td:nth-child(4) {
+  /* Kampus */
+  width: 130px;
+  min-width: 130px;
+}
+.listofitemstable th:nth-child(5),
+.listofitemstable td:nth-child(5) {
+  /* Barang */
+  width: 150px;
+  min-width: 150px;
+}
+.listofitemstable th:nth-child(6),
+.listofitemstable td:nth-child(6) {
+  /* Lokasi */
+  width: 150px;
+  min-width: 150px;
+}
+.listofitemstable th:nth-child(7),
+.listofitemstable td:nth-child(7) {
+  /* Tanggal */
+  width: 150px;
+  min-width: 150px;
+}
+.listofitemstable th:nth-child(8),
+.listofitemstable td:nth-child(8) {
+  /* Status */
+  width: 150px;
+  min-width: 150px;
+}
+.listofitemstable th:nth-child(9),
+.listofitemstable td:nth-child(9) {
+  /* Foto */
+  /* width: 10px; */
+  min-width: 10px;
+}
+
+/* Styling untuk gambar dalam tabel */
+.listofitemstable .item-image {
+  max-width: 150px; /* Memperbesar ukuran maksimum gambar */
+  height: auto; /* Menjaga aspek ratio */
+  object-fit: contain; /* Memastikan gambar tidak terdistorsi */
+  cursor: pointer; /* Menunjukkan bahwa gambar bisa diklik */
+  transition: transform 0.3s ease; /* Efek smooth saat hover */
+}
+
+/* Efek hover pada gambar */
+.listofitemstable .item-image:hover {
+  transform: scale(1.1); /* Sedikit membesarkan gambar saat hover */
 }
 
 /* .listofitemstable tr:nth-child(even) {
@@ -228,12 +294,16 @@ input[type="search"]::-ms-clear {
   font-weight: 700;
 } */
 
-/* Responsivitas */
-@media (max-width: 768px) {
-  .dropdown-lost-and-found,
-  .dropdown-campus,
-  .search-bar,
-  .frame {
-    width: 100%;
+/* Responsivitas untuk layar kecil */
+@media screen and (max-width: 768px) {
+  .listofitemstable td,
+  .listofitemstable th {
+    padding: 10px;
+    font-size: 14px;
+    max-width: 150px;
+  }
+
+  .listofitemstable .item-image {
+    max-width: 100px;
   }
 }
