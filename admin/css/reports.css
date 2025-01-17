@@ -60,12 +60,12 @@ select:focus {
 }
 
 .dropdownlostandfound option:disabled {
-  color: #9b59b6; /* Warna ungu untuk placeholder */
+  color: #763996; /* Warna ungu untuk placeholder */
 }
 
 /* Gaya untuk mengubah warna dropdown ketika nilai terpilih adalah 'Kehilangan' */
 .dropdownlostandfound {
-  color: #9b59b6; /* Warna ungu pada teks pilihan */
+  color: #763996; /* Warna ungu pada teks pilihan */
 }
 
 /* Search bar, diposisikan di kanan */

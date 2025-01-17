@@ -55,12 +55,12 @@ $dataJson = json_encode($allData);
     <style>
         /* Gaya untuk mengubah warna placeholder dropdown */
         .dropdownlostandfound option:disabled {
-            color: #9b59b6; /* Warna ungu untuk placeholder */
+            color: #763996; /* Warna ungu untuk placeholder */
         }
 
         /* Gaya untuk mengubah warna dropdown ketika nilai terpilih adalah 'Kehilangan' */
         .dropdownlostandfound {
-            color: #9b59b6; /* Warna ungu pada teks pilihan */
+            color: #763996; /* Warna ungu pada teks pilihan */
         }
 
         /* Gaya untuk tombol kelola */
@@ -73,7 +73,7 @@ $dataJson = json_encode($allData);
         }
 
         .btn-sudah-ditemukan {
-            background-color: #28a745; /* Hijau */
+            background-color: #763996;; /* Hijau */
             color: white;
         }
 
