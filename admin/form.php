@@ -151,6 +151,67 @@ $dataJson = json_encode($allData);
         return new Intl.DateTimeFormat('id-ID', options).format(date);
     }
 
+    
+    function applyFilters() {
+    const campus = document.querySelector('[name="campus"]').value;
+    const tableBody = document.querySelector('tbody');
+    
+    // Filter data berdasarkan kampus
+    filteredData = allData.filter((row) => {
+        // Jika tidak ada kampus yang dipilih, tampilkan semua
+        // Atau jika kampus cocok dengan data (case-insensitive)
+        return !campus || row.lokasi_kampus.toLowerCase().includes(campus.toLowerCase());
+    });
+
+    // Update tampilan tabel
+    tableBody.innerHTML = '';
+
+    if (filteredData.length === 0) {
+        tableBody.innerHTML = '<tr><td colspan="9" style="text-align:center;">Tidak ada data ditemukan</td></tr>';
+    } else {
+        filteredData.forEach((row, index) => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td>${index + 1}</td>
+                <td>${row.nama}</td>
+                <td>${row.npm}</td>
+                <td>${row.lokasi_kampus}</td>
+                <td>${row.item}</td>
+                <td>${row.lokasi}</td>
+                <td>${formatTanggalIndo(row.tanggal)}</td>
+                <td>
+                    ${row.foto ? 
+                        `<img src="../uploads/${row.foto}" class="item-image" alt="Foto Barang" 
+                        onerror="console.log('Error loading image:', '../uploads/${row.foto}')" 
+                        />`
+                        : 
+                        '<span>Tidak ada foto</span>'
+                    }
+                </td>
+                <td>
+                    <button class="btn-kelola btn-sudah-ditemukan" onclick="markFound(${row.lost_id || row.found_id}, '${row.status}')">
+                        Barang Sudah Ditemukan
+                    </button>
+                    <button class="btn-kelola btn-delete" onclick="deleteItem(${row.lost_id || row.found_id})">
+                        Delete
+                    </button>
+                </td>
+            `;
+            tableBody.appendChild(tr);
+        });
+    }
+}
+
+    // Event listener untuk dropdown kampus
+    document.addEventListener('DOMContentLoaded', () => {
+        const campusDropdown = document.querySelector('.dropdowncampus');
+        campusDropdown.addEventListener('change', applyFilters);
+        
+        // Inisialisasi filter saat halaman dimuat
+        applyFilters();
+    });
+
+      
     function updateTable() {
     const tableBody = document.querySelector('tbody');
     tableBody.innerHTML = '';
@@ -201,7 +262,6 @@ $dataJson = json_encode($allData);
 }
 
 
-
 function markFound(id, status) {
     if (status === 'Lost' || status === 'Found') {
         fetch('updateStatus.php', {
@@ -233,17 +293,14 @@ function markFound(id, status) {
     }
 }
 
-// Fungsi untuk menghapus baris berdasarkan ID
-function removeRowFromTable(id) {
-    // Menghapus baris berdasarkan ID yang terhubung dengan data-id
-    const row = document.querySelector(`tr[data-id="${id}"]`);
-    if (row) {
-        row.remove(); // Menghapus baris yang sesuai
+    // Fungsi untuk menghapus baris berdasarkan ID
+    function removeRowFromTable(id) {
+        // Menghapus baris berdasarkan ID yang terhubung dengan data-id
+        const row = document.querySelector(`tr[data-id="${id}"]`);
+        if (row) {
+            row.remove(); // Menghapus baris yang sesuai
+        }
     }
-}
-
-
-
 
     // Fungsi untuk menghapus item
     function deleteItem(id) {
@@ -285,54 +342,6 @@ function removeRowFromTable(id) {
         // Initial table update
         updateTable();
     });
-    
-    const campusDropdown = document.getElementById('dropdowncampus')
-
-    if (!campusDropdown) {
-            console.error('Dropdowns not found!');
-        } else {
-            console.log('Dropdowns found successfully');
-        }
-
-        async function fetchData() {
-            try {
-                console.log('Fetching data...');
-                const campus = campusDropdown.value || '';
-                
-                console.log('Campus:', campus);
-
-                // Get current URL path
-                const currentPath = window.location.pathname;
-                const basePath = currentPath.substring(0, currentPath.lastIndexOf('/') + 1);
-                const fetchUrl = basePath + 'fetch_items.php';
-                
-                console.log('Fetching from:', fetchUrl);
-
-                const response = await fetch(fetchUrl, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded',
-                    },
-                    body: `type=${type}&campus=${campus}`
-                });
-
-                console.log('Response received:', response.status);
-                
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                
-                const data = await response.json();
-                console.log('Data received:', data);
-                
-                updateTable(data);
-            } catch (error) {
-                console.error('Error in fetchData:', error);
-            }
-        }
-
-        
-
     </script>
 
     
