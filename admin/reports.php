@@ -161,6 +161,29 @@ $dataJson = json_encode($data);
                 }  
             });  
         });  
+        if (lostAndFoundDropdown) {
+            lostAndFoundDropdown.addEventListener('change', () => {
+          // Update color when value changes
+          if (lostAndFoundDropdown.value) {
+            lostAndFoundDropdown.style.color = '#763996';
+            } else {
+                lostAndFoundDropdown.style.color = '#c7c7c7';
+            }
+            fetchData();
+          });
+        }
+        if (campusDropdown) {
+          campusDropdown.style.color = '#c7c7c7';
+            campusDropdown.addEventListener('change', () => {
+                // Update color when value changes
+                if (campusDropdown.value) {
+                    campusDropdown.style.color = '#763996';
+                } else {
+                    campusDropdown.style.color = '#c7c7c7';
+                }
+                fetchData();
+            });
+        }        
 
     </script>        
 </head>        

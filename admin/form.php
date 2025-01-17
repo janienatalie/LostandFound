@@ -91,6 +91,7 @@ $dataJson = json_encode($allData);
         <div class="title">
             <h2>Daftar Barang</h2>
         </div>
+        <form method="GET" action="">
         <div class="dropdown">
             <div class="controls-container">
                 <div class="dropdown-lost-and-found">
@@ -117,6 +118,7 @@ $dataJson = json_encode($allData);
                 </div>
             </div>
         </div>
+        </form>
         <div class="listofitemstable">
             <table>
                 <thead>
@@ -153,20 +155,30 @@ $dataJson = json_encode($allData);
 
     
     function applyFilters() {
+    const lostFound = document.querySelector('[name="lost-found"]').value;      
     const campus = document.querySelector('[name="campus"]').value;
+    const query = document.querySelector('[name="q"]').value.toLowerCase();      
     const tableBody = document.querySelector('tbody');
     
     // Filter data berdasarkan kampus
     filteredData = allData.filter((row) => {
+        const matchesLostFound = !lostFound || lostFound === 'Semua' || 
+            (lostFound === 'Lost' && row.status === 'Lost') || 
+            (lostFound === 'Found' && row.status === 'Found');
         // Jika tidak ada kampus yang dipilih, tampilkan semua
         // Atau jika kampus cocok dengan data (case-insensitive)
-        return !campus || row.lokasi_kampus.toLowerCase().includes(campus.toLowerCase());
+        const matchesCampus = !campus || row.lokasi_kampus.toLowerCase().includes(campus.toLowerCase());
+        const searchWords = query.split(' ');      
+        const allText = Object.values(row).join(' ').toLowerCase();      
+        const matchesQuery = searchWords.every(word => word ? allText.includes(word) : true);
+
+        return matchesLostFound && matchesCampus && matchesQuery;
     });
 
     // Update tampilan tabel
     tableBody.innerHTML = '';
 
-    if (filteredData.length === 0) {
+    if (!filteredData || filteredData.length === 0) {
         tableBody.innerHTML = '<tr><td colspan="9" style="text-align:center;">Tidak ada data ditemukan</td></tr>';
     } else {
         filteredData.forEach((row, index) => {
@@ -203,13 +215,13 @@ $dataJson = json_encode($allData);
 }
 
     // Event listener untuk dropdown kampus
-    document.addEventListener('DOMContentLoaded', () => {
-        const campusDropdown = document.querySelector('.dropdowncampus');
-        campusDropdown.addEventListener('change', applyFilters);
+    // document.addEventListener('DOMContentLoaded', function() => {
+    //     const campusDropdown = document.querySelector('.dropdowncampus');
+    //     campusDropdown.addEventListener('change', applyFilters);
         
-        // Inisialisasi filter saat halaman dimuat
-        applyFilters();
-    });
+    //     // Inisialisasi filter saat halaman dimuat
+    //     applyFilters();
+    // });
 
       
     function updateTable() {
@@ -329,15 +341,38 @@ function markFound(id, status) {
 
 
     // Event listeners
-    document.addEventListener('DOMContentLoaded', () => {
-        const lostFoundSelect = document.querySelector('.dropdownlostandfound');
-        const searchInput = document.querySelector('#query');
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.querySelector('form');        
+        form.addEventListener('input', applyFilters);  
+        applyFilters();
+
+        const lostAndFoundDropdown = document.querySelector('.dropdownlostandfound');
+        // const searchInput = document.querySelector('#query');
+        const campusDropdown = document.querySelector('.dropdowncampus'); 
+        applyFilters();
+        
+        lostAndFoundDropdown.addEventListener('change', function() {
+            if (this.value) {
+                this.classList.add('active');
+            } else {
+                this.classList.remove('active');
+            }
+        });
+
+        campusDropdown.addEventListener('change', function() {
+            if (this.value) {  
+                this.classList.add('active');  
+            } else {  
+                this.classList.remove('active');  
+            } 
+        })
 
 
-        lostFoundSelect.value = "Lost";
 
-        lostFoundSelect.addEventListener('change', updateTable);
-        searchInput.addEventListener('input', updateTable);
+        // lostFoundSelect.value = "Lost";
+
+        // lostFoundSelect.addEventListener('change', updateTable);
+        // searchInput.addEventListener('input', updateTable);
 
         // Initial table update
         updateTable();

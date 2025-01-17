@@ -145,7 +145,7 @@ mysqli_close($conn);
 
         <div class="stats-wrapper">
             <div class="rectangle">
-                <h2>Jumlah Barang yang Hilang</h2>
+                <h2>Jumlah Barang Hilang</h2>
                 <h3><?php echo $has_errors ? "Error loading data" : number_format($lost_count); ?></h3>
  
                 <svg xmlns="http://www.w3.org/2000/svg" width="81" height="78" viewBox="0 0 81 78" fill="none">
@@ -161,7 +161,7 @@ mysqli_close($conn);
             </div>
 
             <div class="rectangle">
-                <h2>Jumlah Barang yang Ditemukan</h2>
+                <h2>Jumlah Barang Temuan</h2>
                 <h3><?php echo $has_errors ? "Error loading data" : number_format($found_count); ?></h3>
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="81" height="74" viewBox="0 0 81 74" fill="none">

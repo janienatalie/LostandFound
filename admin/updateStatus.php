@@ -9,7 +9,7 @@ if (isset($data['id'])) {
 
     // Update status barang menjadi "Sudah Ditemukan" pada tabel LostItems
     $updateSqlLost = "UPDATE LostItems SET status = 'Sudah Ditemukan' WHERE id = ?";
-    $updateSqlFound = "UPDATE FoundItems SET status = 'Sudah Ditemukan' WHERE id = ?";
+    $updateSqlFound = "UPDATE FoundItems SET status = 'Sudah Dikembalikan' WHERE id = ?";
 
     // Cek apakah data ada di tabel LostItems
     $stmtLost = $conn->prepare("SELECT id FROM LostItems WHERE id = ?");

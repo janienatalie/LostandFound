@@ -59,7 +59,7 @@ session_start();
               <th>Kampus</th>
               <th>Lokasi</th>
               <th>Tanggal</th>
-              <th>Foto Barang</th>
+              <th>Foto</th>
             </tr>
           </thead>
           <tbody>

@@ -6,6 +6,8 @@
 
 .content {
   margin-top: 20px;
+  margin-left: 3px;
+  margin-right: 20px;
 }
 
 .title {
@@ -55,6 +57,15 @@ select:focus,
 .dropdownlostandfound input:focus,
 select:focus {
   outline: none;
+}
+
+.dropdownlostandfound option:disabled {
+  color: #9b59b6; /* Warna ungu untuk placeholder */
+}
+
+/* Gaya untuk mengubah warna dropdown ketika nilai terpilih adalah 'Kehilangan' */
+.dropdownlostandfound {
+  color: #9b59b6; /* Warna ungu pada teks pilihan */
 }
 
 /* Search bar, diposisikan di kanan */
