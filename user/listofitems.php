@@ -30,7 +30,7 @@ session_start();
           </div>
           <div class="dropdown-campus">
             <select name="campus" class="dropdowncampus" id="dropdowncampus">
-              <option hidden value="" disabled selected>Kampus</option>
+              <option value="">Kampus</option>
               <option value="Kampus E">Kampus E</option>
               <option value="Kampus D">Kampus D</option>
               <option value="Kampus G">Kampus G</option>
@@ -89,7 +89,7 @@ session_start();
 
         window.addEventListener('DOMContentLoaded', () => {
        if (lostFoundDropdown) {
-          lostFoundDropdown.value = 'Lost';
+          lostFoundDropdown.value = 'Lost' || 'Found';
           // Trigger change event to update styles
           lostFoundDropdown.dispatchEvent(new Event('change'));
           fetchData();

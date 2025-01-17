@@ -11,18 +11,20 @@ function formatTanggal($date) {
 $sqlLost = "
     SELECT u.nama, u.npm, l.lokasi_kampus, l.barang_hilang as item, 
            l.tempat_kehilangan as lokasi, l.tanggal_kehilangan as tanggal,
-           l.foto_barang as foto, 'Lost' as status, l.id as lost_id
+           l.foto_barang as foto, l.status as status, l.id as lost_id
     FROM LostItems l
-    JOIN Users u ON l.user_id = u.id where status = 'Lost'
+    JOIN Users u ON l.user_id = u.id 
+    where status = 'Lost'
 ";
 
 // Query untuk mengambil data barang ditemukan
 $sqlFound = "
     SELECT u.nama, u.npm, f.lokasi_kampus, f.barang_ditemukan as item,
            f.tempat_menemukan as lokasi, f.tanggal_menemukan as tanggal,
-           f.foto_barang as foto, 'Found' as status, f.id as found_id
+           f.foto_barang as foto, f.status as status, f.id as found_id
     FROM FoundItems f
-    JOIN Users u ON f.user_id = u.id where status = 'Found'
+    JOIN Users u ON f.user_id = u.id 
+    WHERE f.status = 'Found' 
 ";
 
 // Gabungkan kedua query
@@ -225,83 +227,92 @@ $dataJson = json_encode($allData);
 
       
     function updateTable() {
-    const tableBody = document.querySelector('tbody');
-    tableBody.innerHTML = '';
-    const lostFoundFilter = document.querySelector('.dropdownlostandfound').value;
-    const searchQuery = document.querySelector('#query').value.toLowerCase();
+        const tableBody = document.querySelector('tbody');
+        tableBody.innerHTML = '';
+        const lostFoundFilter = document.querySelector('.dropdownlostandfound').value;
+        const searchQuery = document.querySelector('#query').value.toLowerCase();
 
-    // Filter data berdasarkan kriteria
-    filteredData = allData.filter(item => {
-        const matchesType = !lostFoundFilter || item.status === lostFoundFilter;
-        const matchesSearch = Object.values(item).some(value => 
-            value && value.toString().toLowerCase().includes(searchQuery)
-        );
-        return matchesType && matchesSearch;
-    });
-
-    // Tampilkan data yang sudah difilter
-    if (filteredData.length === 0) {
-        tableBody.innerHTML = '<tr><td colspan="9" class="no-data">Tidak ada data ditemukan</td></tr>';
-    } else {
-        filteredData.forEach((item, index) => {
-            const tr = document.createElement('tr');
-            tr.setAttribute('data-id', item.lost_id || item.found_id); // Menambahkan ID sebagai data-id
-            tr.innerHTML = `
-                <td>${index + 1}</td>
-                <td>${item.nama}</td>
-                <td>${item.npm}</td>
-                <td>${item.lokasi_kampus}</td>
-                <td>${item.item}</td>
-                <td>${item.lokasi}</td>
-                <td>${formatTanggalIndo(item.tanggal)}</td>
-                <td>
-                    ${item.foto ? 
-                        `<img src="../uploads/${item.foto}" class="item-image" alt="Foto Barang" 
-                        onerror="console.log('Error loading image:', '../uploads/${item.foto}')" 
-                        />`
-                        : 
-                        '<span>Tidak ada foto</span>'
-                    }
-                </td>
-                <td>
-                    <button class="btn-kelola btn-sudah-ditemukan" onclick="markFound(${item.lost_id || item.found_id}, '${item.status}')">Barang Sudah Ditemukan</button>
-                    <button class="btn-kelola btn-delete" onclick="deleteItem(${item.lost_id || item.found_id})">Delete</button>
-                </td>
-            `;
-            tableBody.appendChild(tr);
+        // Filter data berdasarkan kriteria
+        filteredData = allData.filter(item => {
+            const matchesType = !lostFoundFilter || item.status === lostFoundFilter;
+            const matchesSearch = Object.values(item).some(value => 
+                value && value.toString().toLowerCase().includes(searchQuery)
+            );
+            return matchesType && matchesSearch;
         });
-    }
+
+        // Tampilkan data yang sudah difilter
+        if (filteredData.length === 0) {
+            tableBody.innerHTML = '<tr><td colspan="9" class="no-data">Tidak ada data ditemukan</td></tr>';
+        } else {
+            filteredData.forEach((item, index) => {
+                const tr = document.createElement('tr');
+                tr.setAttribute('data-id', item.lost_id || item.found_id); // Menambahkan ID sebagai data-id
+                tr.innerHTML = `
+                    <td>${index + 1}</td>
+                    <td>${item.nama}</td>
+                    <td>${item.npm}</td>
+                    <td>${item.lokasi_kampus}</td>
+                    <td>${item.item}</td>
+                    <td>${item.lokasi}</td>
+                    <td>${formatTanggalIndo(item.tanggal)}</td>
+                    <td>
+                        ${item.foto ? 
+                            `<img src="../uploads/${item.foto}" class="item-image" alt="Foto Barang" 
+                            onerror="console.log('Error loading image:', '../uploads/${item.foto}')" 
+                            />`
+                            : 
+                            '<span>Tidak ada foto</span>'
+                        }
+                    </td>
+                    <td>
+                        <button class="btn-kelola btn-sudah-ditemukan" onclick="markFound(${item.lost_id || item.found_id}, '${item.status}')">Barang Sudah Ditemukan</button>
+                        <button class="btn-kelola btn-delete" onclick="deleteItem(${item.lost_id || item.found_id})">Delete</button>
+                    </td>
+                `;
+                tableBody.appendChild(tr);
+            });
+        }
 }
 
 
 function markFound(id, status) {
+    const row = document.querySelector(`tr[data-id="${id}"]`);
+    if (row) row.classList.add('loading');
+
     if (status === 'Lost' || status === 'Found') {
         fetch('updateStatus.php', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ id }) // Mengirimkan ID barang
+            body: JSON.stringify({ 
+                id: id,
+                status: status,
+                table: status === 'Lost' ? 'LostItems' : 'FoundItems' // Tambahkan informasi tabel
+            })
         })
-        .then((response) => response.json())
-        .then((data) => {
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
             if (data.status === 'success') {
                 alert('Status berhasil diperbarui!');
-                location.reload();
-
-                // Menghapus item yang sudah diperbarui dari filteredData
-                filteredData = filteredData.filter(item => item.lost_id !== id && item.found_id !== id);
-
-                updateTable();
-
-
-                // Menghapus baris data yang sesuai dari tabel
-                removeRowFromTable(id);
+                location.reload(); // Cara paling aman untuk memperbarui data
             } else {
-                alert('Error: ' + data.message);
+                alert('Error: ' + (data.message || 'Gagal mengupdate status'));
+                if (row) row.classList.remove('loading');
             }
         })
-        .catch((error) => console.error('Error:', error));
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Terjadi kesalahan saat mengupdate status');
+            if (row) row.classList.remove('loading');
+        });
     } else {
         alert('Status barang sudah ditemukan atau tidak valid.');
+        if (row) row.classList.remove('loading');
     }
 }
 

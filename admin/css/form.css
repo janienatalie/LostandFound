@@ -9,6 +9,11 @@
 body {
   overflow-y: scroll;
 }
+
+body::-webkit-scrollbar {
+  display: none; /* Untuk Chrome, Safari, dan Edge */
+}
+
 .list-of-items {
   padding: 20px 40px;
   margin-left: 20%;

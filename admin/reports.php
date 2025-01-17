@@ -84,14 +84,16 @@ $dataJson = json_encode($data);
             color: #6a1b9a; /* Warna teks saat aktif */  
         }  
         .item-image {
-            width: 50px;
-            height: 50px;
-            object-fit: cover;
+            max-width: 100%; /* Mencegah gambar melebihi lebar container */
+            height: auto; /* Menjaga rasio aspek gambar */
+            display: inline-block; /* Memastikan gambar mengikuti ukuran kontennya */
         }
     </style>    
     <link rel="stylesheet" href="./css/reports.css">        
     <link rel="stylesheet" href="../css/style.css">        
     <script>        
+
+    
    
         const data = <?php echo $dataJson; ?>;      
         let filteredData = []; // Variabel global untuk data yang difilter  
@@ -117,7 +119,17 @@ $dataJson = json_encode($data);
   
             if (filteredData.length === 0) {        
                 tableBody.innerHTML = '<tr><td colspan="8" style="text-align:center;">Tidak ada data ditemukan</td></tr>';        
-            } else {        
+            } else {      
+                function formatTanggal(tanggal) {
+                const bulanNama = [
+                    "Januari", "Februari", "Maret", "April", "Mei", "Juni",
+                    "Juli", "Agustus", "September", "Oktober", "November", "Desember"
+                ];
+                
+                const [hari, bulan, tahun] = tanggal.split('-'); // Format tanggal 'YYYY-MM-DD'
+                const namaBulan = bulanNama[parseInt(bulan, 10) - 1]; // Konversi bulan ke nama
+                return `${hari} ${namaBulan} ${tahun}`; // Format tanggal dalam bahasa Indonesia
+            }  
                 filteredData.forEach((row, index) => {        
                     const tr = document.createElement('tr');        
                     tr.innerHTML = `        
@@ -127,7 +139,7 @@ $dataJson = json_encode($data);
                         <td>${row.kampus}</td>        
                         <td>${row.barang}</td>        
                         <td>${row.lokasi}</td>        
-                        <td>${row.tanggal}</td>     
+                        <td>${formatTanggal(row.tanggal)}</td>     
                         <td>${row.status}</td>    
                         <td>${row.foto ? `<img src="../uploads/ ${row.foto}" alt="Foto Barang" style="max-width: 100px;">` : 'Tidak ada foto'}</td>
                     `;        
@@ -284,6 +296,16 @@ $dataJson = json_encode($data);
         if (!filteredData ||filteredData.length === 0) {        
             tableBody.innerHTML = '<tr><td colspan="9" style="text-align:center;">Tidak ada data ditemukan</td></tr>';        
         } else {        
+            function formatTanggal(tanggal) {
+                const bulanNama = [
+                    "Januari", "Februari", "Maret", "April", "Mei", "Juni",
+                    "Juli", "Agustus", "September", "Oktober", "November", "Desember"
+                ];
+                
+                const [hari, bulan, tahun] = tanggal.split('-'); // Format tanggal 'YYYY-MM-DD'
+                const namaBulan = bulanNama[parseInt(bulan, 10) - 1]; // Konversi bulan ke nama
+                return `${hari} ${namaBulan} ${tahun}`; // Format tanggal dalam bahasa Indonesia
+            }
             filteredData.forEach((row, index) => {        
                 const tr = document.createElement('tr');        
                 tr.innerHTML = `        
@@ -293,7 +315,7 @@ $dataJson = json_encode($data);
                     <td>${row.kampus}</td>        
                     <td>${row.barang}</td>        
                     <td>${row.lokasi}</td>        
-                    <td>${row.tanggal}</td>     
+                    <td>${formatTanggal(row.tanggal)}</td>     
                     <td>${row.status}</td>
                     <td>
                         ${row.foto ? 

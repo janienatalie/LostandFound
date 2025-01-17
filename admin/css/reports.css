@@ -189,7 +189,10 @@ body {
   padding: 0;
   display: flex;
   overflow-y: scroll;
-  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Untuk Chrome, Safari, dan Edge */
 }
 
 .container {
@@ -226,7 +229,7 @@ body {
 } */
 
 .table {
-  width: 100%; /* Membuat tabel mengisi lebar kontainer */
+  width: 100%;
   margin-top: 30px;
   overflow-x: auto;
   margin-left: 10px;
@@ -235,8 +238,9 @@ body {
 .table table {
   width: 100%;
   border-collapse: collapse;
-  table-layout: fixed;
+  /* Hapus table-layout: fixed untuk mengizinkan kolom menyesuaikan konten */
   margin-right: 30px;
+  white-space: nowrap; /* Mencegah text wrapping */
 }
 
 .table tr {
@@ -248,6 +252,13 @@ td {
   padding: 10px;
   text-align: left;
   border: 1px solid #ddd;
+  /* Tambahkan minimum width untuk mencegah kolom terlalu sempit */
+  min-width: 50px;
+  /* Tambahkan maximum width untuk mencegah kolom terlalu lebar */
+  max-width: 300px;
+  /* Tambahkan pengaturan untuk text yang terlalu panjang */
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 .table tbody {
@@ -269,11 +280,13 @@ tr:nth-child(odd) {
   background-color: white;
 }
 
-.table th:nth-child(1), /* Untuk header kolom "No" */
+/* Khusus untuk kolom nomor, tetap gunakan width tetap */
+.table th:nth-child(1),
 .table td:nth-child(1) {
-  /* Untuk data di kolom "No" */
-  width: 50px; /* Ganti dengan ukuran yang diinginkan */
-  text-align: center; /* Menyelaraskan teks di tengah */
+  width: 50px;
+  min-width: 50px;
+  max-width: 50px;
+  text-align: center;
 }
 
 .print-button {

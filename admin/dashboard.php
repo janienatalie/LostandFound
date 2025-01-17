@@ -6,13 +6,13 @@ include './sidebar.php';
 
 
 // Count lost items
-$lost_query = "SELECT COUNT(*) as lost_count FROM LostItems";
+$lost_query = "SELECT COUNT(*) as lost_count FROM LostItems WHERE status = 'Lost'";
 $lost_result = mysqli_query($conn, $lost_query);
 $lost_data = mysqli_fetch_assoc($lost_result);
 $lost_count = $lost_data['lost_count'];
 
 // Count found items
-$found_query = "SELECT COUNT(*) as found_count FROM FoundItems";
+$found_query = "SELECT COUNT(*) as found_count FROM FoundItems WHERE status = 'Found'";
 $found_result = mysqli_query($conn, $found_query);
 $found_data = mysqli_fetch_assoc($found_result);
 $found_count = $found_data['found_count'];
@@ -61,6 +61,10 @@ mysqli_close($conn);
             padding: 0;
             min-height: 100vh;
             font-family: 'Poppins', sans-serif;
+            overflow-y: scroll;
+        }
+        body::-webkit-scrollbar {
+        display: none; /* Untuk Chrome, Safari, dan Edge */
         }
 
         .dashboard-content {

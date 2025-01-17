@@ -1,58 +1,68 @@
 <?php
 include '../database/config.php';
+header('Content-Type: application/json');
 
-// Mengambil data yang dikirim dari frontend
-$data = json_decode(file_get_contents('php://input'), true);
+try {
+    // Mengambil data yang dikirim dari frontend
+    $data = json_decode(file_get_contents('php://input'), true);
 
-if (isset($data['id'])) {
-    $id = $data['id']; // ID barang yang akan diperbarui statusnya
-
-    // Update status barang menjadi "Sudah Ditemukan" pada tabel LostItems
-    $updateSqlLost = "UPDATE LostItems SET status = 'Sudah Ditemukan' WHERE id = ?";
-    $updateSqlFound = "UPDATE FoundItems SET status = 'Sudah Dikembalikan' WHERE id = ?";
-
-    // Cek apakah data ada di tabel LostItems
-    $stmtLost = $conn->prepare("SELECT id FROM LostItems WHERE id = ?");
-    $stmtLost->bind_param("i", $id);
-    $stmtLost->execute();
-    $resultLost = $stmtLost->get_result();
-
-    if ($resultLost->num_rows > 0) {
-        $stmtUpdateLost = $conn->prepare($updateSqlLost);
-        $stmtUpdateLost->bind_param("i", $id);
-
-        if ($stmtUpdateLost->execute()) {
-            echo json_encode(['status' => 'success', 'message' => 'Status berhasil diperbarui di tabel LostItems']);
-            exit;
-        } else {
-            echo json_encode(['status' => 'error', 'message' => 'Gagal memperbarui status di tabel LostItems']);
-            exit;
-        }
+    if (!isset($data['id']) || !isset($data['status'])) {
+        throw new Exception('Data tidak lengkap');
     }
 
-    // Cek apakah data ada di tabel FoundItems
-    $stmtFound = $conn->prepare("SELECT id FROM FoundItems WHERE id = ?");
-    $stmtFound->bind_param("i", $id);
-    $stmtFound->execute();
-    $resultFound = $stmtFound->get_result();
-
-    if ($resultFound->num_rows > 0) {
-        $stmtUpdateFound = $conn->prepare($updateSqlFound);
-        $stmtUpdateFound->bind_param("i", $id);
-
-        if ($stmtUpdateFound->execute()) {
-            echo json_encode(['status' => 'success', 'message' => 'Status berhasil diperbarui di tabel FoundItems']);
-            exit;
-        } else {
-            echo json_encode(['status' => 'error', 'message' => 'Gagal memperbarui status di tabel FoundItems']);
-            exit;
-        }
+    $id = $data['id'];
+    $originalStatus = $data['status'];
+    
+    // Tentukan status baru dan tabel berdasarkan status original
+    if ($originalStatus === 'Lost') {
+        $newStatus = 'Sudah Ditemukan';
+        $table = 'LostItems';
+    } else if ($originalStatus === 'Found') {
+        $newStatus = 'Sudah Dikembalikan';
+        $table = 'FoundItems';
+    } else {
+        throw new Exception('Status tidak valid');
     }
 
-    echo json_encode(['status' => 'error', 'message' => 'ID barang tidak ditemukan di kedua tabel']);
-} else {
-    echo json_encode(['status' => 'error', 'message' => 'Data tidak lengkap']);
+    // Prepare statement untuk update
+    $sql = "UPDATE $table SET status = ? WHERE id = ?";
+    $stmt = $conn->prepare($sql);
+    
+    if (!$stmt) {
+        throw new Exception('Gagal mempersiapkan query: ' . $conn->error);
+    }
+
+    // Bind parameter dan execute
+    $stmt->bind_param("si", $newStatus, $id);
+    
+    if ($stmt->execute()) {
+        // Cek apakah ada baris yang terpengaruh
+        if ($stmt->affected_rows > 0) {
+            echo json_encode([
+                'status' => 'success',
+                'message' => "Status berhasil diperbarui di tabel $table"
+            ]);
+        } else {
+            echo json_encode([
+                'status' => 'error',
+                'message' => "Data dengan ID tersebut tidak ditemukan di tabel $table"
+            ]);
+        }
+    } else {
+        throw new Exception('Gagal mengeksekusi query: ' . $stmt->error);
+    }
+
+} catch (Exception $e) {
+    echo json_encode([
+        'status' => 'error',
+        'message' => $e->getMessage()
+    ]);
+} finally {
+    if (isset($stmt)) {
+        $stmt->close();
+    }
+    if (isset($conn)) {
+        $conn->close();
+    }
 }
-
-$conn->close();
 ?>

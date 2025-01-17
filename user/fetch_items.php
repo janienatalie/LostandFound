@@ -19,23 +19,25 @@ if ($conn->connect_error) {
     die(json_encode(['error' => 'Database connection failed']));
 }
 
-// Determine which table to query
+// Determine which table to query and set the correct status
 $table = ($type === 'Lost') ? 'LostItems' : 'FoundItems';
+$status = $type; // Status should match the type
 $barangColumn = ($type === 'Lost') ? 'barang_hilang' : 'barang_ditemukan';
 $tempatColumn = ($type === 'Lost') ? 'tempat_kehilangan' : 'tempat_menemukan';
 $tanggalColumn = ($type === 'Lost') ? 'tanggal_kehilangan' : 'tanggal_menemukan';
 
-// Build the query
+// Build the query with proper status filter
 $query = "SELECT $barangColumn as barang, 
                  lokasi_kampus, 
                  $tempatColumn as tempat, 
                  $tanggalColumn as tanggal, 
-                 foto_barang 
-          FROM $table";
+                 foto_barang  
+          FROM $table 
+          WHERE status = ?";
 
 // Add campus filter if specified
 if (!empty($campus)) {
-    $query .= " WHERE lokasi_kampus = ?";
+    $query .= " AND lokasi_kampus = ?";
 }
 
 $query .= " ORDER BY $tanggalColumn DESC";
@@ -47,7 +49,9 @@ try {
     $stmt = $conn->prepare($query);
     
     if (!empty($campus)) {
-        $stmt->bind_param('s', $campus);
+        $stmt->bind_param('ss', $status, $campus);
+    } else {
+        $stmt->bind_param('s', $status);
     }
     
     $stmt->execute();

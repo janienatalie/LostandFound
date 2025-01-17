@@ -104,6 +104,14 @@ $current_page = basename($_SERVER['PHP_SELF']);
             margin-left: 22%;
         }
     </style>
+        <script>
+    function confirmLogout() {
+        if (confirm('Apakah Anda yakin ingin keluar?')) {
+            window.location.href = 'logout.php';
+        }
+        return false;
+    }
+    </script>
 </head>
 <body>
     <!-- Mobile Notice -->
@@ -139,7 +147,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                     <span class="menu-text">Laporan</span>
                 </a>
                 
-                <a href="logout.php" class="menu-item menu-logout"> 
+                <a href="javascript:void(0)" onclick="confirmLogout()" class="menu-item menu-logout">
                     <img src="../image/icon/logout.png" alt="Logout">
                     <span class="menu-text">Keluar</span>
                 </a>

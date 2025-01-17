@@ -108,7 +108,7 @@ $conn->close();
                 <p>Kata Sandi</p>
                 <input type="password" id="password" name="password" required><br>
 
-                <button type="submit" id="submit-button">Masuk</button>
+                <button type="submit" id="submit-button" class="submit-button">Masuk</button>
             </form>
 
             <p class="info" id="signup-info">Belum punya akun? <a href="signup.php" style="text-decoration: underline; color: #1C07D2">Daftar</a></p>

@@ -29,21 +29,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $image_file_type = strtolower(pathinfo($foto_barang, PATHINFO_EXTENSION));
 
         // Validasi jenis file
-        $allowed_types = ['jpg', 'jpeg', 'png', 'gif'];
-        if (!in_array($image_file_type, $allowed_types)) {
-            die("Hanya format JPG, JPEG, PNG, dan GIF yang diperbolehkan.");
-        }
+        // $allowed_types = ['jpg', 'jpeg', 'png', 'gif'];
+        //   if (!in_array($image_file_type, $allowed_types)) {
+        //       die("Hanya format JPG, JPEG, PNG, dan GIF yang diperbolehkan.");
+        //   }
 
         // Validasi ukuran file
-        if ($foto['size'] > 5000000) {
-            die("File terlalu besar (maksimal 5MB).");
-        }
+          // if ($foto['size'] > 5000000) {
+          //     die("File terlalu besar (maksimal 5MB).");
+          // }
 
         // Pindahkan file ke folder tujuan
-        if (!move_uploaded_file($foto["tmp_name"], $foto_barang)) {
-            die("Gagal mengunggah file.");
-        }
-    }
+          if (!move_uploaded_file($foto["tmp_name"], $foto_barang)) {
+              die("Gagal mengunggah file.");
+          }
+      
+    
 
     // Simpan ke database
     $stmt = $conn->prepare("INSERT INTO LostItems (user_id, lokasi_kampus, barang_hilang, tempat_kehilangan, tanggal_kehilangan, foto_barang) VALUES (?, ?, ?, ?, ?, ?)");
@@ -56,6 +57,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     $stmt->close();
+  }
+  
 }
 $conn->close();
 ?>
@@ -77,6 +80,38 @@ $conn->close();
     
     <!-- Page specific styles last -->
     <link rel="stylesheet" href="./css/form.css" />
+    <script>
+    function validateFile(input) {
+      const allowedTypes = ['image/jpeg','image/jpg'];
+      const maxSize = 5 * 1024 * 1024; // 5MB in bytes
+      const file = input.files[0];
+      const validationMessage = document.getElementById('fileValidationMessage');
+      
+      // Reset styling dan pesan
+      input.classList.remove('invalid');
+      validationMessage.textContent = '';
+      
+      if (!file) {
+        return;
+      }
+
+      // Validasi tipe file
+      if (!allowedTypes.includes(file.type)) {
+        input.classList.add('invalid');
+        validationMessage.textContent = 'Hanya format JPG dan JPEG yang diperbolehkan.';
+        input.value = ''; // Clear input
+        return;
+      }
+
+      // Validasi ukuran file
+      if (file.size > maxSize) {
+        input.classList.add('invalid');
+        validationMessage.textContent = 'File terlalu besar (maksimal 5MB).';
+        input.value = ''; // Clear input
+        return;
+      }
+    }
+    </script>
 </head>
   <body>
   <?php include './navbar.php';?>
@@ -126,9 +161,10 @@ $conn->close();
           <input type="date" id="tanggal" name="tanggal" required />
         </div>
         <div class="form-group">
-          <label for="foto">Foto Barang </label>
-          <input type="file" id="foto" name="foto" />
-        </div>
+        <label for="foto">Foto Barang </label>
+        <input type="file" id="foto" name="foto" onchange="validateFile(this)" accept="image/jpeg,image/jpg,image/png,image/gif"/>
+        <div id="fileValidationMessage" class="validation-message"></div>
+      </div>
 
         <button type="submit">Kirim</button>
       </form>

@@ -101,3 +101,21 @@ input:valid,
 select:valid {
   color: black;
 }
+
+.validation-message {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.validation-message.error {
+  color: #dc3545;
+}
+
+.validation-message.success {
+  color: #28a745;
+}
+
+/* Styling untuk invalid input */
+input[type="file"].invalid {
+  border-color: #dc3545;
+}
