@@ -8,9 +8,10 @@ CREATE TABLE Users (
     npm VARCHAR(8) NOT NULL,
     nomor_telepon VARCHAR(15) NOT NULL,
     username VARCHAR(50) UNIQUE NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
     CONSTRAINT unique_npm UNIQUE (npm), 
     CONSTRAINT unique_username UNIQUE (username) 
-    );
+    ); -- Kata sandi akan disimpan dalam bentuk hash
 
 -- Tabel untuk menyimpan data admin
 CREATE TABLE Admins (
