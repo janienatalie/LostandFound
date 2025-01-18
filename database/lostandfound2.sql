@@ -5,18 +5,18 @@ USE lostandfound2;
 CREATE TABLE Users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nama VARCHAR(100) NOT NULL,
-    npm VARCHAR(20) NOT NULL,
+    npm VARCHAR(8) NOT NULL,
     nomor_telepon VARCHAR(15) NOT NULL,
     username VARCHAR(50) UNIQUE NOT NULL,
-    password_hash VARCHAR(255) NOT NULL -- Kata sandi akan disimpan dalam bentuk hash
-);
+    CONSTRAINT unique_npm UNIQUE (npm), 
+    CONSTRAINT unique_username UNIQUE (username) 
+    );
 
 -- Tabel untuk menyimpan data admin
 CREATE TABLE Admins (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) UNIQUE NOT NULL,
     password_hash VARCHAR(255) NOT NULL -- Kata sandi admin juga disimpan dalam bentuk hash
-
 );
 
 INSERT INTO admins (id, username, password_hash) VALUES (1, 'admin', 'admin123');
