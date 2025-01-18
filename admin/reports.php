@@ -246,7 +246,7 @@ $dataJson = json_encode($data);
         </svg>  
         Print  
     </a>      
-</div>         
+    </div>         
       
     <div class="table">        
         <table>        

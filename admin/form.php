@@ -209,7 +209,7 @@ $dataJson = json_encode($allData);
                     <button class="btn-kelola btn-sudah-ditemukan" onclick="markFound(${row.lost_id || row.found_id}, '${row.status}')">
                         Barang Sudah Dikembalikan
                     </button>
-                    <button class="btn-kelola btn-delete" onclick="deleteItem(${row.lost_id || row.found_id})">
+                    <button class="btn-kelola btn-delete" onclick="deleteItem(${row.lost_id || row.found_id}, '${row.status === 'Lost' ? 'lost' : 'found'}')">
                         Delete
                     </button>
                 </td>
@@ -270,7 +270,7 @@ $dataJson = json_encode($allData);
                     </td>
                     <td>
                         <button class="btn-kelola btn-sudah-ditemukan" onclick="markFound(${item.lost_id || item.found_id}, '${item.status}')">Barang Sudah Ditemukan</button>
-                        <button class="btn-kelola btn-delete" onclick="deleteItem(${item.lost_id || item.found_id})">Delete</button>
+                        <button class="btn-kelola btn-delete" onclick="deleteItem(${item.lost_id || item.found_id}, '${item.status === 'Lost' ? 'lost' : 'found'}')">Delete</button>
                     </td>
                 `;
                 tableBody.appendChild(tr);
@@ -329,13 +329,13 @@ function markFound(id, status) {
     }
 
     // Fungsi untuk menghapus item
-    function deleteItem(id) {
+    function deleteItem(id, tableType) {
         const confirmation = confirm("Apakah Anda yakin ingin menghapus data ini?");
         if (confirmation) {
             // Kirim permintaan ke server untuk menghapus item dari database
             fetch('deleteItem.php', {
                 method: 'POST',
-                body: JSON.stringify({ id }),
+                body: JSON.stringify({ id : id, table : tableType }),
                 headers: {
                     'Content-Type': 'application/json',
                 },
