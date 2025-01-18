@@ -206,7 +206,7 @@ $dataJson = json_encode($allData);
                 </td>
                 <td>
                     <button class="btn-kelola btn-sudah-ditemukan" onclick="markFound(${row.lost_id || row.found_id}, '${row.status}')">
-                        Barang Sudah Ditemukan
+                        Barang Sudah Dikembalikan
                     </button>
                     <button class="btn-kelola btn-delete" onclick="deleteItem(${row.lost_id || row.found_id})">
                         Delete
