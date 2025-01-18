@@ -90,7 +90,7 @@ mysqli_close($conn);
         }
 
         .rectangle {
-            width: 950px;
+            width: auto;
             height: 130px;
             flex-shrink: 0;
             border-radius: 10px;
@@ -116,7 +116,7 @@ mysqli_close($conn);
 
         .rectangle svg {
             position: absolute;
-            left: 850px;
+            right: 28px;
             bottom: 40px;
             width: 60px;
             height: 60px;
