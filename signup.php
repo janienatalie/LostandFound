@@ -112,7 +112,7 @@ $conn->close();
                 <input type="text" id="name" name="name" required>
                 
                 <p>NPM</p>
-                <input type="text" id="npm" name="npm" required>
+                <input type="text" id="npm" name="npm" required maxlength="8">
                 <div id="npm-error" class="error-message"></div>
                 
                 <p>Nomor Telepon</p>
@@ -173,6 +173,28 @@ $conn->close();
                 return false;
             }
         }
+
+
+
+        document.getElementById('npm').addEventListener('input', function() {
+        clearTimeout(typingTimer);
+        const errorDiv = document.getElementById('npm-error');
+        
+        if (this.value.length !== 8) {
+            this.classList.add('input-error');
+            this.classList.remove('input-success');
+            errorDiv.style.display = 'block';
+            errorDiv.textContent = 'NPM harus terdiri dari 8 karakter';
+        } else {
+            this.classList.remove('input-error');
+            this.classList.add('input-success');
+            errorDiv.style.display = 'none';
+            // Cek ketersediaan NPM hanya jika panjangnya sudah 8
+            if (this.value) {
+                typingTimer = setTimeout(() => checkAvailability('npm', this.value), doneTypingInterval);
+            }
+        }
+    });
 
         // Add event listeners for real-time validation
         document.getElementById('username').addEventListener('input', function() {

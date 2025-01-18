@@ -303,8 +303,8 @@ tr:nth-child(odd) {
 .table th:nth-child(4),
 .table td:nth-child(4) {
   /* Kampus */
-  width: 100px;
-  min-width: 100px;
+  width: 115px;
+  min-width: 115px;
 }
 .table th:nth-child(5),
 .table td:nth-child(5) {

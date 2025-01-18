@@ -75,7 +75,8 @@ $dataJson = json_encode($allData);
         }
 
         .btn-sudah-ditemukan {
-            background-color: #763996;; /* Hijau */
+            background-color: #5CB85C
+            ;; /* Hijau */
             color: white;
         }
 
